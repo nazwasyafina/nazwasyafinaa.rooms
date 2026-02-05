@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazwa Syafina Library</title>
+    <title>Nazwa Syafina Digital Library</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -17,8 +17,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            color: #e5e7eb;
-            background: linear-gradient(135deg, #020617, #020617, #020617);
+            color: white;
         }
 
         /* ===== NAVBAR ===== */
@@ -26,25 +25,23 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 60px;
+            padding: 22px 60px;
             display: flex;
             justify-content: flex-end;
-            background: rgba(2, 6, 23, 0.7);
-            backdrop-filter: blur(12px);
-            z-index: 100;
+            z-index: 10;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 28px;
         }
 
         nav ul li a {
             text-decoration: none;
+            color: #e5e7eb;
             font-weight: 500;
-            color: #c7d2fe;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
@@ -54,89 +51,49 @@
         /* ===== HERO ===== */
         .hero {
             height: 100vh;
-            background:
-                radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 60%),
-                linear-gradient(135deg, #020617, #020617);
+            background-image:
+                linear-gradient(
+                    rgba(2, 6, 23, 0.75),
+                    rgba(2, 6, 23, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+            background-size: cover;
+            background-position: center;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         .hero-content {
-            max-width: 900px;
-            animation: fadeUp 1.6s ease;
+            animation: fadeUp 1.5s ease;
         }
 
         .hero-content h1 {
-            font-size: 54px;
+            font-size: 64px;
             font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 18px;
-            background: linear-gradient(90deg, #93c5fd, #c7d2fe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .hero-content h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #c7d2fe;
+            margin-bottom: 30px;
         }
 
         .hero-content p {
-            font-size: 18px;
+            font-size: 16px;
             opacity: 0.85;
-            margin-bottom: 40px;
-        }
-
-        /* ===== SEARCH CARD ===== */
-        .search-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            padding: 30px;
-            border-radius: 24px;
-            box-shadow: 0 0 40px rgba(59,130,246,0.15);
-        }
-
-        .search-box {
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-box input {
-            width: 420px;
-            padding: 16px 22px;
-            border-radius: 30px 0 0 30px;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
-
-        .search-box button {
-            padding: 16px 30px;
-            border-radius: 0 30px 30px 0;
-            border: none;
-            background: #1e3a8a;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .search-box button:hover {
-            background: #2563eb;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #020617;
-            text-align: center;
-            padding: 30px 20px;
-            color: #94a3b8;
-            font-size: 14px;
         }
 
         /* ===== ANIMATION ===== */
         @keyframes fadeUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -146,16 +103,12 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            nav {
-                padding: 16px 30px;
-            }
-
             .hero-content h1 {
-                font-size: 36px;
+                font-size: 40px;
             }
 
-            .search-box input {
-                width: 260px;
+            .hero-content h2 {
+                font-size: 20px;
             }
         }
     </style>
@@ -176,25 +129,11 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Nazwa Syafina Library</h1>
-            <p>
-                Explore knowledge. Discover ideas.  
-                Your digital gateway to curated information.
-            </p>
-
-            <div class="search-card">
-                <div class="search-box">
-                    <input type="text" placeholder="Cari buku, jurnal, atau topik...">
-                    <button>Cari</button>
-                </div>
-            </div>
+            <h1>Welcome to Digital Library</h1>
+            <h2>Nazwa Syafina</h2>
+            <p>Explore knowledge • Read • Learn • Discover</p>
         </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2026 Nazwa Syafina Library • Built for the future of learning
-    </footer>
 
 </body>
 </html>
