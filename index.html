@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            color: white;
+            color: #ffffff;
         }
 
         /* ===== NAVBAR ===== */
@@ -29,6 +29,8 @@
             display: flex;
             justify-content: flex-end;
             z-index: 10;
+            background: rgba(2, 6, 23, 0.45);
+            backdrop-filter: blur(8px);
         }
 
         nav ul {
@@ -56,7 +58,7 @@
                     rgba(2, 6, 23, 0.75),
                     rgba(2, 6, 23, 0.75)
                 ),
-                url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+                url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -67,33 +69,71 @@
         }
 
         .hero-content {
-            animation: fadeUp 1.5s ease;
+            max-width: 900px;
+            animation: fadeUp 1.4s ease;
         }
 
         .hero-content h1 {
-            font-size: 64px;
+            font-size: 58px;
             font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
+            line-height: 1.2;
+            margin-bottom: 18px;
         }
 
-        .hero-content h2 {
-            font-size: 28px;
-            font-weight: 400;
-            color: #c7d2fe;
-            margin-bottom: 30px;
+        .hero-content h1 span {
+            color: #93c5fd;
         }
 
         .hero-content p {
-            font-size: 16px;
+            font-size: 17px;
             opacity: 0.85;
+            margin-bottom: 40px;
+        }
+
+        /* ===== SEARCH BAR ===== */
+        .search-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 420px;
+            padding: 16px 22px;
+            border-radius: 30px 0 0 30px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            padding: 16px 32px;
+            border-radius: 0 30px 30px 0;
+            border: none;
+            background: #1e3a8a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #2563eb;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 26px 20px;
+            color: #94a3b8;
+            font-size: 14px;
         }
 
         /* ===== ANIMATION ===== */
         @keyframes fadeUp {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(35px);
             }
             to {
                 opacity: 1;
@@ -103,12 +143,16 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 40px;
+            nav {
+                padding: 18px 30px;
             }
 
-            .hero-content h2 {
-                font-size: 20px;
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .search-box input {
+                width: 260px;
             }
         }
     </style>
@@ -129,11 +173,27 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Digital Library</h1>
-            <h2>Nazwa Syafina</h2>
-            <p>Explore knowledge • Read • Learn • Discover</p>
+            <h1>
+                Welcome to <span>Nazwa Syafina</span><br>
+                Digital Library
+            </h1>
+
+            <p>
+                Ruang literasi digital untuk membaca, belajar, dan mengeksplorasi
+                pengetahuan tanpa batas.
+            </p>
+
+            <div class="search-box">
+                <input type="text" placeholder="Cari buku, jurnal, atau topik...">
+                <button>Cari</button>
+            </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Nazwa Syafina Digital Library • Crafted with care for digital literacy
+    </footer>
 
 </body>
 </html>
