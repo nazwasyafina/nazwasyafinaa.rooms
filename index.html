@@ -29,7 +29,7 @@
             display: flex;
             justify-content: flex-end;
             z-index: 10;
-            background: rgba(2, 6, 23, 0.45);
+            background: rgba(15, 23, 42, 0.35);
             backdrop-filter: blur(8px);
         }
 
@@ -41,40 +41,90 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #e5e7eb;
+            color: #f1f5f9;
             font-weight: 500;
             transition: 0.3s;
         }
 
         nav ul li a:hover {
-            color: #93c5fd;
+            color: #60a5fa;
         }
 
         /* ===== HERO ===== */
         .hero {
             height: 100vh;
-            background-image:
-                linear-gradient(
-                    rgba(2, 6, 23, 0.75),
-                    rgba(2, 6, 23, 0.75)
-                ),
-                url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
-            background-size: cover;
-            background-position: center;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
         }
 
+        /* ===== SLIDESHOW BACKGROUND ===== */
+        .slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideShow 20s infinite;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
+            animation-delay: 5s;
+        }
+
+        .slide:nth-child(3) {
+            background-image: url("https://images.unsplash.com/photo-1512820790803-83ca734da794");
+            animation-delay: 10s;
+        }
+
+        .slide:nth-child(4) {
+            background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d");
+            animation-delay: 15s;
+        }
+
+        @keyframes slideShow {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            25% { opacity: 1; }
+            35% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* ===== OVERLAY ===== */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(15, 23, 42, 0.55),
+                rgba(15, 23, 42, 0.55)
+            );
+            z-index: -1;
+        }
+
+        /* ===== HERO CONTENT ===== */
         .hero-content {
             max-width: 900px;
             animation: fadeUp 1.4s ease;
         }
 
         .hero-content h1 {
-            font-size: 58px;
+            font-size: 56px;
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 18px;
@@ -86,7 +136,7 @@
 
         .hero-content p {
             font-size: 17px;
-            opacity: 0.85;
+            opacity: 0.9;
             margin-bottom: 40px;
         }
 
@@ -109,7 +159,7 @@
             padding: 16px 32px;
             border-radius: 0 30px 30px 0;
             border: none;
-            background: #1e3a8a;
+            background: #2563eb;
             color: white;
             font-size: 16px;
             cursor: pointer;
@@ -117,15 +167,15 @@
         }
 
         .search-box button:hover {
-            background: #2563eb;
+            background: #3b82f6;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: #020617;
+            background: #0f172a;
             text-align: center;
             padding: 26px 20px;
-            color: #94a3b8;
+            color: #cbd5f5;
             font-size: 14px;
         }
 
@@ -172,6 +222,19 @@
 
     <!-- HERO -->
     <section class="hero">
+
+        <!-- Background slideshow -->
+        <div class="slideshow">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
         <div class="hero-content">
             <h1>
                 Welcome to <span>Nazwa Syafina</span><br>
@@ -179,8 +242,8 @@
             </h1>
 
             <p>
-                Ruang literasi digital untuk membaca, belajar, dan mengeksplorasi
-                pengetahuan tanpa batas.
+                A digital space for reading, learning, and discovering
+                knowledge without limits.
             </p>
 
             <div class="search-box">
@@ -188,11 +251,12 @@
                 <button>Cari</button>
             </div>
         </div>
+
     </section>
 
     <!-- FOOTER -->
     <footer>
-        © 2026 Nazwa Syafina Digital Library • Crafted with care for digital literacy
+        © 2026 Nazwa Syafina Digital Library • Designed for modern learners
     </footer>
 
 </body>
