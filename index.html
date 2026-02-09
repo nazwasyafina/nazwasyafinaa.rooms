@@ -18,7 +18,15 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #ffffff;
-      overflow-x: hidden;
+      min-height: 100vh;
+      background: linear-gradient(
+        120deg,
+        #1e3a8a,
+        #4f46e5,
+        #9333ea
+      );
+      display: flex;
+      flex-direction: column;
     }
 
     /* ===== NAVBAR ===== */
@@ -29,15 +37,15 @@
       padding: 22px 60px;
       display: flex;
       justify-content: flex-end;
-      z-index: 20;
+      z-index: 10;
       background: rgba(15, 23, 42, 0.35);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 28px;
     }
 
     nav ul li a {
@@ -48,98 +56,44 @@
     }
 
     nav ul li a:hover {
-      color: #a5b4fc;
+      color: #c7d2fe;
     }
 
     /* ===== HERO ===== */
     .hero {
-      height: 100vh;
-      position: relative;
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 120px 20px 40px;
       text-align: center;
-      padding: 20px;
-      overflow: hidden;
     }
 
-    /* ===== SLIDESHOW ===== */
-    .slideshow {
-      position: absolute;
-      inset: 0;
-      z-index: -3;
-    }
-
-    .slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      animation: slideShow 24s infinite;
-    }
-
-    .slide:nth-child(1) {
-      background-image: url("https://images.unsplash.com/photo-1519682337058-a94d519337bc");
-      animation-delay: 0s;
-    }
-
-    .slide:nth-child(2) {
-      background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
-      animation-delay: 6s;
-    }
-
-    .slide:nth-child(3) {
-      background-image: url("https://images.unsplash.com/photo-1491841550275-ad7854e35ca6");
-      animation-delay: 12s;
-    }
-
-    .slide:nth-child(4) {
-      background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b");
-      animation-delay: 18s;
-    }
-
-    @keyframes slideShow {
-      0% { opacity: 0; }
-      10% { opacity: 1; }
-      30% { opacity: 1; }
-      40% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
-    /* ===== COLORFUL OVERLAY ===== */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        120deg,
-        rgba(30, 58, 138, 0.55),
-        rgba(79, 70, 229, 0.45),
-        rgba(168, 85, 247, 0.45)
-      );
-      z-index: -2;
-    }
-
-    /* ===== HERO CONTENT ===== */
-    .hero-content {
-      max-width: 950px;
+    /* ===== GLASS CARD ===== */
+    .glass-card {
+      max-width: 900px;
+      padding: 60px 60px 70px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
       animation: fadeUp 1.4s ease;
     }
 
-    .hero-content h1 {
-      font-size: 62px;
+    .glass-card h1 {
+      font-size: 56px;
       font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 20px;
+      line-height: 1.2;
+      margin-bottom: 22px;
     }
 
-    .hero-content h1 span {
+    .glass-card h1 span {
       background: linear-gradient(90deg, #93c5fd, #c4b5fd, #f9a8d4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .hero-content p {
+    .glass-card p {
       font-size: 18px;
       opacity: 0.95;
       margin-bottom: 42px;
@@ -152,7 +106,7 @@
     }
 
     .search-box input {
-      width: 440px;
+      width: 420px;
       padding: 16px 22px;
       border-radius: 30px 0 0 30px;
       border: none;
@@ -177,7 +131,7 @@
 
     /* ===== FOOTER ===== */
     footer {
-      background: #0f172a;
+      background: rgba(15, 23, 42, 0.8);
       text-align: center;
       padding: 26px 20px;
       color: #c7d2fe;
@@ -199,15 +153,19 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       nav {
-        padding: 18px 28px;
+        padding: 18px 30px;
       }
 
-      .hero-content h1 {
-        font-size: 40px;
+      .glass-card {
+        padding: 40px 26px 50px;
+      }
+
+      .glass-card h1 {
+        font-size: 38px;
       }
 
       .search-box input {
-        width: 260px;
+        width: 240px;
       }
     }
   </style>
@@ -227,24 +185,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="slideshow">
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-    </div>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
+    <div class="glass-card">
       <h1>
-        Welcome to<br>
-        <span>Nazwa Syafina Digital Library</span>
+        Welcome to <span>Nazwa Syafina</span><br>
+        Digital Library
       </h1>
 
       <p>
-        Explore knowledge, read freely, and grow together  
-        in a colorful digital library made for Gen Z.
+        Ruang literasi digital untuk membaca, belajar,  
+        dan mengeksplorasi pengetahuan tanpa batas.
       </p>
 
       <div class="search-box">
@@ -256,7 +205,7 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2026 Nazwa Syafina Digital Library • Learn. Explore. Grow.
+    © 2026 Nazwa Syafina Digital Library • Learn • Explore • Grow
   </footer>
 
 </body>
