@@ -18,14 +18,15 @@
 
         body {
             min-height: 100vh;
-            color: #eaf2ff;
-            background: linear-gradient(120deg, #b8d7ff, #d9cfff, #b5f0ff);
+            color: #2b2b2b;
+            background: linear-gradient(120deg, #cfe4ff, #e6dcff, #c9f4ff);
             overflow-x: hidden;
         }
 
         /* ===== NAVBAR ===== */
         nav {
-            background: #0f1e3a;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
             padding: 16px 50px;
             display: flex;
             justify-content: flex-end;
@@ -34,13 +35,13 @@
 
         nav a {
             text-decoration: none;
-            color: #dbe7ff;
+            color: #3a4a6b;
             font-weight: 500;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #9fd4ff;
+            color: #6b7cff;
         }
 
         /* ===== HERO ===== */
@@ -59,31 +60,35 @@
             font-size: 52px;
             font-weight: 700;
             letter-spacing: 2px;
-            background: linear-gradient(90deg, #ffffff, #b8e2ff);
+            line-height: 1.2;
+            background: linear-gradient(90deg, #2b3a67, #6f8cff, #7fd7ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 8px 30px rgba(80, 110, 255, 0.25);
         }
 
         .hero p {
-            margin-top: 16px;
+            margin-top: 18px;
             font-size: 18px;
-            max-width: 600px;
-            opacity: 0.9;
+            max-width: 620px;
+            color: #4a5875;
         }
 
         /* ===== SEARCH BAR ===== */
         .search-box {
-            margin-top: 40px;
+            margin-top: 42px;
             width: 100%;
             max-width: 480px;
             display: flex;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-radius: 30px;
+            overflow: hidden;
         }
 
         .search-box input {
             flex: 1;
             padding: 16px 20px;
             border: none;
-            border-radius: 30px 0 0 30px;
             outline: none;
             font-size: 15px;
         }
@@ -91,8 +96,7 @@
         .search-box button {
             padding: 16px 26px;
             border: none;
-            border-radius: 0 30px 30px 0;
-            background: linear-gradient(135deg, #6fb1ff, #8f7bff);
+            background: linear-gradient(135deg, #6f8cff, #7fd7ff);
             color: white;
             cursor: pointer;
             font-weight: 500;
@@ -106,8 +110,8 @@
         /* ===== SPARKLE ===== */
         .sparkle {
             position: absolute;
-            width: 2px;
-            height: 2px;
+            width: 3px;
+            height: 3px;
             background: white;
             border-radius: 50%;
             animation: twinkle 4s infinite ease-in-out;
@@ -127,11 +131,12 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background: #0b162d;
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(10px);
             padding: 24px;
             text-align: center;
             font-size: 14px;
-            color: #b8cfff;
+            color: #4a5875;
         }
     </style>
 </head>
@@ -148,10 +153,10 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Welcome to Nazwa Syafina<br>Digital Library</h1>
+        <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
         <p>
-            Discover knowledge, explore collections, and enjoy a modern digital
-            library experience designed for you.
+            A modern digital library space to explore knowledge,
+            collections, and ideas — designed with a fresh, gen-z vibe.
         </p>
 
         <div class="search-box">
