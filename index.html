@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazwa Syafina Digital Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,138 +13,163 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #ffffff;
-            background: linear-gradient(135deg, #A5B4FC, #FBCFE8, #C4B5FD);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
+            color: #eaf2ff;
+            background: linear-gradient(120deg, #b8d7ff, #d9cfff, #b5f0ff);
+            overflow-x: hidden;
         }
 
+        /* ===== NAVBAR ===== */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 50px;
+            background: #0f1e3a;
+            padding: 16px 50px;
             display: flex;
             justify-content: flex-end;
-            background: rgba(255,255,255,0.25);
-            backdrop-filter: blur(10px);
-            z-index: 10;
+            gap: 32px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 28px;
-        }
-
-        nav ul li a {
+        nav a {
             text-decoration: none;
-            color: #ffffff;
+            color: #dbe7ff;
             font-weight: 500;
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: #FDE68A;
+        nav a:hover {
+            color: #9fd4ff;
         }
 
+        /* ===== HERO ===== */
         .hero {
-            flex: 1;
+            position: relative;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-top: 100px;
-            padding-bottom: 60px;
+            text-align: center;
+            padding: 40px 20px;
         }
 
         .hero h1 {
-            font-size: 64px;
+            font-size: 52px;
             font-weight: 700;
-            background: linear-gradient(90deg, #EC4899, #3B82F6);
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ffffff, #b8e2ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 22px;
-            margin-bottom: 30px;
-            color: #fafafa;
+            margin-top: 16px;
+            font-size: 18px;
+            max-width: 600px;
             opacity: 0.9;
         }
 
+        /* ===== SEARCH BAR ===== */
         .search-box {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 480px;
             display: flex;
-            gap: 10px;
-            justify-content: center;
         }
 
         .search-box input {
-            width: 360px;
-            padding: 14px 20px;
-            border-radius: 30px 0 0 30px;
+            flex: 1;
+            padding: 16px 20px;
             border: none;
+            border-radius: 30px 0 0 30px;
             outline: none;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .search-box button {
-            padding: 14px 26px;
-            border-radius: 0 30px 30px 0;
+            padding: 16px 26px;
             border: none;
-            background: #6366F1;
-            color: #ffffff;
-            font-size: 16px;
+            border-radius: 0 30px 30px 0;
+            background: linear-gradient(135deg, #6fb1ff, #8f7bff);
+            color: white;
             cursor: pointer;
+            font-weight: 500;
             transition: 0.3s;
         }
 
         .search-box button:hover {
-            background: #4F46E5;
+            opacity: 0.85;
         }
 
+        /* ===== SPARKLE ===== */
+        .sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.8);
+            }
+        }
+
+        /* ===== FOOTER ===== */
         footer {
-            background: rgba(255,255,255,0.2);
-            color: #f0f9ff;
-            padding: 24px 20px;
+            background: #0b162d;
+            padding: 24px;
+            text-align: center;
             font-size: 14px;
+            color: #b8cfff;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVBAR -->
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Koleksi</a></li>
-            <li><a href="#">Layanan</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Kontak</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
-        <p>Explore, Learn, and Grow in a Digital World</p>
+        <h1>Welcome to Nazwa Syafina<br>Digital Library</h1>
+        <p>
+            Discover knowledge, explore collections, and enjoy a modern digital
+            library experience designed for you.
+        </p>
 
         <div class="search-box">
-            <input type="text" placeholder="Cari buku, jurnal, atau topik...">
-            <button>Cari</button>
+            <input type="text" placeholder="Search books, journals, or collections...">
+            <button>Search</button>
         </div>
+
+        <!-- Sparkles -->
+        <span class="sparkle" style="top:15%; left:20%"></span>
+        <span class="sparkle" style="top:40%; left:70%"></span>
+        <span class="sparkle" style="top:65%; left:30%"></span>
+        <span class="sparkle" style="top:25%; left:85%"></span>
+        <span class="sparkle" style="top:75%; left:60%"></span>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        © 2026 Nazwa Syafina Digital Library — Read • Discover • Create
+        © 2026 Nazwa Syafina Digital Library · All Rights Reserved
     </footer>
 
 </body>
