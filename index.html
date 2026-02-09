@@ -1,212 +1,151 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nazwa Syafina Digital Library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazwa Syafina Digital Library</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #ffffff;
-      min-height: 100vh;
-      background: linear-gradient(
-        120deg,
-        #1e3a8a,
-        #4f46e5,
-        #9333ea
-      );
-      display: flex;
-      flex-direction: column;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #A5B4FC, #FBCFE8, #C4B5FD);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
 
-    /* ===== NAVBAR ===== */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 22px 60px;
-      display: flex;
-      justify-content: flex-end;
-      z-index: 10;
-      background: rgba(15, 23, 42, 0.35);
-      backdrop-filter: blur(10px);
-    }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #e0e7ff;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-    nav ul li a:hover {
-      color: #c7d2fe;
-    }
+        nav ul li a:hover {
+            color: #FDE68A;
+        }
 
-    /* ===== HERO ===== */
-    .hero {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 20px 40px;
-      text-align: center;
-    }
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
 
-    /* ===== GLASS CARD ===== */
-    .glass-card {
-      max-width: 900px;
-      padding: 60px 60px 70px;
-      border-radius: 26px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-      animation: fadeUp 1.4s ease;
-    }
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #EC4899, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
 
-    .glass-card h1 {
-      font-size: 56px;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 22px;
-    }
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #fafafa;
+            opacity: 0.9;
+        }
 
-    .glass-card h1 span {
-      background: linear-gradient(90deg, #93c5fd, #c4b5fd, #f9a8d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+        .search-box {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
 
-    .glass-card p {
-      font-size: 18px;
-      opacity: 0.95;
-      margin-bottom: 42px;
-    }
+        .search-box input {
+            width: 360px;
+            padding: 14px 20px;
+            border-radius: 30px 0 0 30px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
 
-    /* ===== SEARCH BAR ===== */
-    .search-box {
-      display: flex;
-      justify-content: center;
-    }
+        .search-box button {
+            padding: 14px 26px;
+            border-radius: 0 30px 30px 0;
+            border: none;
+            background: #6366F1;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    .search-box input {
-      width: 420px;
-      padding: 16px 22px;
-      border-radius: 30px 0 0 30px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-    }
+        .search-box button:hover {
+            background: #4F46E5;
+        }
 
-    .search-box button {
-      padding: 16px 34px;
-      border-radius: 0 30px 30px 0;
-      border: none;
-      background: linear-gradient(90deg, #6366f1, #a855f7);
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .search-box button:hover {
-      opacity: 0.9;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: rgba(15, 23, 42, 0.8);
-      text-align: center;
-      padding: 26px 20px;
-      color: #c7d2fe;
-      font-size: 14px;
-    }
-
-    /* ===== ANIMATION ===== */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      nav {
-        padding: 18px 30px;
-      }
-
-      .glass-card {
-        padding: 40px 26px 50px;
-      }
-
-      .glass-card h1 {
-        font-size: 38px;
-      }
-
-      .search-box input {
-        width: 240px;
-      }
-    }
-  </style>
+        footer {
+            background: rgba(255,255,255,0.2);
+            color: #f0f9ff;
+            padding: 24px 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Koleksi</a></li>
-      <li><a href="#">Layanan</a></li>
-      <li><a href="#">Tentang</a></li>
-      <li><a href="#">Kontak</a></li>
-    </ul>
-  </nav>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Koleksi</a></li>
+            <li><a href="#">Layanan</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="glass-card">
-      <h1>
-        Welcome to <span>Nazwa Syafina</span><br>
-        Digital Library
-      </h1>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
+        <p>Explore, Learn, and Grow in a Digital World</p>
 
-      <p>
-        Ruang literasi digital untuk membaca, belajar,  
-        dan mengeksplorasi pengetahuan tanpa batas.
-      </p>
+        <div class="search-box">
+            <input type="text" placeholder="Cari buku, jurnal, atau topik...">
+            <button>Cari</button>
+        </div>
+    </section>
 
-      <div class="search-box">
-        <input type="text" placeholder="Cari buku, jurnal, atau topik...">
-        <button>Cari</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Nazwa Syafina Digital Library • Learn • Explore • Grow
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Nazwa Syafina Digital Library — Read • Discover • Create
+    </footer>
 
 </body>
 </html>
