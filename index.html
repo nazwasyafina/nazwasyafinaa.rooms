@@ -1,107 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nazwa Syafina Digital Library</title>
+    <meta charset="UTF-8">
+    <title>Nazwa Syafina Digital Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #ffffff, #e6f0ff);
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-/* NAVBAR */
-nav {
-    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
-    padding: 15px;
-    text-align: center;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-}
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #ffffff 0%,
+                #f8fbff 40%,
+                #e0f2fe 75%,
+                #c7e0ff 100%
+            );
+            overflow-x: hidden;
+        }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 60px 20px;
-}
+        nav {
+            background: rgba(199, 224, 255, 0.6);
+            backdrop-filter: blur(12px);
+            padding: 16px 50px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 32px;
+        }
 
-header h1 {
-    font-size: 40px;
-    font-weight: 700;
-    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        nav a {
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-/* MAIN CONTENT */
-.main-content {
-    padding: 40px 20px;
-    text-align: center;
-}
+        nav a:hover {
+            color: #2563eb;
+        }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: 0.3s;
-}
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.btn:hover {
-    opacity: 0.8;
-}
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #1e3a8a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-/* FOOTER */
-footer {
-    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-</style>
+        .hero p {
+            margin-top: 18px;
+            font-size: 18px;
+            max-width: 620px;
+            color: #334155;
+        }
+
+        .search-box {
+            margin-top: 42px;
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 18px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search-box button {
+            padding: 16px 26px;
+            border: none;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            opacity: 0.85;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #93c5fd;
+            border-radius: 50%;
+            animation: twinkle 4s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.8);
+            }
+        }
+
+        /* ===== NEW SECTION (TAMBAHAN SAJA) ===== */
+        .extra-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .extra-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+
+        .extra-section a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            color: white;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            transition: 0.3s;
+        }
+
+        .extra-section a:hover {
+            opacity: 0.85;
+        }
+
+        footer {
+            background: rgba(199, 224, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: #1e3a8a;
+        }
+    </style>
 </head>
 
 <body>
 
 <nav>
     <a href="#">Home</a>
-    <a href="#video">Video</a>
-    <a href="about.html">About Me</a>
+    <a href="#">Collection</a>
+    <a href="about.html">About</a>
+    <a href="#">Contact</a>
 </nav>
 
-<header>
-    <h1>Welcome to Nazwa Syafina Digital Library</h1>
-</header>
-
-<div class="main-content">
-    <p>This is my personal digital library website.</p>
-
-    <!-- LINK KE ABOUT ME -->
-    <a href="about.html" class="btn">Visit My Profile</a>
-
-    <!-- YOUTUBE SECTION -->
-    <h2 id="video" style="margin-top:60px;">Featured Video</h2>
+<section class="hero">
+    <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
     <p>
-        <a href="https://www.youtube.com/" target="_blank">
-            Click here to watch my YouTube video
-        </a>
+        A modern digital library space to explore knowledge,
+        collections, and ideas — designed with a fresh gen-z vibe.
     </p>
-</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search books, journals, or collections...">
+        <button>Search</button>
+    </div>
+
+    <span class="sparkle" style="top:18%; left:22%"></span>
+    <span class="sparkle" style="top:42%; left:75%"></span>
+    <span class="sparkle" style="top:68%; left:35%"></span>
+    <span class="sparkle" style="top:28%; left:85%"></span>
+    <span class="sparkle" style="top:75%; left:60%"></span>
+</section>
+
+<!-- ===== TAMBAHAN DI BAWAH HERO ===== -->
+<section class="extra-section">
+    <h2>Explore More About Me</h2>
+
+    <!-- LINK ABOUT ME -->
+    <a href="about.html">Visit My Profile</a>
+
+    <!-- LINK YOUTUBE -->
+    <a href="https://youtube.com/" target="_blank">
+        Watch My YouTube
+    </a>
+</section>
 
 <footer>
-    © 2026 Nazwa Syafina | Digital Library
+    © 2026 Nazwa Syafina Digital Library · Designed with 💙
 </footer>
 
 </body>
