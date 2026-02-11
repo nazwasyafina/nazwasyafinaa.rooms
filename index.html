@@ -1,118 +1,107 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nazwa Syafina Digital Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nazwa Syafina Digital Library</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #e6f0ff);
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+/* NAVBAR */
+nav {
+    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
+    padding: 15px;
+    text-align: center;
+}
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg,#ffffff,#eaf4ff,#dbeafe);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
 
-        nav {
-            background: rgba(199,224,255,0.7);
-            padding: 16px 50px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 30px;
-        }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #1e3a8a;
-            font-weight: 500;
-        }
+header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        nav a:hover {
-            color: #2563eb;
-        }
+/* MAIN CONTENT */
+.main-content {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
 
-        h1 {
-            font-size: 52px;
-            background: linear-gradient(90deg,#1e3a8a,#3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.btn:hover {
+    opacity: 0.8;
+}
 
-        p {
-            margin-top: 18px;
-            font-size: 18px;
-            max-width: 600px;
-            color: #334155;
-        }
-
-        .btn-group {
-            margin-top: 35px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            background: linear-gradient(135deg,#1e40af,#3b82f6);
-            color: white;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            opacity: 0.85;
-        }
-
-        footer {
-            background: rgba(199,224,255,0.8);
-            text-align: center;
-            padding: 25px;
-            color: #1e3a8a;
-        }
-    </style>
+/* FOOTER */
+footer {
+    background: linear-gradient(to right, #0f2a5f, #2b6cb0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
+    <a href="#">Home</a>
+    <a href="#video">Video</a>
     <a href="about.html">About Me</a>
 </nav>
 
-<section class="hero">
-    <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
-    <p>
-        Digital library platform designed for modern learners.
-        Explore knowledge, collections, and educational resources.
-    </p>
+<header>
+    <h1>Welcome to Nazwa Syafina Digital Library</h1>
+</header>
 
-    <div class="btn-group">
-        <a href="about.html" class="btn">About Me</a>
-        <a href="https://www.youtube.com/" target="_blank" class="btn">Watch on YouTube</a>
-    </div>
-</section>
+<div class="main-content">
+    <p>This is my personal digital library website.</p>
+
+    <!-- LINK KE ABOUT ME -->
+    <a href="about.html" class="btn">Visit My Profile</a>
+
+    <!-- YOUTUBE SECTION -->
+    <h2 id="video" style="margin-top:60px;">Featured Video</h2>
+    <p>
+        <a href="https://www.youtube.com/" target="_blank">
+            Click here to watch my YouTube video
+        </a>
+    </p>
+</div>
 
 <footer>
-    © 2026 Nazwa Syafina Digital Library · Designed with 💙
+    © 2026 Nazwa Syafina | Digital Library
 </footer>
 
 </body>
