@@ -2,10 +2,9 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Nazwa Syafina Digital Library</title>
+    <title>About Me - Nazwa Syafina</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -18,151 +17,66 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(
-                135deg,
-                #ffffff 0%,
-                #f8fbff 40%,
-                #e0f2fe 75%,
-                #c7e0ff 100%
-            );
-            overflow-x: hidden;
+            background: linear-gradient(135deg,#ffffff,#eaf4ff,#dbeafe);
+            padding: 50px 20px;
         }
 
-        nav {
-            background: rgba(199, 224, 255, 0.6);
-            backdrop-filter: blur(12px);
-            padding: 16px 50px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 32px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #1e3a8a;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #2563eb;
-        }
-
-        .hero {
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .container {
+            max-width: 900px;
+            margin: auto;
             text-align: center;
-            padding: 40px 20px;
         }
 
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            line-height: 1.2;
-            background: linear-gradient(90deg, #1e3a8a, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        .hero p {
-            margin-top: 18px;
-            font-size: 18px;
-            max-width: 620px;
+        h1 {
+            font-size: 36px;
+            color: #1e3a8a;
+        }
+
+        p {
+            margin-top: 15px;
+            color: #475569;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg,#1e40af,#3b82f6);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .cv {
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .cv h2 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .cv ul {
+            list-style: disc;
+            margin-left: 20px;
             color: #334155;
         }
 
-        .search-box {
-            margin-top: 42px;
-            width: 100%;
-            max-width: 480px;
-            display: flex;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 18px 40px rgba(59, 130, 246, 0.15);
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 16px 20px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .search-box button {
-            padding: 16px 26px;
-            border: none;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            cursor: pointer;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .search-box button:hover {
-            opacity: 0.85;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #93c5fd;
-            border-radius: 50%;
-            animation: twinkle 4s infinite ease-in-out;
-            opacity: 0.8;
-        }
-
-        @keyframes twinkle {
-            0%, 100% {
-                opacity: 0.2;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.8);
-            }
-        }
-
-        /* ===== NEW SECTION (TAMBAHAN SAJA) ===== */
-        .extra-section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .extra-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #1e3a8a;
-        }
-
-        .extra-section a {
-            display: inline-block;
-            margin: 10px 15px;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            color: white;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transition: 0.3s;
-        }
-
-        .extra-section a:hover {
-            opacity: 0.85;
-        }
-
         footer {
-            background: rgba(199, 224, 255, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 24px;
+            margin-top: 40px;
             text-align: center;
-            font-size: 14px;
             color: #1e3a8a;
         }
     </style>
@@ -170,48 +84,29 @@
 
 <body>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Collection</a>
-    <a href="about.html">About</a>
-    <a href="#">Contact</a>
-</nav>
+<div class="container">
+    <img src="https://via.placeholder.com/180" alt="Foto Nazwa">
 
-<section class="hero">
-    <h1>Welcome to<br>Nazwa Syafina Digital Library</h1>
-    <p>
-        A modern digital library space to explore knowledge,
-        collections, and ideas — designed with a fresh gen-z vibe.
-    </p>
+    <h1>Nazwa Syafina</h1>
+    <p>Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang tertarik pada literasi digital dan pengembangan perpustakaan berbasis teknologi.</p>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search books, journals, or collections...">
-        <button>Search</button>
+    <div class="social">
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
     </div>
 
-    <span class="sparkle" style="top:18%; left:22%"></span>
-    <span class="sparkle" style="top:42%; left:75%"></span>
-    <span class="sparkle" style="top:68%; left:35%"></span>
-    <span class="sparkle" style="top:28%; left:85%"></span>
-    <span class="sparkle" style="top:75%; left:60%"></span>
-</section>
+    <div class="cv">
+        <h2>Curriculum Vitae</h2>
+        <ul>
+            <li>Pendidikan: S1 Perpustakaan dan Sains Informasi</li>
+            <li>Keahlian: Digital Library, Information Management, Web Design</li>
+            <li>Pengalaman: Proyek Website Perpustakaan Digital</li>
+        </ul>
+    </div>
 
-<!-- ===== TAMBAHAN DI BAWAH HERO ===== -->
-<section class="extra-section">
-    <h2>Explore More About Me</h2>
-
-    <!-- LINK ABOUT ME -->
-    <a href="about.html">Visit My Profile</a>
-
-    <!-- LINK YOUTUBE -->
-    <a href="https://youtube.com/" target="_blank">
-        Watch My YouTube
-    </a>
-</section>
-
-<footer>
-    © 2026 Nazwa Syafina Digital Library · Designed with 💙
-</footer>
+    <footer>
+        © 2026 Nazwa Syafina
+    </footer>
+</div>
 
 </body>
 </html>
