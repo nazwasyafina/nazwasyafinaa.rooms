@@ -1,112 +1,229 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>About Me - Nazwa Syafina</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nazwa Syafina Digital Library</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg,#ffffff,#eaf4ff,#dbeafe);
-            padding: 50px 20px;
-        }
+body{
+  background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
+  color:#4b3621;
+  overflow-x:hidden;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(15px);
+  z-index:1000;
+}
 
-        img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
+nav a{
+  text-decoration:none;
+  color:#6f4e37;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
+}
 
-        h1 {
-            font-size: 36px;
-            color: #1e3a8a;
-        }
+nav a:hover{
+  color:#b08968;
+}
 
-        p {
-            margin-top: 15px;
-            color: #475569;
-        }
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 20px;
+  position:relative;
+}
 
-        .social {
-            margin-top: 20px;
-        }
+.hero h1{
+  font-size:56px;
+  font-weight:700;
+  background:linear-gradient(90deg,#6f4e37,#b08968);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-        .social a {
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(135deg,#1e40af,#3b82f6);
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
+.hero span{
+  font-weight:400;
+  font-size:18px;
+  display:block;
+  margin-top:10px;
+  letter-spacing:2px;
+}
 
-        .cv {
-            margin-top: 35px;
-            text-align: left;
-        }
+.hero p{
+  max-width:650px;
+  margin-top:25px;
+  line-height:1.8;
+}
 
-        .cv h2 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
+/* elemen dekoratif */
+.circle{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(176,137,104,0.2);
+  filter:blur(70px);
+  z-index:-1;
+}
 
-        .cv ul {
-            list-style: disc;
-            margin-left: 20px;
-            color: #334155;
-        }
+.circle.one{width:300px;height:300px;top:100px;left:80px;}
+.circle.two{width:250px;height:250px;bottom:100px;right:100px;}
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #1e3a8a;
-        }
-    </style>
+/* ===== BUTTON ===== */
+.btn{
+  margin-top:35px;
+  display:inline-block;
+  padding:14px 30px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#6f4e37,#b08968);
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:120px 20px;
+  text-align:center;
+}
+
+.section h2{
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+/* ===== ABOUT ===== */
+.about img{
+  width:220px;
+  border-radius:20px;
+  margin:25px 0;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.social a{
+  display:inline-block;
+  margin:12px;
+  padding:12px 26px;
+  border-radius:25px;
+  background:#b08968;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social a:hover{
+  background:#6f4e37;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:30px;
+  text-align:center;
+  background:rgba(255,255,255,0.5);
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
-    <img src="https://via.placeholder.com/180" alt="Foto Nazwa">
+<!-- AUDIO -->
+<audio autoplay loop>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
 
-    <h1>Nazwa Syafina</h1>
-    <p>Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang tertarik pada literasi digital dan pengembangan perpustakaan berbasis teknologi.</p>
+<!-- NAVBAR -->
+<nav>
+  <div><strong>NS</strong></div>
+  <div>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang Saya</a>
+    <a href="#media">Media</a>
+  </div>
+</nav>
 
-    <div class="social">
-        <a href="https://instagram.com/" target="_blank">Instagram</a>
-    </div>
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="circle one"></div>
+  <div class="circle two"></div>
 
-    <div class="cv">
-        <h2>Curriculum Vitae</h2>
-        <ul>
-            <li>Pendidikan: S1 Perpustakaan dan Sains Informasi</li>
-            <li>Keahlian: Digital Library, Information Management, Web Design</li>
-            <li>Pengalaman: Proyek Website Perpustakaan Digital</li>
-        </ul>
-    </div>
+  <h1>Nazwa Syafina<br>Digital Library</h1>
+  <span>Website Identitas Akademik Personal</span>
 
-    <footer>
-        © 2026 Nazwa Syafina
-    </footer>
-</div>
+  <p>
+    Website ini merupakan perpustakaan digital personal yang saya kembangkan
+    sebagai representasi identitas akademik dalam bidang
+    Ilmu Perpustakaan dan Sains Informasi.
+    Platform ini menjadi ruang eksplorasi literasi digital,
+    koleksi, serta pengembangan profesional saya.
+  </p>
+
+  <a href="#tentang" class="btn">Lihat Profil Saya</a>
+</section>
+
+<!-- TENTANG -->
+<section class="section about" id="tentang">
+  <h2>Tentang Saya</h2>
+
+  <img src="foto-saya.jpg" alt="Foto Nazwa Syafina">
+
+  <p>
+    Saya adalah mahasiswa Program Studi Ilmu Perpustakaan dan Sains Informasi.
+    Website ini dirancang sebagai bentuk penguatan identitas diri,
+    portofolio akademik, serta implementasi keterampilan
+    dalam pengembangan sistem perpustakaan digital.
+  </p>
+
+  <div class="social">
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
+    <a href="cv.pdf" target="_blank">Unduh Curriculum Vitae</a>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="section" id="media">
+  <h2>Media & Konten Akademik</h2>
+
+  <p>
+    Watch my curated educational content
+  </p>
+
+  <a href="https://youtube.com/" target="_blank" class="btn">
+    Kunjungi Kanal YouTube
+  </a>
+</section>
+
+<footer>
+© 2026 Nazwa Syafina Digital Library 
+</footer>
 
 </body>
 </html>
