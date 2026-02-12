@@ -72,11 +72,20 @@ nav a:hover{
   text-align:center;
 }
 
-.center img{
-  width:200px;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.1);
-  margin-bottom:15px;
+/* FOTO PROFIL */
+.profile-img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #ffffff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  margin-bottom:20px;
+  transition:0.4s ease;
+}
+
+.profile-img:hover{
+  transform:scale(1.05);
 }
 
 .center h2{
@@ -173,7 +182,7 @@ footer{
   </div>
 
   <div class="center">
-    <img src="foto.jpeg" alt="Foto Nazwa"> class="profile-img"> 
+    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
     <h2>Nazwa Syafina</h2>
     <span>Ilmu Perpustakaan & Sains Informasi</span>
   </div>
@@ -184,11 +193,10 @@ footer{
     </a>
 
     <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-   target="_blank" 
-   class="link-btn">
-  Curriculum Vitae
-</a>
-
+       target="_blank" 
+       class="link-btn">
+      Curriculum Vitae
+    </a>
   </div>
 
 </div>
