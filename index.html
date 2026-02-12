@@ -13,15 +13,12 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-  height:100vh;
-  overflow:hidden;
   background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
   color:#4b3621;
-  display:flex;
-  flex-direction:column;
 }
 
 /* ===== NAVBAR ===== */
@@ -31,6 +28,9 @@ nav{
   padding:20px 60px;
   background:rgba(255,255,255,0.6);
   backdrop-filter:blur(15px);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 nav a{
@@ -50,8 +50,7 @@ nav a:hover{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   align-items:center;
-  padding:30px 60px;
-  flex:1;
+  padding:80px 60px 60px 60px;
 }
 
 /* LEFT */
@@ -107,11 +106,11 @@ nav a:hover{
 
 /* ===== YOUTUBE SECTION ===== */
 .youtube-section{
-  padding:10px 60px 30px 60px;
+  padding:40px 60px 80px 60px;
   text-align:center;
 }
 
-/* GARIS PEMBATAS DI ATAS JUDUL */
+/* GARIS PEMBATAS */
 .divider{
   width:80%;
   height:2px;
@@ -126,7 +125,7 @@ nav a:hover{
 }
 
 .youtube-section h3{
-  margin-bottom:15px;
+  margin-bottom:20px;
 }
 
 .youtube-section iframe{
@@ -137,7 +136,7 @@ nav a:hover{
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
-  padding:12px;
+  padding:20px;
   background:rgba(255,255,255,0.5);
   font-size:13px;
 }
@@ -198,7 +197,7 @@ footer{
 
   <h3>Video Dokumentasi</h3>
 
-  <iframe width="420" height="236"
+  <iframe width="560" height="315"
     src="https://www.youtube.com/embed/4w13jP-cshM"
     frameborder="0"
     allowfullscreen>
