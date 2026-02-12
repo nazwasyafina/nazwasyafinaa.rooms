@@ -24,7 +24,7 @@ body{
   flex-direction:column;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav{
   display:flex;
   justify-content:space-between;
@@ -45,18 +45,18 @@ nav a:hover{
   color:#b08968;
 }
 
-/* ===== MAIN LAYOUT ===== */
+/* MAIN TOP */
 .container{
-  flex:1;
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   align-items:center;
-  padding:40px 60px;
+  padding:30px 60px;
+  flex:1;
 }
 
-/* ===== LEFT ===== */
+/* LEFT */
 .left h1{
-  font-size:42px;
+  font-size:38px;
   background:linear-gradient(90deg,#6f4e37,#b08968);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -64,50 +64,40 @@ nav a:hover{
 
 .left p{
   margin-top:20px;
-  line-height:1.8;
-  max-width:350px;
+  line-height:1.7;
+  max-width:320px;
 }
 
-/* ===== CENTER ===== */
+/* CENTER */
 .center{
   text-align:center;
 }
 
 .center img{
-  width:220px;
+  width:200px;
   border-radius:20px;
   box-shadow:0 20px 40px rgba(0,0,0,0.1);
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
 .center h2{
-  font-weight:600;
-  margin-bottom:10px;
+  margin-bottom:5px;
 }
 
-.center span{
-  font-size:14px;
-  letter-spacing:2px;
-}
-
-/* ===== RIGHT ===== */
+/* RIGHT */
 .right{
   text-align:center;
 }
 
-.right h3{
-  margin-bottom:25px;
-}
-
 .link-btn{
   display:block;
-  margin:15px auto;
-  padding:12px 25px;
+  margin:12px auto;
+  padding:10px 22px;
   border-radius:25px;
   background:linear-gradient(135deg,#6f4e37,#b08968);
   color:white;
   text-decoration:none;
-  width:200px;
+  width:180px;
   transition:0.3s;
 }
 
@@ -115,10 +105,25 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-/* ===== FOOTER ===== */
+/* YOUTUBE SECTION */
+.youtube-section{
+  padding:20px 60px 40px 60px;
+  text-align:center;
+}
+
+.youtube-section h3{
+  margin-bottom:15px;
+}
+
+.youtube-section iframe{
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
 footer{
   text-align:center;
-  padding:15px;
+  padding:12px;
   background:rgba(255,255,255,0.5);
   font-size:13px;
 }
@@ -127,7 +132,6 @@ footer{
 
 <body>
 
-<!-- AUDIO -->
 <audio autoplay loop>
   <source src="audio.mp3" type="audio/mpeg">
 </audio>
@@ -141,30 +145,25 @@ footer{
   </div>
 </nav>
 
+<!-- BAGIAN ATAS -->
 <div class="container">
 
-  <!-- LEFT -->
   <div class="left">
     <h1>Nazwa Syafina Digital Library</h1>
     <p>
       Website ini merupakan perpustakaan digital personal yang
       merepresentasikan identitas akademik saya dalam bidang
       Ilmu Perpustakaan dan Sains Informasi.
-      Platform ini menjadi ruang literasi digital dan pengembangan profesional.
     </p>
   </div>
 
-  <!-- CENTER -->
   <div class="center">
     <img src="foto-saya.jpg" alt="Foto Nazwa">
     <h2>Nazwa Syafina</h2>
     <span>Ilmu Perpustakaan & Sains Informasi</span>
   </div>
 
-  <!-- RIGHT -->
   <div class="right">
-    <h3>Terhubung Dengan Saya</h3>
-
     <a href="https://instagram.com/" target="_blank" class="link-btn">
       Instagram
     </a>
@@ -172,12 +171,20 @@ footer{
     <a href="cv.pdf" target="_blank" class="link-btn">
       Curriculum Vitae
     </a>
-
-    <a href="https://youtube.com/" target="_blank" class="link-btn">
-      YouTube
-    </a>
   </div>
 
+</div>
+
+<!-- SECTION YOUTUBE -->
+<div class="youtube-section">
+  <h3>Video Perkenalan</h3>
+
+  <!-- Ganti link setelah embed/ dengan ID video kamu -->
+  <iframe width="420" height="236"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
 </div>
 
 <footer>
