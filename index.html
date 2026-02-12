@@ -24,7 +24,7 @@ body{
   flex-direction:column;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 nav{
   display:flex;
   justify-content:space-between;
@@ -45,7 +45,7 @@ nav a:hover{
   color:#b08968;
 }
 
-/* MAIN TOP */
+/* ===== BAGIAN ATAS ===== */
 .container{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -105,9 +105,23 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-/* YOUTUBE SECTION */
+/* ===== GARIS PEMBATAS ===== */
+.divider{
+  width:80%;
+  height:2px;
+  margin:5px auto 25px auto;
+  background:linear-gradient(to right, 
+    transparent, 
+    #b08968, 
+    #6f4e37, 
+    #b08968, 
+    transparent);
+  border-radius:10px;
+}
+
+/* ===== YOUTUBE SECTION ===== */
 .youtube-section{
-  padding:20px 60px 40px 60px;
+  padding:10px 60px 30px 60px;
   text-align:center;
 }
 
@@ -120,7 +134,7 @@ nav a:hover{
   box-shadow:0 15px 35px rgba(0,0,0,0.1);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
   text-align:center;
   padding:12px;
@@ -132,10 +146,12 @@ footer{
 
 <body>
 
+<!-- AUDIO -->
 <audio autoplay loop>
   <source src="audio.mp3" type="audio/mpeg">
 </audio>
 
+<!-- NAVBAR -->
 <nav>
   <div><strong>Nazwa Syafina Digital Library</strong></div>
   <div>
@@ -164,7 +180,7 @@ footer{
   </div>
 
   <div class="right">
-    <a href="https://instagram.com/" target="_blank" class="link-btn">
+    <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
       Instagram
     </a>
 
@@ -175,18 +191,22 @@ footer{
 
 </div>
 
-<!-- SECTION YOUTUBE -->
-<div class="youtube-section">
-  <h3>Video Perkenalan</h3>
+<!-- GARIS PEMBATAS -->
+<div class="divider"></div>
 
-  <!-- Ganti link setelah embed/ dengan ID video kamu -->
+<!-- YOUTUBE -->
+<div class="youtube-section">
+  <h3>Video Dokumentasi</h3>
+
+  <!-- Ganti ID video setelah embed/ -->
   <iframe width="420" height="236"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    src="https://youtu.be/4w13jP-cshM?si=DOibJ-UUo0yXeCU8"
     frameborder="0"
     allowfullscreen>
   </iframe>
 </div>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Nazwa Syafina Digital Library
 </footer>
