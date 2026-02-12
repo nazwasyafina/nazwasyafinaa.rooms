@@ -3,151 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nazwa Syafina Digital Library</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Digital Library - Nazwa Syafina</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
+  font-family:'Poppins', sans-serif;
 }
 
 body{
-  background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
-  color:#4b3621;
+  background:linear-gradient(to bottom, #fdf6f0, #f8ede3);
+  scroll-behavior:smooth;
+  color:#5c4033;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(15px);
-  position:sticky;
+  background:#8b5e3c;
+  padding:20px;
+  text-align:center;
+  position:fixed;
+  width:100%;
   top:0;
   z-index:1000;
 }
 
 nav a{
+  color:white;
   text-decoration:none;
-  color:#6f4e37;
-  margin-left:30px;
+  margin:0 15px;
   font-weight:500;
   transition:0.3s;
 }
 
 nav a:hover{
-  color:#b08968;
+  opacity:0.7;
 }
 
-/* ===== BAGIAN ATAS ===== */
-.container{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  align-items:center;
-  padding:80px 60px 60px 60px;
-}
-
-/* LEFT */
-.left h1{
-  font-size:38px;
-  background:linear-gradient(90deg,#6f4e37,#b08968);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.left p{
-  margin-top:20px;
-  line-height:1.7;
-  max-width:320px;
-}
-
-/* CENTER */
-.center{
+/* SECTION */
+section{
+  min-height:100vh;
+  padding:120px 20px 60px;
   text-align:center;
 }
 
-/* FOTO PROFIL */
+/* HERO */
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:#a67b5b;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#8b5e3c;
+}
+
+/* FOTO */
 .profile-img{
   width:220px;
   height:220px;
   object-fit:cover;
   border-radius:50%;
-  border:5px solid #ffffff;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  border:5px solid white;
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
   margin-bottom:20px;
-  transition:0.4s ease;
+  transition:0.4s;
 }
 
 .profile-img:hover{
   transform:scale(1.05);
 }
 
-.center h2{
-  margin-bottom:5px;
+/* ABOUT */
+.about-box{
+  max-width:700px;
+  margin:20px auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* RIGHT */
-.right{
-  text-align:center;
-}
-
-.link-btn{
+.about-box a{
   display:block;
-  margin:12px auto;
-  padding:10px 22px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#6f4e37,#b08968);
-  color:white;
+  margin:10px 0;
+  color:#8b5e3c;
   text-decoration:none;
-  width:180px;
-  transition:0.3s;
+  font-weight:500;
 }
 
-.link-btn:hover{
-  transform:scale(1.05);
+.about-box a:hover{
+  text-decoration:underline;
 }
 
-/* ===== YOUTUBE SECTION ===== */
-.youtube-section{
-  padding:40px 60px 80px 60px;
-  text-align:center;
-}
-
-/* GARIS PEMBATAS */
+/* PEMBATAS */
 .divider{
-  width:80%;
+  width:60%;
   height:2px;
-  margin:20px auto 20px auto;
-  background:linear-gradient(to right, 
-    transparent, 
-    #b08968, 
-    #6f4e37, 
-    #b08968, 
-    transparent);
-  border-radius:10px;
+  background:#d2b48c;
+  margin:0 auto 20px;
 }
 
-.youtube-section h3{
+/* VIDEO */
+.video-section h2{
   margin-bottom:20px;
 }
 
-.youtube-section iframe{
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+iframe{
+  width:80%;
+  max-width:700px;
+  height:400px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
+  background:#8b5e3c;
+  color:white;
   text-align:center;
   padding:20px;
-  background:rgba(255,255,255,0.5);
-  font-size:13px;
 }
 </style>
 </head>
@@ -161,64 +152,58 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-  <div><strong>Nazwa Syafina Digital Library</strong></div>
-  <div>
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Media</a>
-  </div>
+  <a href="#home">Beranda</a>
+  <a href="#about">Tentang Saya</a>
+  <a href="#video">Video</a>
 </nav>
 
-<!-- BAGIAN ATAS -->
-<div class="container">
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>Digital Library</h1>
+  <p>Website Perpustakaan Digital Pribadi</p>
+  <a href="#about" class="btn">Jelajahi Profil</a>
+</section>
 
-  <div class="left">
-    <h1>Nazwa Syafina Digital Library</h1>
+<!-- ABOUT -->
+<section id="about">
+  <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
+  <h2>Nazwa Syafina</h2>
+  <p>Mahasiswa Ilmu Perpustakaan & Sains Informasi</p>
+
+  <div class="about-box">
     <p>
-      Website ini merupakan perpustakaan digital personal yang
-      merepresentasikan identitas saya dalam bidang
-      Ilmu Perpustakaan dan Sains Informasi.
+      Website ini merupakan representasi dari identitas digital saya sebagai pengelola
+      perpustakaan digital pribadi. Berisi informasi profil, CV, dan media sosial.
     </p>
-  </div>
 
-  <div class="center">
-    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-    <h2>Nazwa Syafina</h2>
-    <span>Ilmu Perpustakaan & Sains Informasi</span>
-  </div>
-
-  <div class="right">
-    <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
-      Instagram
+    <a href="https://instagram.com/usernamekamu" target="_blank">
+      🌿 Instagram
     </a>
 
-    <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-       target="_blank" 
-       class="link-btn">
-      Curriculum Vitae
+    <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk" target="_blank">
+      📄 Curriculum Vitae
     </a>
   </div>
+</section>
 
-</div>
-
-<!-- YOUTUBE -->
-<div class="youtube-section">
-
+<!-- VIDEO -->
+<section id="video" class="video-section">
   <div class="divider"></div>
+  <h2>Video Profil</h2>
 
-  <h3>Video Dokumentasi</h3>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  frameborder="0"
+  allowfullscreen></iframe>
 
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/4w13jP-cshM"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-
-</div>
+  <p style="margin-top:15px;">
+    Atau buka langsung di 
+    <a href="https://youtube.com" target="_blank">YouTube</a>
+  </p>
+</section>
 
 <!-- FOOTER -->
 <footer>
-© 2026 Nazwa Syafina Digital Library
+  © 2026 Digital Library - Nazwa Syafina
 </footer>
 
 </body>
