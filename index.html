@@ -49,31 +49,38 @@ nav a:hover{
   color:#fff3e6;
 }
 
-/* ===== BAGIAN ATAS ===== */
-.container{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+/* ===== SECTION UMUM ===== */
+.section{
+  padding:100px 60px;
+  min-height:100vh;
+  display:flex;
   align-items:center;
-  padding:80px 60px 60px 60px;
+  justify-content:center;
 }
 
-/* LEFT */
-.left h1{
+/* ===== SECTION 1 (PENGENALAN) ===== */
+.intro{
+  max-width:800px;
+}
+
+.intro h1{
   font-size:38px;
   background:linear-gradient(90deg,#6f4e37,#b08968);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-.left p{
+.intro p{
   margin-top:20px;
-  line-height:1.7;
-  max-width:320px;
+  line-height:1.8;
 }
 
-/* CENTER */
-.center{
-  text-align:center;
+/* ===== SECTION 2 (PROFIL) ===== */
+.profile-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:50px;
 }
 
 .profile-img{
@@ -91,13 +98,12 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-.center h2{
-  margin-bottom:5px;
+.profile-info{
+  text-align:center;
 }
 
-/* RIGHT */
-.right{
-  text-align:center;
+.profile-info h2{
+  margin-bottom:5px;
 }
 
 .link-btn{
@@ -116,9 +122,8 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-/* ===== YOUTUBE SECTION ===== */
+/* ===== SECTION 3 (YOUTUBE) ===== */
 .youtube-section{
-  padding:40px 60px 80px 60px;
   text-align:center;
 }
 
@@ -133,10 +138,6 @@ nav a:hover{
     #b08968, 
     transparent);
   border-radius:10px;
-}
-
-.youtube-section h3{
-  margin-bottom:20px;
 }
 
 .youtube-section iframe{
@@ -170,52 +171,61 @@ footer{
   </div>
 </nav>
 
-<div class="container">
-
-  <div class="left">
+<!-- ===== SECTION 1 ===== -->
+<section class="section">
+  <div class="intro">
     <h1>Nazwa Syafina Digital Library</h1>
     <p>
-      Website ini merupakan perpustakaan digital personal yang
-      merepresentasikan identitas saya dalam bidang
-      Ilmu Perpustakaan dan Sains Informasi.
+      Saya membangun Nazwa Syafina Digital Library sebagai ruang belajar pribadi 
+      sekaligus media berbagi pengetahuan yang merepresentasikan diri saya 
+      sebagai mahasiswi Program Studi Perpustakaan dan Sains Informasi. 
+      Website ini tidak hanya berfungsi sebagai profil personal, tetapi juga sebagai bentuk personal branding dan refleksi perjalanan saya dalam dunia literasi, yang memadukan semangat membaca, menulis, serta visi untuk mengintegrasikan ilmu perpustakaan dengan inovasi dan perkembangan teknologi digital.
     </p>
   </div>
+</section>
 
-  <div class="center">
-    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-    <h2>Nazwa Syafina</h2>
-    <span>Perpustakaan & Sains Informasi</span>
+<!-- ===== SECTION 2 ===== -->
+<section class="section">
+  <div class="profile-container">
+
+    <div class="profile-info">
+      <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
+      <h2>Nazwa Syafina</h2>
+      <span>Perpustakaan & Sains Informasi</span>
+    </div>
+
+    <div class="profile-info">
+      <h3>Tentang Saya</h3>
+
+      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
+        Sosial Media
+      </a>
+
+      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
+         target="_blank" 
+         class="link-btn">
+        Curriculum Vitae
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 3 ===== -->
+<section class="section youtube-section">
+
+  <div>
+    <div class="divider"></div>
+    <h3>Video Dokumentasi</h3>
+
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/4w13jP-cshM"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <div class="right">
-    <h3>Tentang Saya</h3>
-
-    <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
-      Instagram
-    </a>
-
-    <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-       target="_blank" 
-       class="link-btn">
-      Curriculum Vitae
-    </a>
-  </div>
-
-</div>
-
-<div class="youtube-section">
-
-  <div class="divider"></div>
-
-  <h3>Video Dokumentasi</h3>
-
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/4w13jP-cshM"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-
-</div>
+</section>
 
 <footer>
 © 2026 Nazwa Syafina Digital Library
