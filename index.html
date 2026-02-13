@@ -33,9 +33,7 @@ nav{
   z-index:1000;
 }
 
-nav strong{
-  color:#ffffff;
-}
+nav strong{ color:#ffffff; }
 
 nav a{
   text-decoration:none;
@@ -45,8 +43,20 @@ nav a{
   transition:0.3s;
 }
 
-nav a:hover{
-  color:#fff3e6;
+nav a:hover{ color:#fff3e6; }
+
+/* ===== GARIS PEMBATAS SECTION ===== */
+.section-divider{
+  width:90%;
+  height:2px;
+  margin:0 auto;
+  background:linear-gradient(to right, 
+    transparent, 
+    #b08968, 
+    #6f4e37, 
+    #b08968, 
+    transparent);
+  border-radius:10px;
 }
 
 /* ===== SECTION UMUM ===== */
@@ -59,18 +69,24 @@ nav a:hover{
 }
 
 /* ===== SECTION 1 (PENGENALAN) ===== */
-.intro{
-  max-width:800px;
+.intro-box{
+  max-width:850px;
+  background:rgba(255,255,255,0.6);
+  padding:50px;
+  border-radius:25px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.08);
+  text-align:center;
 }
 
-.intro h1{
+.intro-box h1{
   font-size:38px;
   background:linear-gradient(90deg,#6f4e37,#b08968);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-.intro p{
+.intro-box p{
   margin-top:20px;
   line-height:1.8;
 }
@@ -80,17 +96,21 @@ nav a:hover{
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:50px;
+  gap:60px;
+}
+
+.profile-left{
+  text-align:center;
 }
 
 .profile-img{
-  width:220px;
-  height:220px;
+  width:230px;
+  height:230px;
   object-fit:cover;
   border-radius:50%;
-  border:5px solid #ffffff;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-  margin-bottom:20px;
+  border:6px solid #ffffff;
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+  margin-bottom:25px;
   transition:0.4s ease;
 }
 
@@ -98,23 +118,36 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-.profile-info{
-  text-align:center;
+.profile-left h2{
+  margin-bottom:8px;
 }
 
-.profile-info h2{
-  margin-bottom:5px;
+.profile-left span{
+  display:block;
+  max-width:320px;
+  margin:0 auto;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.profile-right{
+  background:rgba(255,255,255,0.6);
+  padding:40px;
+  border-radius:25px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.08);
+  text-align:center;
 }
 
 .link-btn{
   display:block;
-  margin:12px auto;
-  padding:10px 22px;
+  margin:15px auto;
+  padding:12px 24px;
   border-radius:25px;
   background:linear-gradient(135deg,#6f4e37,#b08968);
   color:white;
   text-decoration:none;
-  width:180px;
+  width:200px;
   transition:0.3s;
 }
 
@@ -127,22 +160,10 @@ nav a:hover{
   text-align:center;
 }
 
-.divider{
-  width:80%;
-  height:2px;
-  margin:20px auto 20px auto;
-  background:linear-gradient(to right, 
-    transparent, 
-    #b08968, 
-    #6f4e37, 
-    #b08968, 
-    transparent);
-  border-radius:10px;
-}
-
 .youtube-section iframe{
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,0.1);
+  margin-top:20px;
 }
 
 /* ===== FOOTER ===== */
@@ -173,7 +194,7 @@ footer{
 
 <!-- ===== SECTION 1 ===== -->
 <section class="section">
-  <div class="intro">
+  <div class="intro-box">
     <h1>Nazwa Syafina Digital Library</h1>
     <p>
       Saya membangun Nazwa Syafina Digital Library sebagai ruang belajar pribadi 
@@ -184,17 +205,23 @@ footer{
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- ===== SECTION 2 ===== -->
 <section class="section">
   <div class="profile-container">
 
-    <div class="profile-info">
+    <div class="profile-left">
       <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
       <h2>Nazwa Syafina</h2>
-      <span>Perpustakaan & Sains Informasi</span>
+      <span>
+        Mahasiswi Program Studi Perpustakaan dan Sains Informasi 
+        yang memiliki minat dalam literasi digital, pengelolaan informasi, 
+        serta pengembangan inovasi layanan perpustakaan berbasis teknologi.
+      </span>
     </div>
 
-    <div class="profile-info">
+    <div class="profile-right">
       <h3>Tentang Saya</h3>
 
       <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
@@ -211,11 +238,11 @@ footer{
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- ===== SECTION 3 ===== -->
 <section class="section youtube-section">
-
   <div>
-    <div class="divider"></div>
     <h3>Video Dokumentasi</h3>
 
     <iframe width="560" height="315"
@@ -224,7 +251,6 @@ footer{
       allowfullscreen>
     </iframe>
   </div>
-
 </section>
 
 <footer>
