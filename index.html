@@ -64,49 +64,84 @@ nav a:hover{ color:#f8f1e4; }
   display:flex;
   align-items:center;
   justify-content:center;
+  position:relative;
+  overflow:hidden;
 }
 
-/* ===== SECTION 1 - GRADIENT LEBIH HIDUP ===== */
+/* ===== ANIMASI GRADIENT ===== */
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+/* ===== TEXTURE OVERLAY ===== */
+.section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size:20px 20px;
+  pointer-events:none;
+}
+
+/* ===== SECTION 1 ===== */
 #beranda{
   background:linear-gradient(
-    135deg,
-    #3b2516 0%,
-    #5a3a27 30%,
-    #8b6b4f 65%,
-    #c2a78f 100%
+    270deg,
+    #3b2516,
+    #5a3a27,
+    #8b6b4f,
+    #c2a78f
   );
+  background-size:400% 400%;
+  animation:gradientMove 18s ease infinite;
   color:white;
-  position:relative;
 }
 
+/* glow halus */
 #beranda::before{
   content:"";
   position:absolute;
-  width:450px;
-  height:450px;
-  background:radial-gradient(circle at top left, rgba(255, 255, 255, 0.15), transparent 60%);
-  top:-80px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+  top:-120px;
   left:-120px;
-  filter:blur(100px);
-  z-index:0;
+  filter:blur(120px);
 }
 
-#beranda::after{
-  content:"";
-  position:absolute;
-  width:350px;
-  height:350px;
-  background:radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 60%);
-  bottom:-100px;
-  right:-80px;
-  filter:blur(90px);
-  z-index:0;
+/* ===== SECTION 2 ===== */
+#profil{
+  background:linear-gradient(
+    270deg,
+    #b08968,
+    #c8a98f,
+    #e0c7b5,
+    #f2e5dc
+  );
+  background-size:400% 400%;
+  animation:gradientMove 22s ease infinite;
 }
 
+/* ===== SECTION 3 ===== */
+#media{
+  background:linear-gradient(
+    270deg,
+    #f2e5dc,
+    #f7efe9,
+    #fbf7f4,
+    #ffffff
+  );
+  background-size:400% 400%;
+  animation:gradientMove 26s ease infinite;
+}
+
+/* ===== SECTION 1 CONTENT ===== */
 .intro-wrapper{
   text-align:center;
   max-width:900px;
-  z-index:1;
+  z-index:2;
 }
 
 .intro-wrapper h1{
@@ -123,7 +158,6 @@ nav a:hover{ color:#f8f1e4; }
   line-height:1.8;
 }
 
-/* SEARCH ENGINE */
 .search-box{
   display:flex;
   justify-content:center;
@@ -153,19 +187,10 @@ nav a:hover{ color:#f8f1e4; }
   background:#8b6b4f;
 }
 
-/* ===== SECTION 2 - GRADIENT SOFT ===== */
-#profil{
-  background:linear-gradient(
-    135deg,
-    #b08968 0%,
-    #c8a98f 40%,
-    #e0c7b5 75%,
-    #f2e5dc 100%
-  );
-}
-
+/* ===== SECTION 2 CONTENT ===== */
 .profile-container{
   max-width:1000px;
+  z-index:2;
 }
 
 .profile-container h3{
@@ -229,19 +254,10 @@ nav a:hover{ color:#f8f1e4; }
   transform:scale(1.05);
 }
 
-/* ===== SECTION 3 - CREAMY CLEAN GRADIENT ===== */
-#media{
-  background:linear-gradient(
-    135deg,
-    #f2e5dc 0%,
-    #f7efe9 40%,
-    #fbf7f4 75%,
-    #ffffff 100%
-  );
-}
-
+/* ===== SECTION 3 CONTENT ===== */
 .youtube-section{
   text-align:center;
+  z-index:2;
 }
 
 .youtube-section h3{
@@ -276,53 +292,35 @@ footer{
   </div>
 </nav>
 
-<!-- ===== SECTION 1 ===== -->
 <section class="section" id="beranda">
   <div class="intro-wrapper">
-
     <h1>Welcome to Nazwa’s Library Corner</h1>
-
     <p>A personal digital space where knowledge, literacy, and ideas grow together</p>
-
     <div class="search-box">
       <input type="text" placeholder="Search books, articles, ideas...">
       <button>Search</button>
     </div>
-
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ===== SECTION 2 ===== -->
 <section class="section" id="profil">
   <div class="profile-container">
     <h3>The Story Behind the Library</h3>
-
     <div class="profile-content">
       <div class="profile-left">
         <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
         <h2>Nazwa Syafina</h2>
       </div>
-
       <div class="profile-right">
-        <p>
-          Nazwa’s Library Corner merupakan platform perpustakaan digital yang dikembangkan oleh Nazwa Syafina, mahasiswi Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara yang memiliki minat pada bidang literasi, pengelolaan informasi, dan pengembangan web.
-        </p>
-
-        <p>
-          Website ini dibuat sebagai ruang digital untuk menyimpan, membagikan, dan mengembangkan berbagai ide serta pembelajaran seputar dunia perpustakaan. Selain menjadi media personal branding, platform ini juga menjadi tempat bagi Nazwa untuk mengekspresikan minatnya dalam menggabungkan ilmu perpustakaan dengan teknologi secara sederhana dan mudah dipahami.
-        </p>
-
-        <p>
-          Melalui Nazwa’s Library Corner, diharapkan nantinya dapat tercipta ruang yang nyaman dan inspiratif, yang tidak hanya menampilkan informasi, tetapi juga memberi semangat bagi pengunjung untuk terus belajar dan berkembang di era digital.
-        </p>
-
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
         <div class="button-wrapper">
           <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">Sosial Media</a>
           <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk" target="_blank" class="link-btn">Curriculum Vitae</a>
         </div>
-
       </div>
     </div>
   </div>
@@ -330,7 +328,6 @@ footer{
 
 <div class="section-divider"></div>
 
-<!-- ===== SECTION 3 ===== -->
 <section class="section youtube-section" id="media">
   <div>
     <h3>Video Dokumentasi</h3>
