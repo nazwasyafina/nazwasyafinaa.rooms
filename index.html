@@ -238,6 +238,63 @@ footer{
   color:#ffffff;
   font-size:13px;
 }
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px){
+
+  nav{
+    padding:15px 20px;
+  }
+
+  nav a{
+    margin-left:15px;
+    font-size:14px;
+  }
+
+  .section{
+    padding:70px 20px;
+  }
+
+  .intro-wrapper h1{
+    font-size:28px;
+  }
+
+  .intro-wrapper p{
+    font-size:15px;
+  }
+
+  .search-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .search-box input{
+    width:100%;
+    border-radius:30px;
+    margin-bottom:10px;
+  }
+
+  .search-box button{
+    width:100%;
+    border-radius:30px;
+  }
+
+  .profile-content{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .profile-right{
+    text-align:left;
+  }
+
+  .youtube-section iframe{
+    width:100%;
+    height:220px;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -251,7 +308,6 @@ footer{
   </div>
 </nav>
 
-<!-- ===== SECTION 1 ===== -->
 <section class="section" id="beranda">
   <div class="intro-wrapper">
     <h1>Welcome to Nazwa’s Library Corner</h1>
@@ -263,7 +319,6 @@ footer{
   </div>
 </section>
 
-<!-- ===== SECTION 2 ===== -->
 <section class="section" id="profil">
   <div class="profile-container">
     <h3>The Story Behind the Library</h3>
@@ -297,7 +352,6 @@ footer{
   </div>
 </section>
 
-<!-- ===== SECTION 3 ===== -->
 <section class="section youtube-section" id="media">
   <div>
     <h3>Video Dokumentasi</h3>
