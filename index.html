@@ -67,53 +67,31 @@ nav a:hover{ color:#f8f1e4; }
   justify-content:center;
 }
 
-/* ===== SECTION 1 ===== */
+/* ===== SECTION 1 (UPDATED SHINING EFFECT) ===== */
 .intro-wrapper{
   text-align:center;
   max-width:1000px;
   position:relative;
 }
 
-/* Ornamen blur */
 .intro-wrapper::before{
   content:"";
   position:absolute;
-  width:300px;
-  height:300px;
-  background:#e6cfc0;
-  border-radius:50%;
-  top:-100px;
-  left:-120px;
-  filter:blur(120px);
-  z-index:-1;
-}
-
-.intro-wrapper::after{
-  content:"";
-  position:absolute;
-  width:250px;
-  height:250px;
-  background:#d9b8a5;
-  border-radius:50%;
-  bottom:-80px;
-  right:-100px;
-  filter:blur(120px);
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  filter:blur(60px);
   z-index:-1;
 }
 
 .intro-wrapper h1{
   font-size:42px;
   color:#8b6b4f;
-  margin-bottom:15px;
+  margin-bottom:40px;
   font-weight:700;
-}
-
-.decor-line{
-  width:120px;
-  height:4px;
-  background:#8b6b4f;
-  margin:0 auto 40px auto;
-  border-radius:10px;
 }
 
 .intro-box{
@@ -121,13 +99,10 @@ nav a:hover{ color:#f8f1e4; }
   background:#8b6b4f;
   padding:60px;
   border-radius:30px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
   margin:0 auto;
-  transition:0.4s ease;
-}
-
-.intro-box:hover{
-  transform:translateY(-8px);
+  position:relative;
+  z-index:1;
 }
 
 .intro-box p{
@@ -137,7 +112,7 @@ nav a:hover{ color:#f8f1e4; }
   font-size:16px;
 }
 
-/* ===== SECTION 2 ===== */
+/* ===== SECTION 2 (TIDAK DIUBAH) ===== */
 .profile-container{
   text-align:center;
   max-width:900px;
@@ -196,7 +171,7 @@ nav a:hover{ color:#f8f1e4; }
   transform:scale(1.05);
 }
 
-/* ===== SECTION 3 ===== */
+/* ===== SECTION 3 (TIDAK DIUBAH) ===== */
 .youtube-section{
   text-align:center;
 }
@@ -238,7 +213,6 @@ footer{
   <div class="intro-wrapper">
 
     <h1>Nazwa Syafina Digital Library</h1>
-    <div class="decor-line"></div>
 
     <div class="intro-box">
       <p>
@@ -257,27 +231,16 @@ footer{
 <!-- ===== SECTION 2 ===== -->
 <section class="section">
   <div class="profile-container">
-
     <h3>Tentang Saya</h3>
-
     <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-
     <h2>Nazwa Syafina</h2>
-
     <span>
       Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, serta pengembangan inovasi layanan perpustakaan berbasis teknologi. Saya tertarik pada bagaimana informasi dapat dikelola secara sistematis dan modern agar lebih mudah diakses, relevan, serta bermanfaat bagi masyarakat luas dalam era transformasi digital saat ini.
     </span>
-
     <div class="button-wrapper">
-      <a href="https://www.instagram.com/nazwasyafinaa" target="_blank" class="link-btn">
-        Sosial Media
-      </a>
-
-      <a href="https://drive.google.com" target="_blank" class="link-btn">
-        Curriculum Vitae
-      </a>
+      <a href="#" class="link-btn">Sosial Media</a>
+      <a href="#" class="link-btn">Curriculum Vitae</a>
     </div>
-
   </div>
 </section>
 
@@ -287,7 +250,6 @@ footer{
 <section class="section youtube-section">
   <div>
     <h3>Video Dokumentasi</h3>
-
     <iframe width="560" height="315"
       src="https://www.youtube.com/embed/4w13jP-cshM"
       frameborder="0"
