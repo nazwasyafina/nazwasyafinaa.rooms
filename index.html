@@ -26,7 +26,7 @@ nav{
   display:flex;
   justify-content:space-between;
   padding:20px 60px;
-  background:#6f4e37;
+  background:#8b6b4f;
   position:sticky;
   top:0;
   z-index:1000;
@@ -52,7 +52,7 @@ nav a:hover{ color:#f8f1e4; }
   background:linear-gradient(to right, 
     transparent, 
     #b08968, 
-    #6f4e37, 
+    #8b6b4f, 
     #b08968, 
     transparent);
   border-radius:10px;
@@ -70,28 +70,69 @@ nav a:hover{ color:#f8f1e4; }
 /* ===== SECTION 1 ===== */
 .intro-wrapper{
   text-align:center;
-  max-width:900px;
+  max-width:1000px;
+  position:relative;
+}
+
+/* Ornamen blur */
+.intro-wrapper::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#e6cfc0;
+  border-radius:50%;
+  top:-100px;
+  left:-120px;
+  filter:blur(120px);
+  z-index:-1;
+}
+
+.intro-wrapper::after{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:#d9b8a5;
+  border-radius:50%;
+  bottom:-80px;
+  right:-100px;
+  filter:blur(120px);
+  z-index:-1;
 }
 
 .intro-wrapper h1{
-  font-size:40px;
-  color:#6f4e37;
-  margin-bottom:40px;
+  font-size:42px;
+  color:#8b6b4f;
+  margin-bottom:15px;
   font-weight:700;
+}
+
+.decor-line{
+  width:120px;
+  height:4px;
+  background:#8b6b4f;
+  margin:0 auto 40px auto;
+  border-radius:10px;
 }
 
 .intro-box{
   max-width:850px;
-  background:#6f4e37;
+  background:#8b6b4f;
   padding:60px;
   border-radius:30px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.2);
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
   margin:0 auto;
+  transition:0.4s ease;
+}
+
+.intro-box:hover{
+  transform:translateY(-8px);
 }
 
 .intro-box p{
   line-height:1.9;
-  color:#f8f1e4;
+  color:#fdf7f2;
   font-weight:300;
   font-size:16px;
 }
@@ -145,7 +186,7 @@ nav a:hover{ color:#f8f1e4; }
 .link-btn{
   padding:12px 28px;
   border-radius:25px;
-  background:linear-gradient(135deg,#6f4e37,#b08968);
+  background:linear-gradient(135deg,#8b6b4f,#b08968);
   color:white;
   text-decoration:none;
   transition:0.3s;
@@ -174,7 +215,7 @@ nav a:hover{ color:#f8f1e4; }
 footer{
   text-align:center;
   padding:20px;
-  background:#6f4e37;
+  background:#8b6b4f;
   color:#ffffff;
   font-size:13px;
 }
@@ -197,6 +238,7 @@ footer{
   <div class="intro-wrapper">
 
     <h1>Nazwa Syafina Digital Library</h1>
+    <div class="decor-line"></div>
 
     <div class="intro-box">
       <p>
@@ -227,13 +269,11 @@ footer{
     </span>
 
     <div class="button-wrapper">
-      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
+      <a href="https://www.instagram.com/nazwasyafinaa" target="_blank" class="link-btn">
         Sosial Media
       </a>
 
-      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-         target="_blank" 
-         class="link-btn">
+      <a href="https://drive.google.com" target="_blank" class="link-btn">
         Curriculum Vitae
       </a>
     </div>
