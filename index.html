@@ -1,89 +1,23 @@
-<!DOCTYPE html> 
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nazwa Syafina Digital Library</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
+/* ===== SECTION 1 (UPDATED AGAIN) ===== */
+.intro-wrapper{
+  text-align:center;
+  max-width:900px;
 }
 
-body{
-  background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
-  color:#4b3621;
+.intro-wrapper h1{
+  font-size:40px;
+  color:#6f4e37;
+  margin-bottom:40px;
+  font-weight:700;
 }
 
-/* ===== NAVBAR ===== */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
-  background:rgba(176,137,104,0.75);
-  backdrop-filter:blur(12px);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-nav strong{ color:#ffffff; }
-
-nav a{
-  text-decoration:none;
-  color:#ffffff;
-  margin-left:30px;
-  font-weight:500;
-  transition:0.3s;
-}
-
-nav a:hover{ color:#fff3e6; }
-
-/* ===== GARIS PEMBATAS ===== */
-.section-divider{
-  width:90%;
-  height:2px;
-  margin:0 auto;
-  background:linear-gradient(to right, 
-    transparent, 
-    #b08968, 
-    #6f4e37, 
-    #b08968, 
-    transparent);
-  border-radius:10px;
-}
-
-/* ===== SECTION UMUM ===== */
-.section{
-  padding:100px 60px;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* ===== SECTION 1 (UPDATED) ===== */
 .intro-box{
   max-width:850px;
-  background:linear-gradient(135deg,#6f4e37,#5a3e2b);
+  background:#6f4e37; /* sama seperti footer & navbar */
   padding:60px;
   border-radius:30px;
   box-shadow:0 30px 60px rgba(0,0,0,0.2);
-  text-align:center;
-}
-
-.intro-box h1{
-  font-size:40px;
-  background:linear-gradient(90deg,#f5deb3,#ffd700);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:25px;
+  margin:0 auto;
 }
 
 .intro-box p{
@@ -93,164 +27,3 @@ nav a:hover{ color:#fff3e6; }
   font-size:16px;
 }
 
-/* ===== SECTION 2 ===== */
-.profile-container{
-  text-align:center;
-  max-width:900px;
-}
-
-.profile-container h3{
-  font-size:32px;
-  margin-bottom:40px;
-}
-
-.profile-img{
-  width:230px;
-  height:230px;
-  object-fit:cover;
-  border-radius:50%;
-  border:6px solid #ffffff;
-  box-shadow:0 25px 50px rgba(0,0,0,0.15);
-  margin-bottom:15px;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.profile-container h2{
-  font-size:22px;
-  font-weight:600;
-  margin-top:5px;
-  margin-bottom:20px;
-}
-
-.profile-container span{
-  display:block;
-  max-width:800px;
-  margin:0 auto 30px auto;
-  font-size:15px;
-  line-height:1.7;
-}
-
-.button-wrapper{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-}
-
-.link-btn{
-  padding:12px 28px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#6f4e37,#b08968);
-  color:white;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.link-btn:hover{
-  transform:scale(1.05);
-}
-
-/* ===== SECTION 3 ===== */
-.youtube-section{
-  text-align:center;
-}
-
-.youtube-section h3{
-  font-size:30px;
-}
-
-.youtube-section iframe{
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
-  margin-top:20px;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#6f4e37;
-  color:#ffffff;
-  font-size:13px;
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-  <div><strong>Nazwa Syafina Digital Library</strong></div>
-  <div>
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Media</a>
-  </div>
-</nav>
-
-<!-- ===== SECTION 1 ===== -->
-<section class="section">
-  <div class="intro-box">
-    <h1>Nazwa Syafina Digital Library</h1>
-    <p>
-      Saya membangun Nazwa Syafina Digital Library sebagai ruang belajar pribadi 
-      sekaligus media berbagi pengetahuan yang merepresentasikan diri saya 
-      sebagai mahasiswi Program Studi Perpustakaan dan Sains Informasi. 
-      Website ini tidak hanya berfungsi sebagai profil personal, tetapi juga sebagai bentuk personal branding dan refleksi perjalanan saya dalam dunia literasi, yang memadukan semangat membaca, menulis, serta visi untuk mengintegrasikan ilmu perpustakaan dengan inovasi dan perkembangan teknologi digital.
-    </p>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ===== SECTION 2 ===== -->
-<section class="section">
-  <div class="profile-container">
-
-    <h3>Tentang Saya</h3>
-
-    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-
-    <h2>Nazwa Syafina</h2>
-
-    <span>
-      Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, serta pengembangan inovasi layanan perpustakaan berbasis teknologi. Saya tertarik pada bagaimana informasi dapat dikelola secara sistematis dan modern agar lebih mudah diakses, relevan, serta bermanfaat bagi masyarakat luas dalam era transformasi digital saat ini.
-    </span>
-
-    <div class="button-wrapper">
-      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
-        Sosial Media
-      </a>
-
-      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-         target="_blank" 
-         class="link-btn">
-        Curriculum Vitae
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ===== SECTION 3 ===== -->
-<section class="section youtube-section">
-  <div>
-    <h3>Video Dokumenter Kegiatan</h3>
-
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/4w13jP-cshM"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<footer>
-© 2026 Nazwa Syafina Digital Library
-</footer>
-
-</body>
-</html>
