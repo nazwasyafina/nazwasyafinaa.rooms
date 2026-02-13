@@ -51,7 +51,6 @@ nav a:hover{ color:#8b6b4f; }
   display:flex;
   align-items:center;
   justify-content:center;
-  border-top:1px solid rgba(0,0,0,0.08); /* GARIS PEMBATAS */
 }
 
 /* ===== SECTION 1 ===== */
@@ -136,8 +135,22 @@ nav a:hover{ color:#8b6b4f; }
     #fbf7f4 80%,
     #ffffff 100%
   );
+  position:relative;
 }
 
+/* ===== GARIS PEMBATAS KHUSUS ANTARA SECTION 2 & 3 ===== */
+#media::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:60%;
+  height:2px;
+  background:#b08968;
+}
+
+/* ===== PROFILE ===== */
 .profile-container{
   max-width:1000px;
 }
