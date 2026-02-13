@@ -67,7 +67,7 @@ nav a:hover{ color:#f8f1e4; }
   justify-content:center;
 }
 
-/* ===== SECTION 1 (UPDATED SHINING EFFECT) ===== */
+/* ===== SECTION 1 (UPDATED SHINING EFFECT COKLAT) ===== */
 .intro-wrapper{
   text-align:center;
   max-width:1000px;
@@ -77,14 +77,20 @@ nav a:hover{ color:#f8f1e4; }
 .intro-wrapper::before{
   content:"";
   position:absolute;
-  width:350px;
-  height:350px;
-  background:radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle, rgba(176,137,104,0.5) 0%, rgba(139,107,79,0.0) 70%);
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  filter:blur(60px);
+  filter:blur(80px);
   z-index:-1;
+  animation: shining 4s ease-in-out infinite;
+}
+
+@keyframes shining{
+  0%,100%{transform:translate(-50%,-50%) scale(1);}
+  50%{transform:translate(-50%,-50%) scale(1.2);}
 }
 
 .intro-wrapper h1{
@@ -112,7 +118,7 @@ nav a:hover{ color:#f8f1e4; }
   font-size:16px;
 }
 
-/* ===== SECTION 2 (TIDAK DIUBAH) ===== */
+/* ===== SECTION 2 ===== */
 .profile-container{
   text-align:center;
   max-width:900px;
@@ -171,13 +177,13 @@ nav a:hover{ color:#f8f1e4; }
   transform:scale(1.05);
 }
 
-/* ===== SECTION 3 (TIDAK DIUBAH) ===== */
+/* ===== SECTION 3 ===== */
 .youtube-section{
   text-align:center;
 }
 
 .youtube-section h3{
-  font-size:30px;
+  font-size:32px;
 }
 
 .youtube-section iframe{
@@ -238,8 +244,8 @@ footer{
       Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, serta pengembangan inovasi layanan perpustakaan berbasis teknologi. Saya tertarik pada bagaimana informasi dapat dikelola secara sistematis dan modern agar lebih mudah diakses, relevan, serta bermanfaat bagi masyarakat luas dalam era transformasi digital saat ini.
     </span>
     <div class="button-wrapper">
-      <a href="#" class="link-btn">Sosial Media</a>
-      <a href="#" class="link-btn">Curriculum Vitae</a>
+      <a href="#" class="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==">Sosial Media</a>
+      <a href="#" class="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk">Curriculum Vitae</a>
     </div>
   </div>
 </section>
