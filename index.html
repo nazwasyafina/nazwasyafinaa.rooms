@@ -68,33 +68,46 @@ nav a:hover{ color:#fff3e6; }
   justify-content:center;
 }
 
-/* ===== SECTION 1 ===== */
+/* ===== SECTION 1 (LEBIH HIDUP) ===== */
 .intro-box{
-  max-width:850px;
-  background:rgba(255,255,255,0.6);
-  padding:50px;
-  border-radius:25px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.08);
+  max-width:900px;
+  background:linear-gradient(145deg, rgba(255,255,255,0.8), rgba(240,220,205,0.6));
+  padding:60px;
+  border-radius:30px;
+  backdrop-filter:blur(15px);
+  box-shadow:0 30px 60px rgba(111,78,55,0.15);
   text-align:center;
+  border:1px solid rgba(176,137,104,0.3);
+  position:relative;
+}
+
+.intro-box::before{
+  content:"";
+  position:absolute;
+  top:-50px;
+  right:-50px;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, rgba(176,137,104,0.25), transparent 70%);
+  border-radius:50%;
 }
 
 .intro-box h1{
-  font-size:38px;
+  font-size:40px;
   background:linear-gradient(90deg,#6f4e37,#b08968);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .intro-box p{
-  margin-top:20px;
-  line-height:1.8;
+  margin-top:25px;
+  line-height:1.9;
 }
 
-/* ===== SECTION 2 (UPDATED LAYOUT) ===== */
+/* ===== SECTION 2 ===== */
 .profile-container{
   text-align:center;
-  max-width:700px;
+  max-width:900px;
 }
 
 .profile-container h3{
@@ -117,27 +130,38 @@ nav a:hover{ color:#fff3e6; }
   transform:scale(1.05);
 }
 
+/* Nama dengan border */
 .profile-container h2{
-  margin-bottom:10px;
+  display:inline-block;
+  padding:8px 25px;
+  border:2px solid #b08968;
+  border-radius:30px;
+  margin-bottom:20px;
 }
 
+/* Deskripsi lebih melebar */
 .profile-container span{
   display:block;
-  max-width:420px;
-  margin:0 auto 30px auto;
-  font-size:14px;
-  line-height:1.6;
+  max-width:750px;
+  margin:0 auto 35px auto;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* Tombol sejajar */
+.button-group{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
 }
 
 .link-btn{
-  display:block;
-  margin:15px auto;
-  padding:12px 24px;
+  padding:12px 28px;
   border-radius:25px;
   background:linear-gradient(135deg,#6f4e37,#b08968);
   color:white;
   text-decoration:none;
-  width:220px;
   transition:0.3s;
 }
 
@@ -150,10 +174,14 @@ nav a:hover{ color:#fff3e6; }
   text-align:center;
 }
 
+.youtube-section h3{
+  font-size:30px;
+}
+
 .youtube-section iframe{
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,0.1);
-  margin-top:20px;
+  margin-top:25px;
 }
 
 /* ===== FOOTER ===== */
@@ -197,7 +225,7 @@ footer{
 
 <div class="section-divider"></div>
 
-<!-- ===== SECTION 2 (UPDATED) ===== -->
+<!-- ===== SECTION 2 ===== -->
 <section class="section">
   <div class="profile-container">
 
@@ -208,20 +236,20 @@ footer{
     <h2>Nazwa Syafina</h2>
 
     <span>
-      Mahasiswi Program Studi Perpustakaan dan Sains Informasi 
-      yang memiliki minat dalam literasi digital, pengelolaan informasi, 
-      serta pengembangan inovasi layanan perpustakaan berbasis teknologi.
+      Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, pengembangan sistem klasifikasi, pengindeksan subjek, serta inovasi layanan perpustakaan berbasis teknologi yang adaptif terhadap perkembangan era digital dan transformasi informasi.
     </span>
 
-    <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
-      Sosial Media
-    </a>
+    <div class="button-group">
+      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
+        Sosial Media
+      </a>
 
-    <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-       target="_blank" 
-       class="link-btn">
-      Curriculum Vitae
-    </a>
+      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
+         target="_blank" 
+         class="link-btn">
+        Curriculum Vitae
+      </a>
+    </div>
 
   </div>
 </section>
