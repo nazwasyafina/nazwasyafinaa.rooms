@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nazwa Syafina Digital Library</title>
+<title>Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,7 +17,10 @@
 }
 
 body{
-  background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(176,137,104,0.25), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139,107,79,0.25), transparent 50%),
+    linear-gradient(135deg, #fdf8f4, #e6d2c3, #d2b8a3, #b08968);
   color:#4b3621;
 }
 
@@ -67,7 +70,7 @@ nav a:hover{ color:#f8f1e4; }
   justify-content:center;
 }
 
-/* ===== SECTION 1 (UPDATED SHINING EFFECT COKLAT) ===== */
+/* ===== SECTION 1 ===== */
 .intro-wrapper{
   text-align:center;
   max-width:1000px;
@@ -206,42 +209,38 @@ footer{
 <body>
 
 <nav>
-  <div><strong>Nazwa Syafina Digital Library</strong></div>
+  <div><strong>Nazwa’s Library Corner</strong></div>
   <div>
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Media</a>
+    <a href="#beranda">Beranda</a>
+    <a href="#profil">Profil</a>
+    <a href="#media">Media</a>
   </div>
 </nav>
 
 <!-- ===== SECTION 1 ===== -->
-<section class="section">
+<section class="section" id="beranda">
   <div class="intro-wrapper">
-
-    <h1>Nazwa Syafina Digital Library</h1>
-
+    <h1>Welcome to Nazwa’s Library Corner</h1>
     <div class="intro-box">
       <p>
-        Saya membangun Nazwa Syafina Digital Library sebagai ruang belajar pribadi 
-        sekaligus media berbagi pengetahuan yang merepresentasikan diri saya 
-        sebagai mahasiswi Program Studi Perpustakaan dan Sains Informasi. 
-        Website ini tidak hanya berfungsi sebagai profil personal, tetapi juga sebagai bentuk personal branding dan refleksi perjalanan saya dalam dunia literasi, yang memadukan semangat membaca, menulis, serta visi untuk mengintegrasikan ilmu perpustakaan dengan inovasi dan perkembangan teknologi digital.
+        A personal digital space where knowledge, literacy, and ideas grow together
       </p>
     </div>
-
   </div>
 </section>
 
 <div class="section-divider"></div>
 
 <!-- ===== SECTION 2 ===== -->
-<section class="section">
+<section class="section" id="profil">
   <div class="profile-container">
-    <h3>Tentang Saya</h3>
+    <h3>The Story Behind the Library</h3>
     <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
     <h2>Nazwa Syafina</h2>
     <span>
-      Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, serta pengembangan inovasi layanan perpustakaan berbasis teknologi. Saya tertarik pada bagaimana informasi dapat dikelola secara sistematis dan modern agar lebih mudah diakses, relevan, serta bermanfaat bagi masyarakat luas dalam era transformasi digital saat ini.
+Nazwa’s Library Corner merupakan platform perpustakaan digital yang dikembangkan oleh Nazwa Syafina, mahasiswi Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara yang memiliki minat pada bidang literasi, pengelolaan informasi, dan pengembangan web.
+Website ini dibuat sebagai ruang digital untuk menyimpan, membagikan, dan mengembangkan berbagai ide serta pembelajaran seputar dunia perpustakaan. Selain menjadi media personal branding, platform ini juga menjadi tempat bagi Nazwa untuk mengekspresikan minatnya dalam menggabungkan ilmu perpustakaan dengan teknologi secara sederhana dan mudah dipahami.
+Melalui Nazwa’s Library Corner, diharapkan nantinya dapat tercipta ruang yang nyaman dan inspiratif, yang tidak hanya menampilkan informasi, tetapi juga memberi semangat bagi pengunjung untuk terus belajar dan berkembang di era digital.
     </span>
     <div class="button-wrapper">
       <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">Sosial Media</a>
@@ -253,7 +252,7 @@ footer{
 <div class="section-divider"></div>
 
 <!-- ===== SECTION 3 ===== -->
-<section class="section youtube-section">
+<section class="section youtube-section" id="media">
   <div>
     <h3>Video Dokumentasi</h3>
     <iframe width="560" height="315"
@@ -265,7 +264,7 @@ footer{
 </section>
 
 <footer>
-© 2026 Nazwa Syafina Digital Library
+© 2026 Nazwa’s Library Corner 
 </footer>
 
 </body>
