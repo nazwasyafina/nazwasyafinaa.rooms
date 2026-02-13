@@ -45,7 +45,7 @@ nav a{
 
 nav a:hover{ color:#fff3e6; }
 
-/* ===== GARIS PEMBATAS SECTION ===== */
+/* ===== GARIS PEMBATAS ===== */
 .section-divider{
   width:90%;
   height:2px;
@@ -68,7 +68,7 @@ nav a:hover{ color:#fff3e6; }
   justify-content:center;
 }
 
-/* ===== SECTION 1 (PENGENALAN) ===== */
+/* ===== SECTION 1 ===== */
 .intro-box{
   max-width:850px;
   background:rgba(255,255,255,0.6);
@@ -91,16 +91,15 @@ nav a:hover{ color:#fff3e6; }
   line-height:1.8;
 }
 
-/* ===== SECTION 2 (PROFIL) ===== */
+/* ===== SECTION 2 (UPDATED LAYOUT) ===== */
 .profile-container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:60px;
+  text-align:center;
+  max-width:700px;
 }
 
-.profile-left{
-  text-align:center;
+.profile-container h3{
+  font-size:32px;
+  margin-bottom:40px;
 }
 
 .profile-img{
@@ -118,25 +117,16 @@ nav a:hover{ color:#fff3e6; }
   transform:scale(1.05);
 }
 
-.profile-left h2{
-  margin-bottom:8px;
+.profile-container h2{
+  margin-bottom:10px;
 }
 
-.profile-left span{
+.profile-container span{
   display:block;
-  max-width:320px;
-  margin:0 auto;
+  max-width:420px;
+  margin:0 auto 30px auto;
   font-size:14px;
   line-height:1.6;
-}
-
-.profile-right{
-  background:rgba(255,255,255,0.6);
-  padding:40px;
-  border-radius:25px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.08);
-  text-align:center;
 }
 
 .link-btn{
@@ -147,7 +137,7 @@ nav a:hover{ color:#fff3e6; }
   background:linear-gradient(135deg,#6f4e37,#b08968);
   color:white;
   text-decoration:none;
-  width:200px;
+  width:220px;
   transition:0.3s;
 }
 
@@ -155,7 +145,7 @@ nav a:hover{ color:#fff3e6; }
   transform:scale(1.05);
 }
 
-/* ===== SECTION 3 (YOUTUBE) ===== */
+/* ===== SECTION 3 ===== */
 .youtube-section{
   text-align:center;
 }
@@ -207,33 +197,31 @@ footer{
 
 <div class="section-divider"></div>
 
-<!-- ===== SECTION 2 ===== -->
+<!-- ===== SECTION 2 (UPDATED) ===== -->
 <section class="section">
   <div class="profile-container">
 
-    <div class="profile-left">
-      <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-      <h2>Nazwa Syafina</h2>
-      <span>
-        Mahasiswi Program Studi Perpustakaan dan Sains Informasi 
-        yang memiliki minat dalam literasi digital, pengelolaan informasi, 
-        serta pengembangan inovasi layanan perpustakaan berbasis teknologi.
-      </span>
-    </div>
+    <h3>Tentang Saya</h3>
 
-    <div class="profile-right">
-      <h3>Tentang Saya</h3>
+    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
 
-      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
-        Sosial Media
-      </a>
+    <h2>Nazwa Syafina</h2>
 
-      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
-         target="_blank" 
-         class="link-btn">
-        Curriculum Vitae
-      </a>
-    </div>
+    <span>
+      Mahasiswi Program Studi Perpustakaan dan Sains Informasi 
+      yang memiliki minat dalam literasi digital, pengelolaan informasi, 
+      serta pengembangan inovasi layanan perpustakaan berbasis teknologi.
+    </span>
+
+    <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">
+      Sosial Media
+    </a>
+
+    <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/preview" 
+       target="_blank" 
+       class="link-btn">
+      Curriculum Vitae
+    </a>
 
   </div>
 </section>
