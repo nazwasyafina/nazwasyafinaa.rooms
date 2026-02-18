@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:Poppins;
+  background:linear-gradient(135deg,#5c3a2e,#8c5a3c);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.box{
+  background:white;
+  padding:40px;
+  width:400px;
+  border-radius:15px;
+}
+input,button{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+}
+button{
+  background:#5c3a2e;
+  color:white;
+  border:none;
+}
+a{color:#5c3a2e;}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Daftar</h2>
+  <input type="text" placeholder="First Name">
+  <input type="text" placeholder="Last Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="tel" placeholder="Nomor HP">
+  <input type="password" id="password" placeholder="Password">
+  <button id="registerBtn">Daftar</button>
+  <p>Sudah punya akun? <a href="login.html">Login</a></p>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "API_KEY_KAMU",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  messagingSenderId: "XXXX",
+  appId: "XXXX"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("registerBtn").addEventListener("click", ()=>{
+  const email=document.getElementById("email").value;
+  const password=document.getElementById("password").value;
+
+  createUserWithEmailAndPassword(auth,email,password)
+  .then(()=>{
+    alert("Akun berhasil dibuat!");
+    window.location.href="login.html";
+  })
+  .catch(err=>alert(err.message));
+});
+</script>
+
+</body>
+</html>
