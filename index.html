@@ -22,14 +22,17 @@ body{
 
 /* ===== NAVBAR ===== */
 nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
   display:flex;
   justify-content:space-between;
-  padding:20px 60px;
-  background:#ffffff;
-  position:sticky;
-  top:0;
+  align-items:center;
+  padding:0 50px;
+  height:70px; /* tinggi tetap */
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   z-index:1000;
-  border-bottom:1px solid #e5e5e5;
 }
 
 nav strong{ 
@@ -41,19 +44,14 @@ nav strong{
 .logo-area{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:15px;
+  height:70px;
 }
 
 .logo-img{
-  height:100%;
-  max-height:70px;
+  height:55px;
   width:auto;
   object-fit:contain;
-  transition:0.3s ease;
-}
-
-.logo-img:hover{
-  transform:scale(1.08);
 }
 
 nav a{
