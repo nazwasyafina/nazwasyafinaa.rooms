@@ -32,7 +32,12 @@ nav{
   border-bottom:1px solid #e5e5e5;
 }
 
-nav strong{ color:#4b3621; }
+nav strong{ 
+  color:#4b3621; 
+  font-size:18px;
+}
+
+/* Logo Area */
 .logo-area{
   display:flex;
   align-items:center;
@@ -41,10 +46,16 @@ nav strong{ color:#4b3621; }
 
 .logo-img{
   height:100%;
-  max-height:60px;
+  max-height:70px;
   width:auto;
   object-fit:contain;
+  transition:0.3s ease;
 }
+
+.logo-img:hover{
+  transform:scale(1.08);
+}
+
 nav a{
   text-decoration:none;
   color:#4b3621;
