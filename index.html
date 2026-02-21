@@ -33,7 +33,17 @@ nav{
 }
 
 nav strong{ color:#4b3621; }
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
+.logo-img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
 nav a{
   text-decoration:none;
   color:#4b3621;
@@ -301,7 +311,10 @@ footer{
 <body>
 
 <nav>
-  <div><strong>Nazwa’s Library Corner</strong></div>
+ <div class="logo-area">
+  <img src="logo.png" alt="Logo" class="logo-img">
+  <strong>Nazwa’s Library Corner</strong>
+</div>
   <div>
     <a href="#beranda">Beranda</a>
     <a href="#profil">Profil</a>
