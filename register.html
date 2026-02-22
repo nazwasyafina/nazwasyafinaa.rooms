@@ -20,7 +20,7 @@ body {
 /* BOX PUTIH */
 .register-box {
     background: white;
-    width: 550px; /* dikecilkan lagi */
+    width: 480px; /* dikecilkan lagi */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -115,7 +115,39 @@ body {
         <button>Daftar</button>
 
     </div>
+
+     <p>Sudah punya akun? <a href="login.html">Login</a></p>
 </div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "API_KEY_KAMU",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  messagingSenderId: "XXXX",
+  appId: "XXXX"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("registerBtn").addEventListener("click", ()=>{
+  const email=document.getElementById("email").value;
+  const password=document.getElementById("password").value;
+
+  createUserWithEmailAndPassword(auth,email,password)
+  .then(()=>{
+    alert("Akun berhasil dibuat!");
+    window.location.href="login.html";
+  })
+  .catch(err=>alert(err.message));
+});
+</script>
 
 </body>
 </html>
