@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - Nazwa's Library Corner</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
@@ -16,23 +17,80 @@ body {
     align-items: flex-start;
     min-height: 100vh;
 }
+
 .box{
   background:white;
   padding:40px;
-  width:350px;
+  width:480px;
   border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
-input,button{
+
+.box h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#5C4033;
+}
+
+.form-container{
+  width:320px;
+  margin:0 auto;
+}
+
+.form-container input{
   width:100%;
-  padding:12px;
+  padding:10px;
   margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
 }
-button{
-  background:#5c3a2e;
+
+/* Checkbox di atas tombol */
+.checkbox-group{
+  display:flex;
+  align-items:center;
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+.checkbox-group input{
+  width:auto;
+  margin-right:5px;
+}
+
+/* Tombol Masuk */
+.form-container button{
+  width:100%;
+  padding:10px;
+  background-color:#8B5E3C;
   color:white;
   border:none;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  margin-bottom:15px;
 }
-a{color:#5c3a2e;}
+
+.form-container button:hover{
+  background-color:#6F4E37;
+}
+
+/* Link Daftar bold coklat */
+.register-link{
+  text-align:center;
+  font-size:14px;
+}
+
+.register-link a{
+  color:#8B5E3C;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.register-link a:hover{
+  color:#6F4E37;
+}
 </style>
 </head>
 
@@ -41,20 +99,28 @@ a{color:#5c3a2e;}
 <div class="box">
   <h2>Login</h2>
 
-  <p style="font-size:14px; margin-bottom:20px;">
+  <p style="font-size:14px; margin-bottom:20px; text-align:center;">
     Masuk untuk mengakses Nazwa’s Library Corner dan melanjutkan eksplorasi pengetahuan.
   </p>
 
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-  <button id="loginBtn">Masuk</button>
+  <div class="form-container">
 
-  <div style="margin-bottom:15px;">
-    <input type="checkbox" id="remember" style="width:auto; margin-right:5px;">
-    <label for="remember" style="font-size:14px;">Remember Me</label>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <!-- Checkbox tepat di atas tombol -->
+    <div class="checkbox-group">
+      <input type="checkbox" id="remember">
+      <label for="remember">Remember Me</label>
+    </div>
+
+    <button id="loginBtn">Masuk</button>
+
+    <div class="register-link">
+      Belum punya akun? <a href="register.html">Daftar</a>
+    </div>
+
   </div>
-
-  <p>Belum punya akun? <a href="register.html">Daftar</a></p>
 </div>
 
 <script type="module">
