@@ -98,26 +98,27 @@ body {
     <div class="form-container">
 
         <h3>Informasi Pribadi</h3>
-        <input type="text" placeholder="First Name">
-        <input type="email" placeholder="Last Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Nomor HP">
+<input type="text" placeholder="First Name">
+<input type="email" placeholder="Last Name">
+<input type="email" placeholder="Email" id="email">
+<input type="text" placeholder="Nomor HP">
 
-        <h3>Keamanan</h3>
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Konfirmasi Password">
+<h3>Keamanan</h3>
+<input type="password" placeholder="Password" id="password">
+<input type="password" placeholder="Konfirmasi Password">
 
-        <div class="checkbox-group">
-            <input type="checkbox" id="agree">
-            <label for="agree">Saya setuju dengan syarat & ketentuan</label>
-        </div>
-
-        <button>Daftar</button>
-
-    </div>
-
-     <p>Sudah punya akun? <a href="login.html">Login</a></p>
+<div class="checkbox-group">
+    <input type="checkbox" id="agree">
+    <label for="agree">Saya setuju dengan syarat & ketentuan</label>
 </div>
+
+<button id="registerBtn">Daftar</button>
+
+<p style="text-align:center; margin-top:15px; font-size:14px;">
+  Sudah punya akun? <a href="login.html">Login</a>
+</p>
+
+</div> 
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
