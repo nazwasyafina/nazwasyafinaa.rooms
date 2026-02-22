@@ -1,106 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body{
-  margin:0;
-  font-family:Poppins;
-  background:linear-gradient(135deg,#5c3a2e,#8c5a3c);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  padding:40px 0;
-}
-.box{
-  background:white;
-  padding:40px;
-  width:500px; /* diperkecil lagi */
-  border-radius:15px;
-}
-input{
-  width:280px; /* diperkecil */
-  padding:12px;
-  margin:0 auto 15px auto; /* ditengah */
-  display:block;
-}
-button{
-  background:#5c3a2e;
-  color:white;
-  border:none;
-  width:280px; /* sejajar dengan field */
-  padding:12px;
-  display:block;
-  margin:15px auto;
-}
-a{color:#5c3a2e;}
-</style>
-</head>
+<title>Daftar - Nazwa’s Library Corner</title>
 
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8B5E3C, #C19A6B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* BOX PUTIH */
+.register-box {
+    background: white;
+    width: 550px; /* dikecilkan lagi */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* JUDUL */
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5C4033;
+}
+
+/* CONTAINER FORM DI TENGAH */
+.form-container {
+    width: 320px;
+    margin: 0 auto;
+}
+
+/* SUB JUDUL */
+.form-container h3 {
+    margin-bottom: 15px;
+    color: #5C4033;
+}
+
+/* FIELD */
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* BUTTON */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B5E3C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #6F4E37;
+}
+</style>
+
+</head>
 <body>
 
-<div class="box">
-  <h2 style="text-align:center;">Daftar</h2>
+<div class="register-box">
+    <h2>Daftar Akun</h2>
 
-  <p style="font-size:14px; margin-bottom:20px; text-align:center;">
-    Silahkan lengkapi data diri di bawah ini untuk membuat akun dan mendapatkan akses ke fitur dan konten yang tersedia.
-  </p>
+    <div class="form-container">
 
-  <h4>Informasi Pribadi</h4>
-  <input type="text" placeholder="First Name">
-  <input type="text" placeholder="Last Name">
-  <input type="email" id="email" placeholder="Email">
-  <input type="tel" placeholder="Nomor HP">
+        <h3>Informasi Pribadi</h3>
+        <input type="text" placeholder="Nama Lengkap">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Username">
 
-  <h4>Keamanan</h4>
-  <input type="password" id="password" placeholder="Password">
-  <input type="password" placeholder="Konfirmasi Password">
+        <h3>Keamanan</h3>
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Konfirmasi Password">
 
-  <button id="registerBtn">Daftar</button>
+        <div class="checkbox-group">
+            <input type="checkbox" id="agree">
+            <label for="agree">Saya setuju dengan syarat & ketentuan</label>
+        </div>
 
-  <div style="margin-bottom:15px; text-align:center;">
-    <input type="checkbox" id="terms" style="width:auto; margin-right:5px;">
-    <label for="terms" style="font-size:14px;">
-      Saya setuju dengan Terms & Conditions
-    </label>
-  </div>
+        <button>Daftar</button>
 
-  <p style="text-align:center;">Sudah punya akun? <a href="login.html">Login</a></p>
+    </div>
 </div>
-
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "API_KEY_KAMU",
-  authDomain: "PROJECT_ID.firebaseapp.com",
-  projectId: "PROJECT_ID",
-  storageBucket: "PROJECT_ID.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-document.getElementById("registerBtn").addEventListener("click", ()=>{
-  const email=document.getElementById("email").value;
-  const password=document.getElementById("password").value;
-
-  createUserWithEmailAndPassword(auth,email,password)
-  .then(()=>{
-    alert("Akun berhasil dibuat!");
-    window.location.href="login.html";
-  })
-  .catch(err=>alert(err.message));
-});
-</script>
 
 </body>
 </html>
