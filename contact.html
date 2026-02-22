@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -10,12 +10,12 @@
 <style>
 body {
     margin: 0;
-    padding: 40px 0; /* kasih ruang atas bawah */
-    font-family: 'Poppins';
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #8B5E3C, #C19A6B);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* tidak center full */
+    align-items: flex-start;
     min-height: 100vh;
 }
 
@@ -51,7 +51,16 @@ body {
   border-radius:10px;
   border:1px solid #ddd;
   font-size:14px;
+  font-family:'Poppins', sans-serif;
   outline:none;
+}
+
+/* SAMAKAN FONT PLACEHOLDER */
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+  font-family:'Poppins', sans-serif;
+  font-size:14px;
+  font-weight:400;
 }
 
 .input-group textarea{
@@ -92,7 +101,6 @@ button:hover{
   <p style="text-align:center; font-size:14px; margin-bottom:20px; color:#6b4f3a;">
     Punya pertanyaan, kritik, atau saran untuk Nazwa’s Library Corner? 
     Silahkan kirimkan pesanmu melalui formulir di bawah ini. 
-    
   </p>
 
   <form id="contactForm">
