@@ -316,9 +316,9 @@ footer{
   }
 
 }
-  /* ===== PRE FOOTER (3 KOLOM) ===== */
+  /* ===== PRE FOOTER ===== */
 .pre-footer{
-  background:#f7efe9;
+  background:#8b6b4f; 
   padding:60px 80px;
 }
 
@@ -332,27 +332,35 @@ footer{
 }
 
 .pre-footer h4{
-  font-size:18px;
+  font-size:17px;
   margin-bottom:20px;
   font-weight:600;
-  color:#4b3621;
+  color:#ffffff;
 }
 
 .pre-footer p,
 .pre-footer a{
   font-size:14px;
-  line-height:1.8;
-  color:#6b4f3a;
+  line-height:1.9;
+  color:#ffffff;
   text-decoration:none;
-  display:block;
-  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.pre-footer i{
+  font-size:14px;
+  width:18px;
+  text-align:center;
+  color:#ffffff;
 }
 
 .pre-footer a:hover{
-  color:#8b6b4f;
+  opacity:0.8;
 }
 
-/* RESPONSIVE */
 @media (max-width:768px){
   .pre-footer{
     padding:40px 20px;
@@ -443,23 +451,29 @@ footer{
 
     <div>
       <h4>Jam Operasional</h4>
-      <p>Senin – Jumat: 08.00 – 16.00</p>
-      <p>Sabtu: 09.00 – 14.00</p>
-      <p>Minggu & Hari Libur: Tutup</p>
+      <p><i class="fa-regular fa-clock"></i> Senin – Jumat: 08.00 – 16.00</p>
+      <p><i class="fa-regular fa-clock"></i> Sabtu: 09.00 – 14.00</p>
+      <p><i class="fa-solid fa-xmark"></i> Minggu & Hari Libur: Tutup</p>
     </div>
 
     <div>
       <h4>Kontak</h4>
-      <p>Email: nazwalibrarycorner@gmail.com</p>
-      <p>Phone: +62 812-xxxx-xxxx</p>
-      <p>Medan, Indonesia</p>
+      <p><i class="fa-regular fa-envelope"></i> nazwalibrarycorner@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +62 812-xxxx-xxxx</p>
+      <p><i class="fa-solid fa-location-dot"></i> Medan, Indonesia</p>
     </div>
 
     <div>
       <h4>Sosial Media</h4>
-      <a href="https://www.instagram.com/nazwasyafinaa" target="_blank">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">YouTube</a>
+      <a href="https://www.instagram.com/nazwasyafinaa" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="#" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="#" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+      </a>
     </div>
 
   </div>
