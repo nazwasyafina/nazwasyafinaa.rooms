@@ -316,6 +316,53 @@ footer{
   }
 
 }
+  /* ===== PRE FOOTER (3 KOLOM) ===== */
+.pre-footer{
+  background:#f7efe9;
+  padding:60px 80px;
+}
+
+.pre-footer-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.pre-footer h4{
+  font-size:18px;
+  margin-bottom:20px;
+  font-weight:600;
+  color:#4b3621;
+}
+
+.pre-footer p,
+.pre-footer a{
+  font-size:14px;
+  line-height:1.8;
+  color:#6b4f3a;
+  text-decoration:none;
+  display:block;
+  margin-bottom:6px;
+}
+
+.pre-footer a:hover{
+  color:#8b6b4f;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .pre-footer{
+    padding:40px 20px;
+  }
+
+  .pre-footer-container{
+    flex-direction:column;
+    gap:30px;
+  }
+}
 </style>
 </head>
 
@@ -391,6 +438,32 @@ footer{
 </section>
 
 <footer>
+  <section class="pre-footer">
+  <div class="pre-footer-container">
+
+    <div>
+      <h4>Jam Operasional</h4>
+      <p>Senin – Jumat: 08.00 – 16.00</p>
+      <p>Sabtu: 09.00 – 14.00</p>
+      <p>Minggu & Hari Libur: Tutup</p>
+    </div>
+
+    <div>
+      <h4>Kontak</h4>
+      <p>Email: nazwalibrarycorner@gmail.com</p>
+      <p>Phone: +62 812-xxxx-xxxx</p>
+      <p>Medan, Indonesia</p>
+    </div>
+
+    <div>
+      <h4>Sosial Media</h4>
+      <a href="https://www.instagram.com/nazwasyafinaa" target="_blank">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+
+  </div>
+</section>
 © 2026 Nazwa’s Library Corner 
 </footer>
 
