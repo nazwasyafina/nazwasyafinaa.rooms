@@ -319,53 +319,62 @@ footer{
   /* ===== PRE FOOTER ===== */
 .pre-footer {
   background: #8b6b4f;
-  color: #fff;
+  color: #ffffff;
   padding: 70px 80px 50px;
 }
 
 .pre-footer-container {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  align-items: flex-start;
   max-width: 1100px;
   margin: auto;
-  flex-wrap: wrap;
+  gap: 80px;
 }
 
 .pre-col {
   flex: 1;
-  min-width: 240px;
+}
+
+.center-col {
+  text-align: center;
 }
 
 .pre-footer h4 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   color: #f4d03f;
   letter-spacing: 0.5px;
 }
 
 .pre-footer p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
   line-height: 1.8;
 }
 
+.center-col p {
+  justify-content: center;
+}
+
 .pre-footer i {
   font-size: 15px;
   margin-top: 3px;
+  color: #ffffff;
 }
 
-/* DESKRIPSI SOSMED LEBIH RAPI (3 BARIS) */
+/* DESKRIPSI SOSIAL MEDIA */
 .pre-description {
   font-size: 13px;
-  opacity: 0.85;
+  opacity: 0.9;
   line-height: 1.7;
-  max-width: 260px; /* bikin jadi 3 baris */
+  max-width: 260px;
   margin-bottom: 18px;
+  text-align: left;
 }
 
 /* ICON SOSIAL MEDIA */
@@ -398,6 +407,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.3);
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .pre-footer {
     padding: 50px 20px 40px;
@@ -406,6 +416,14 @@ footer {
   .pre-footer-container {
     flex-direction: column;
     gap: 40px;
+  }
+
+  .center-col {
+    text-align: left;
+  }
+
+  .center-col p {
+    justify-content: flex-start;
   }
 }
 </style>
@@ -486,41 +504,40 @@ footer {
 <footer>
   <section class="pre-footer">
   <div class="pre-footer-container">
-
-    <div>
+    
+    <!-- JAM OPERASIONAL -->
+    <div class="pre-col">
       <h4>Jam Operasional</h4>
-      <p><i class="fa-regular fa-clock"></i> Senin – Jumat: 08.00 – 16.00</p>
-      <p><i class="fa-regular fa-clock"></i> Sabtu: 09.00 – 14.00</p>
-      <p><i class="fa-solid fa-xmark"></i> Minggu & Hari Libur: Tutup</p>
+      <p><i class="fas fa-clock"></i> Senin - Jumat: 08.00 - 16.00</p>
+      <p><i class="fas fa-clock"></i> Sabtu: 09.00 - 14.00</p>
+      <p><i class="fas fa-times-circle"></i> Minggu & Libur Nasional: Tutup</p>
     </div>
 
-    <div>
+    <!-- KONTAK (TENGAH) -->
+    <div class="pre-col center-col">
       <h4>Kontak</h4>
-      <p><i class="fa-regular fa-envelope"></i> nazwalibrarycorner@gmail.com</p>
-      <p><i class="fa-solid fa-phone"></i> +62 812-xxxx-xxxx</p>
-      <p><i class="fa-solid fa-location-dot"></i> Medan, Indonesia</p>
+      <p><i class="fas fa-envelope"></i> nazwa.library@email.com</p>
+      <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+      <p><i class="fas fa-map-marker-alt"></i> Indonesia</p>
     </div>
 
-   <div class="pre-col">
-  <h4>Sosial Media</h4>
+    <!-- SOSIAL MEDIA -->
+    <div class="pre-col">
+      <h4>Sosial Media</h4>
+      <p class="pre-description">
+        Ikuti Nazwa’s Library Corner untuk update literasi,
+        pengelolaan informasi, dan pengembangan
+        perpustakaan digital.
+      </p>
 
-  <div class="pre-description">
-    Ikuti Nazwa’s Library Corner untuk update literasi,
-    pengelolaan informasi, dan pengembangan perpustakaan digital.
-  </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com/nazwasyafinaa" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="#">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-    <a href="#">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
   </div>
-</div>
 </section>
 © 2026 Nazwa’s Library Corner 
 </footer>
