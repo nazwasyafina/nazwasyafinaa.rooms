@@ -137,77 +137,14 @@ nav a:hover{ color:#8b6b4f; }
 }
 
 /* ===== SECTION 2 ===== */
-/* Profil Section Variatif */
-#profil {
-  padding:90px 60px;
-  background:#f8f4ef;
-}
-
-/* Block layout */
-.profile-block {
-  display:flex;
-  align-items:center;
-  gap:50px;
-  margin-bottom:60px;
-  flex-wrap:wrap;
-}
-
-.profile-block img {
-  width:100%;
-  max-width:380px;
-  object-fit:contain;
-}
-
-.profile-text {
-  flex:1;
-  min-width:280px;
-}
-
-.intro-block .profile-text h2 {
-  font-size:34px;
-  margin-bottom:15px;
-  color:#5c4033;
-}
-
-/* Swap order in detail block */
-.detail-block {
-  flex-direction:row-reverse;
-}
-
-.cards-block {
-  display:flex;
-  gap:40px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.vision-box,
-.mission-box {
-  background:#ffffff;
-  border-radius:18px;
-  padding:25px;
-  flex:1;
-  min-width:240px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.06);
-  text-align:center;
-}
-
-.card-icon {
-  width:48px;
-  height:48px;
-  margin-bottom:12px;
-  fill:#8b6b4f;
-  opacity:0.85;
-}
-
-.cards-block h3 {
-  margin-top:10px;
-  color:#8b6b4f;
-}
-
-.mission-box ul {
-  padding-left:20px;
-  text-align:left;
+#profil{
+  background:linear-gradient(
+    180deg,
+    #b08968 0%,
+    #c8a98f 40%,
+    #e0c7b5 75%,
+    #f2e5dc 100%
+  );
 }
 
 /* ===== SECTION 3 ===== */
@@ -602,66 +539,50 @@ footer {
   </div>
 </section>
 
-<section class="section" id="profil">
-  <!-- Block 1: Intro Profil -->
-  <div class="profile-block intro-block">
-    <div class="profile-text">
-      <h2>Profil Perpustakaan</h2>
-      <p>
-         <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
-      </p>
-    </div>
-    <div class="profile-illustration">
-      <img src="illustration-library.png" alt="Ilustrasi Perpustakaan">
-    </div>
-  </div>
+<section class="section library-profile" id="profil">
+  <div class="profile-container">
 
-  <!-- Block 2: Detail Profil -->
-  <div class="profile-block detail-block">
-    <div class="profile-illustration">
-      <img src="illustration-learning.png" alt="Ilustrasi Pembelajaran">
-    </div>
-    <div class="profile-text">
+    <div class="profile-left">
+      <h2>
+        <i class="fa-solid fa-book-open profile-icon"></i>
+        Profil Perpustakaan
+      </h2>
+
       <p>
+        <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
+      </p>
+      
+       <p>
        Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
       </p>
 
-       <p>
+      <p>
        Dengan memadukan nilai-nilai dasar ilmu perpustakaan dan pemanfaatan teknologi, <strong>Nazwa’s Library Corner</strong> hadir sebagai pusat akses pengetahuan yang mendorong pembelajaran berkelanjutan. Perpustakaan ini berperan dalam menumbuhkan budaya literasi, meningkatkan kesadaran akan pentingnya informasi yang berkualitas, serta membangun ekosistem belajar yang adaptif terhadap perkembangan zaman.
       </p>
-      
-    </div>
-  </div>
-
-  <!-- Block 3: Visi & Misi Cards -->
-  <div class="profile-block cards-block">
-    <div class="vision-box">
-      <svg class="card-icon" viewBox="0 0 24 24">
-        <!-- Eye icon simple SVG -->
-        <path d="M1 12s4 8 11 8 11 -8 11 -8 -4 -8 -11 -8 -11 8 -11 8z"/>
-        <circle cx="12" cy="12" r="3"/>
-      </svg>
-      <h3>Visi</h3>
-      <p>
-        Menjadi ruang literasi yang inspiratif, inklusif, dan adaptif dalam mendukung pengembangan pengetahuan serta budaya membaca masyarakat.
-      </p>
     </div>
 
-    <div class="mission-box">
-      <svg class="card-icon" viewBox="0 0 24 24">
-        <!-- Target icon simple SVG -->
-        <circle cx="12" cy="12" r="10"/>
-        <circle cx="12" cy="12" r="6"/>
-        <circle cx="12" cy="12" r="2"/>
-      </svg>
-      <h3>Misi</h3>
-      <ul>
-        <li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
-        <li>Mengembangkan layanan perpustakaan yang adaptif terhadap perkembangan teknologi dan kebutuhan pengguna.</li>
-        <li>Mendorong budaya literasi dan pembelajaran di tengah masyarakat.</li>
-       
-      </ul>
+    <div class="profile-right">
+      <div class="vision-box">
+        <h3>
+          <i class="fa-solid fa-eye"></i> Visi
+        </h3>
+        <p>
+          Menjadi ruang literasi yang inspiratif, inklusif, dan adaptif dalam mendukung pengembangan pengetahuan serta budaya membaca masyarakat.
+        </p>
+      </div>
+
+      <div class="mission-box">
+        <h3>
+          <i class="fa-solid fa-bullseye"></i> Misi
+        </h3>
+        <ul>
+          <li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
+          <li>MMengembangkan layanan perpustakaan yang adaptif terhadap perkembangan teknologi dan kebutuhan pengguna.</li>
+          <li>Mendorong budaya literasi dan pembelajaran di tengah masyarakat.</li>
+        </ul>
+      </div>
     </div>
+
   </div>
 </section>
       
