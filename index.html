@@ -250,7 +250,105 @@ nav a:hover{ color:#8b6b4f; }
   box-shadow:0 15px 35px rgba(0,0,0,0.1);
   margin-top:20px;
 }
+.library-profile {
+  background: #f5eee6;
+  padding: 90px 10%;
+  position: relative;
+  overflow: hidden;
+}
 
+.profile-container {
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #5c4033;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-icon {
+  color: #8b6b4f;
+}
+
+.profile-left p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.profile-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.vision-box,
+.mission-box {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.vision-box:hover,
+.mission-box:hover {
+  transform: translateY(-6px);
+}
+
+.vision-box h3,
+.mission-box h3 {
+  margin-bottom: 15px;
+  color: #8b6b4f;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-box ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Decorative soft background shapes */
+.library-profile::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: #e6d3c3;
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  opacity: 0.35;
+}
+
+.library-profile::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: #d2b8a3;
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+  opacity: 0.3;
+}
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
@@ -451,29 +549,50 @@ footer {
         <h2>Nazwa Syafina</h2>
       </div>
 
-      <div class="profile-right">
+      <section class="library-profile">
+  <div class="profile-container">
+
+    <div class="profile-left">
+      <h2>
+        <i class="fa-solid fa-book-open profile-icon"></i>
+        Profil Perpustakaan
+      </h2>
+
+      <p>
+        <strong>Nazwa’s Library Corner</strong> merupakan ruang literasi yang menghadirkan koleksi bacaan, sumber informasi, serta ruang belajar yang mendukung budaya membaca dan pengembangan pengetahuan. Perpustakaan ini dirancang sebagai ruang yang nyaman dan inklusif, baik secara digital maupun fisik, untuk menjembatani kebutuhan informasi masyarakat di era modern.
+      </p>
+
+      <p>
+        Nazwa percaya bahwa perpustakaan umum di era digital tidak hanya berfungsi sebagai tempat penyimpanan koleksi, tetapi juga sebagai ruang inklusif yang mampu menjembatani kebutuhan informasi masyarakat secara luas.
+      </p>
+    </div>
+
+    <div class="profile-right">
+      <div class="vision-box">
+        <h3>
+          <i class="fa-solid fa-eye"></i> Visi
+        </h3>
         <p>
-          Nazwa’s Library Corner merupakan platform perpustakaan digital yang dikembangkan oleh Nazwa Syafina, mahasiswi Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara yang memiliki minat pada bidang literasi, pengelolaan informasi, dan pengembangan web.
+          Menjadi ruang literasi yang inspiratif, inklusif, dan adaptif dalam mendukung pengembangan pengetahuan serta budaya membaca di era digital.
         </p>
+      </div>
 
-        <p>
-          Website ini dibuat sebagai ruang digital untuk menyimpan, membagikan, dan mengembangkan berbagai ide serta pembelajaran seputar dunia perpustakaan. Selain menjadi media personal branding, platform ini juga menjadi tempat bagi Nazwa untuk mengekspresikan minatnya dalam menggabungkan ilmu perpustakaan dengan teknologi secara sederhana dan mudah dipahami.
-        </p>
-
-        <p>
-          Melalui Nazwa’s Library Corner, diharapkan nantinya dapat tercipta ruang yang nyaman dan inspiratif, yang tidak hanya menampilkan informasi, tetapi juga memberi semangat bagi pengunjung untuk terus belajar dan berkembang di era digital.
-        </p>
-
-        <div class="button-wrapper">
-          <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">Sosial Media</a>
-          <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk" target="_blank" class="link-btn">Curriculum Vitae</a>
-        </div>
-
+      <div class="mission-box">
+        <h3>
+          <i class="fa-solid fa-bullseye"></i> Misi
+        </h3>
+        <ul>
+          <li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
+          <li>Mendorong budaya literasi dan pembelajaran sepanjang hayat.</li>
+          <li>Menciptakan ruang belajar yang nyaman dan inklusif.</li>
+          <li>Mengintegrasikan teknologi dalam layanan perpustakaan.</li>
+        </ul>
       </div>
     </div>
+
   </div>
 </section>
-
+      
 <section class="section youtube-section" id="media">
   <div>
     <h3>Video Dokumentasi</h3>
