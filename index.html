@@ -507,6 +507,129 @@ footer {
     gap: 40px;
   }
 }
+  /* ===== PREMIUM EDITORIAL STYLE PROFIL ===== */
+
+/* Tambah layering background lebih hidup */
+#profil{
+  position:relative;
+  overflow:hidden;
+}
+
+#profil::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle, rgba(139,107,79,0.15) 0%, transparent 70%);
+  top:-120px;
+  right:-120px;
+  z-index:0;
+}
+
+#profil::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(176,137,104,0.18) 0%, transparent 70%);
+  bottom:-100px;
+  left:-100px;
+  z-index:0;
+}
+
+/* Pastikan konten di atas background */
+.profile-container{
+  position:relative;
+  z-index:2;
+}
+
+/* Turunkan kanan + efek editorial */
+.profile-right{
+  margin-top:90px;
+  position:relative;
+}
+
+/* Overlap effect */
+.mission-box{
+  margin-top:-40px;
+}
+
+/* Vision box */
+.vision-box{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(6px);
+  border-left:6px solid #8b6b4f;
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Mission box */
+.mission-box{
+  background:rgba(255,255,255,0.9);
+  border-left:6px solid #b08968;
+  box-shadow:0 25px 50px rgba(0,0,0,0.1);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Decorative watermark icon */
+.vision-box::after{
+  content:"\f5da";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  position:absolute;
+  right:25px;
+  bottom:15px;
+  font-size:70px;
+  color:rgba(139,107,79,0.07);
+}
+
+.mission-box::after{
+  content:"\f19d";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  position:absolute;
+  right:25px;
+  bottom:15px;
+  font-size:70px;
+  color:rgba(176,137,104,0.08);
+}
+
+/* Hover lebih premium */
+.vision-box:hover,
+.mission-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* Garis aksen elegan kiri */
+.profile-left h2::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:4px;
+  background:linear-gradient(to right,#8b6b4f,#d2b8a3);
+  margin-top:12px;
+  border-radius:6px;
+}
+
+/* Tambah vertical decorative line */
+.profile-left{
+  position:relative;
+  padding-left:25px;
+}
+
+.profile-left::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:linear-gradient(to bottom,#8b6b4f,#d2b8a3);
+  border-radius:3px;
+}
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
