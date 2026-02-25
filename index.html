@@ -138,13 +138,8 @@ nav a:hover{ color:#8b6b4f; }
 
 /* ===== SECTION 2 ===== */
 #profil{
-  background:linear-gradient(
-    180deg,
-    #b08968 0%,
-    #c8a98f 40%,
-    #e0c7b5 75%,
-    #f2e5dc 100%
-  );
+  background: url("bground sec 2") no-repeat center center;
+  background-size: cover;
 }
 
 /* ===== SECTION 3 ===== */
@@ -274,7 +269,8 @@ nav a:hover{ color:#8b6b4f; }
   font-size: 32px;
   margin-bottom: 20px;
   color: #5c4033;
-  display: flex;
+  display:inline-flex;
+  white-space: nowrap;
   align-items: center;
   gap: 12px;
 }
@@ -304,6 +300,7 @@ nav a:hover{ color:#8b6b4f; }
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: 0.3s ease;
+  margin-top: 30px;
 }
 
 .vision-box:hover,
@@ -602,34 +599,7 @@ footer {
   transform:translateY(-10px);
   box-shadow:0 30px 60px rgba(0,0,0,0.12);
 }
-
-/* Garis aksen elegan kiri */
-.profile-left h2::after{
-  content:"";
-  display:block;
-  width:80px;
-  height:4px;
-  background:linear-gradient(to right,#8b6b4f,#d2b8a3);
-  margin-top:12px;
-  border-radius:6px;
-}
-
-/* Tambah vertical decorative line */
-.profile-left{
-  position:relative;
-  padding-left:25px;
-}
-
-.profile-left::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  width:4px;
-  height:100%;
-  background:linear-gradient(to bottom,#8b6b4f,#d2b8a3);
-  border-radius:3px;
-}
+  
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
