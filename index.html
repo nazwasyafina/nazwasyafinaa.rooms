@@ -373,7 +373,32 @@ footer{
   margin-bottom: 15px;
   line-height: 1.7;
 }
-  /* ==== FIX SOCIAL ICON AGAR SEJAJAR ==== */
+ 
+.pre-col .social-icons {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.pre-col .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 16px;
+  gap: 0; 
+}
+
+.pre-col .social-icons i {
+  margin: 0; 
+}
+
 
 .social-icons {
   display: flex;
@@ -394,7 +419,7 @@ footer{
   transition: all 0.3s ease;
 }
 
-/* Override style lama biar gak ikut flex kiri */
+
 .social-icons a {
   align-items: center;
   gap: 0;
