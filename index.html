@@ -320,7 +320,7 @@ footer{
 .pre-footer {
   background: #8b6b4f;
   color: #fff;
-  padding: 70px 80px 50px 80px;
+  padding: 70px 80px 50px;
 }
 
 .pre-footer-container {
@@ -341,15 +341,12 @@ footer{
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 18px;
-  color: #f4d03f; /* kuning elegan */
+  color: #f4d03f;
   letter-spacing: 0.5px;
 }
 
-.pre-footer p,
-.pre-footer a {
+.pre-footer p {
   font-size: 14px;
-  color: #ffffff;
-  text-decoration: none;
   margin-bottom: 10px;
   display: flex;
   align-items: flex-start;
@@ -359,70 +356,35 @@ footer{
 
 .pre-footer i {
   font-size: 15px;
-  color: #ffffff;
   margin-top: 3px;
 }
 
-.pre-footer a:hover {
-  opacity: 0.8;
-}
-
+/* DESKRIPSI SOSMED LEBIH RAPI (3 BARIS) */
 .pre-description {
   font-size: 13px;
   opacity: 0.85;
-  margin-bottom: 15px;
   line-height: 1.7;
-}
- 
-.pre-col .social-icons {
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  gap: 16px;
-  margin-top: 15px;
+  max-width: 260px; /* bikin jadi 3 baris */
+  margin-bottom: 18px;
 }
 
-.pre-col .social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 16px;
-  gap: 0; 
-}
-
-.pre-col .social-icons i {
-  margin: 0; 
-}
-
-
+/* ICON SOSIAL MEDIA */
 .social-icons {
   display: flex;
   gap: 16px;
-  margin-top: 12px;
 }
 
 .social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 42px;
   height: 42px;
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
   font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-
-.social-icons a {
-  align-items: center;
-  gap: 0;
+  transition: 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -430,15 +392,15 @@ footer{
   color: #8b6b4f;
   border-color: #f4d03f;
 }
+
 /* PEMBATAS KE FOOTER */
 footer {
   border-top: 1px solid rgba(255,255,255,0.3);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .pre-footer {
-    padding: 50px 20px 40px 20px;
+    padding: 50px 20px 40px;
   }
 
   .pre-footer-container {
