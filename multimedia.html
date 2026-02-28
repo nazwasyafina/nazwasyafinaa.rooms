@@ -17,8 +17,8 @@
 }
 
 body{
-  color:#4b3621;
   padding-top:100px;
+  color:#4b3621;
   background: linear-gradient(135deg,#f5f0eb,#e0d6c8);
 }
 
@@ -37,19 +37,19 @@ nav{
   z-index:1000;
 }
 
-nav strong{ color:#4b3621; font-size:18px; }
-
 .logo-area{
   display:flex;
   align-items:center;
   gap:8px;
-  height:70px;
 }
 
 .logo-img{
   height:80px;
-  width:auto;
-  object-fit:contain;
+}
+
+nav strong{
+  font-size:18px;
+  color:#4b3621;
 }
 
 nav a{
@@ -59,105 +59,101 @@ nav a{
   font-weight:500;
   transition:0.3s;
 }
-nav a:hover{ color:#8b6b4f; }
 
-#authBtn{
-  background:#8b6b4f;
-  color:#ffffff !important;
-  padding:8px 22px;
-  border-radius:30px;
-  margin-left:30px;
-  transition:0.3s;
+nav a:hover{
+  color:#8b6b4f;
 }
-#authBtn:hover{ background:#b08968; }
 
-/* CONTENT WRAPPER */
+/* ===== CONTENT ===== */
+
 .multimedia-container{
-  max-width:960px;
+  max-width:1100px;
   margin:auto;
-  padding:40px 20px;
+  padding:60px 20px;
   text-align:center;
 }
 
 .multimedia-container h2{
   font-size:32px;
-  margin-bottom:20px;
-  color:#5c4033;
+  margin-bottom:50px;
+  color:#5c3d2e;
 }
 
-/* YOUTUBE VIDEO */
-.video-frame{
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+.video-card iframe{
   width:100%;
-  height:480px;
+  height:250px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
   border:none;
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
-  margin-bottom:40px;
-}
-
-/* PODCAST PLAYER */
-.audio-section{
-  margin-top:30px;
-  padding:30px;
-  background:#ffffff;
-  border-radius:12px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.07);
-}
-
-.audio-section h3{
-  font-size:22px;
-  margin-bottom:15px;
-  color:#4a3428;
-}
-
-audio{
-  width:100%;
-  outline:none;
 }
 
 /* ===== PRE FOOTER ===== */
+
 .pre-footer {
   background: #8b6b4f;
   color: #ffffff;
   padding: 70px 80px 50px;
 }
+
 .pre-footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1100px;
   margin: auto;
-  gap: 80px;
+  gap: 60px;
 }
-.pre-col { flex:1; }
+
+.pre-col {
+  flex:1;
+}
+
 .pre-footer h4 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #f4d03f;
 }
+
 .pre-footer p {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 12px;
   line-height: 1.8;
 }
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 18px;
-  transition: 0.3s;
+
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
 }
-.social-icons a:hover {
-  background: #f4d03f;
-  color: #8b6b4f;
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
 }
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
 /* FOOTER */
+
 footer{
   text-align:center;
   padding:20px;
@@ -178,38 +174,37 @@ footer{
   </div>
   <div>
     <a href="index.html#beranda">Beranda</a>
-    <a href="index.html#profil">Profil</a>
-    <a href="index.html#media">Media</a>
-    <a href="founder.html">Founder</a>
-    <a href="contact.html" target="_blank">Contact Us</a>
-    <a href="login.html" id="authBtn" target="_blank">Login</a>
   </div>
 </nav>
 
 <div class="multimedia-container">
 
-  <h2>Video Dokumentasi</h2>
+  <h2>Multimedia Edukasi Perpustakaan</h2>
 
-  <iframe class="video-frame"
-    src="https://www.youtube.com/embed/4w13jP-cshM"
-    allowfullscreen>
-  </iframe>
+  <div class="video-grid">
 
-  <div class="audio-section">
-    <h3>Podcast Rekomendasi</h3>
-    <audio controls>
-      <source src="https://audio.com/naim-leon/audio/contoh-podcast" type="audio/mpeg">
-      Browser kamu tidak mendukung audio player.
-    </audio>
-    <p style="font-size:14px; color:#6d5c50; margin-top:8px;">
-      Putar untuk mendengarkan cuplikan podcast contoh.
-    </p>
+    <!-- VIDEO 1 (DARI KAMU) -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/4w13jP-cshM" allowfullscreen></iframe>
+    </div>
+
+    <!-- VIDEO 2 WEBINAR PERPUSTAKAAN -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/6v2L2UGZJAM" allowfullscreen></iframe>
+    </div>
+
+    <!-- VIDEO 3 WEBINAR LITERASI INFORMASI -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/NHcR0jvYxLk" allowfullscreen></iframe>
+    </div>
+
   </div>
 
 </div>
 
 <section class="pre-footer">
   <div class="pre-footer-container">
+    
     <div class="pre-col">
       <h4>Jam Operasional</h4>
       <p>Senin - Jumat: 08.00 - 16.00</p>
@@ -217,7 +212,7 @@ footer{
       <p>Minggu & Libur Nasional: Tutup</p>
     </div>
 
-    <div class="pre-col center-col">
+    <div class="pre-col">
       <h4>Kontak</h4>
       <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
       <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
@@ -226,9 +221,8 @@ footer{
 
     <div class="pre-col">
       <h4>Sosial Media</h4>
-      <p class="pre-description">
-        Ikuti Nazwa’s Library Corner untuk update literasi,
-        pengelolaan informasi, dan pengembangan perpustakaan digital.
+      <p>
+        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
       </p>
 
       <div class="social-icons">
@@ -237,6 +231,7 @@ footer{
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
+
   </div>
 </section>
 
