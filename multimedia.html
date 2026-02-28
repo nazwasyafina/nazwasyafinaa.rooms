@@ -92,7 +92,45 @@ nav a:hover{
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
   border:none;
 }
+.video-card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.07);
+  transition:0.3s;
+  text-align:left;
+}
 
+.video-card:hover{
+  transform:translateY(-5px);
+}
+
+.video-icon{
+  font-size:20px;
+  color:#8b6b4f;
+  margin-bottom:10px;
+}
+
+.video-card h3{
+  font-size:18px;
+  margin:10px 0 8px;
+  color:#5c3d2e;
+}
+
+.video-card p{
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:15px;
+  color:#6b4f3a;
+}
+
+.multimedia-desc{
+  max-width:750px;
+  margin: -25px auto 50px;
+  font-size:15px;
+  line-height:1.7;
+  color:#6b4f3a;
+}
 /* ===== PRE FOOTER ===== */
 
 .pre-footer {
@@ -179,25 +217,46 @@ footer{
 
 <div class="multimedia-container">
 
-  <h2>Multimedia Edukasi Perpustakaan</h2>
+ <h2>Multimedia Edukasi Perpustakaan</h2>
 
-  <div class="video-grid">
+<p class="multimedia-desc">
+Kumpulan video edukatif seputar literasi informasi, pengelolaan perpustakaan, 
+dan pengembangan pengetahuan di era digital. Setiap video dirancang untuk 
+menambah wawasan serta memperluas perspektif dalam dunia kepustakawanan.
+</p>
+<div class="video-grid">
 
-    <!-- VIDEO 1 (DARI KAMU) -->
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/4w13jP-cshM" allowfullscreen></iframe>
-    </div>
+  <!-- VIDEO 1 -->
+  <div class="video-card">
+    <div class="video-icon"><i class="fas fa-video"></i></div>
+    <h3>Pengenalan Literasi Informasi</h3>
+    <p>
+      Video ini membahas dasar-dasar literasi informasi serta pentingnya 
+      kemampuan mengakses, mengevaluasi, dan menggunakan informasi secara efektif.
+    </p>
+    <iframe src="https://www.youtube.com/embed/4w13jP-cshM" allowfullscreen></iframe>
+  </div>
 
-    <!-- VIDEO 2 WEBINAR PERPUSTAKAAN -->
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/6v2L2UGZJAM" allowfullscreen></iframe>
-    </div>
+  <!-- VIDEO 2 -->
+  <div class="video-card">
+    <div class="video-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+    <h3>Webinar Perpustakaan & Transformasi Digital</h3>
+    <p>
+      Rekaman webinar yang membahas transformasi perpustakaan di era digital, 
+      inovasi layanan, serta tantangan pengelolaan informasi modern.
+    </p>
+    <iframe src="https://www.youtube.com/embed/ulvrXVMQK4A" allowfullscreen></iframe>
+  </div>
 
-    <!-- VIDEO 3 WEBINAR LITERASI INFORMASI -->
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/NHcR0jvYxLk" allowfullscreen></iframe>
-    </div>
-
+  <!-- VIDEO 3 -->
+  <div class="video-card">
+    <div class="video-icon"><i class="fas fa-podcast"></i></div>
+    <h3>Podcast Edukasi Kepustakawanan</h3>
+    <p>
+      Diskusi ringan namun informatif mengenai perkembangan dunia perpustakaan, 
+      literasi, dan peran generasi muda dalam menjaga budaya baca.
+    </p>
+    <iframe src="https://www.youtube.com/embed/K7-g4rZ7kjo" allowfullscreen></iframe>
   </div>
 
 </div>
