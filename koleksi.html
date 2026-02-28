@@ -187,63 +187,73 @@ nav a:hover{ color:#8b6b4f; }
 }
 
 /* ===== PRE FOOTER ===== */
+
 .pre-footer {
   background: #8b6b4f;
-  color: #fff;
-  padding: 50px 20px;
+  color: #ffffff;
+  padding: 70px 80px 50px;
 }
 
 .pre-footer-container {
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
 }
 
 .pre-col {
-  flex: 1;
-  min-width: 250px;
+  flex:1;
 }
 
-.pre-col h4 {
-  margin-bottom: 15px;
-  font-size: 18px;
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
 }
 
-.pre-col p {
-  margin: 6px 0;
-  line-height: 1.6;
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
 }
 
-.pre-col i {
-  margin-right: 8px;
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
 }
 
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column; /* ICON SEJAJAR KE BAWAH */
-  gap: 10px;
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
 }
 
-.social-icons a {
-  color: #fff;
-  font-size: 18px;
-  transition: 0.3s;
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
 }
 
-.social-icons a:hover {
-  color: #f5e6d3;
-}
+/* FOOTER */
 
-.main-footer {
-  background: #6f533c;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+footer{
+  text-align:center;
+  padding:20px;
+  background:#8b6b4f;
+  color:#ffffff;
+  font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
 }
 </style>
 </head>
@@ -335,6 +345,6 @@ nav a:hover{ color:#8b6b4f; }
   </div>
 </section>
 
-<footer class="main-footer">
+<footer class="pre-footer">
   © 2026 Nazwa’s Library Corner
 </footer>
