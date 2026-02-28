@@ -3,169 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Koleksi Perpustakaan | Nazwa’s Library Corner</title>
+<title>Koleksi | Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #8b6b4f, #3f8f7f);
-    padding: 50px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* CONTAINER */
-.wrapper {
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f5eee6, #e8dfd8);
+    padding: 80px 40px;
+}
+
+/* ===== WRAPPER ===== */
+.container {
     max-width: 1200px;
     margin: auto;
 }
 
-/* HEADER BOX */
-.header-box {
-    background: linear-gradient(135deg, #2f4f6f, #3f8f7f);
-    padding: 40px;
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 40px;
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-.header-box h1 {
-    margin: 10px 0;
-    font-size: 36px;
-}
-
-.header-box p {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* CARD GRID */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ICON */
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: rgba(139,107,79,0.15);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.icon-box i {
-    font-size: 22px;
-    color: #8b6b4f;
-}
-
-/* TEXT */
-.card h3 {
-    margin: 10px 0;
-    color: #2f2f2f;
-}
-
-.card p {
-    font-size: 13px;
-    color: #555;
+.hero h1 {
+    font-size: 38px;
+    color: #5c4033;
     margin-bottom: 15px;
 }
 
-/* BUTTON */
-.card a {
-    display: inline-block;
-    padding: 8px 18px;
+.hero p {
+    font-size: 14px;
+    color: #7a6a5f;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ===== CARD GRID ===== */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* ===== GLASS CARD ===== */
+.collection-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 25px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.collection-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* ===== ICON STYLE (New Style) ===== */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b6b4f, #c7b198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.icon-circle i {
+    color: white;
+    font-size: 24px;
+}
+
+/* ===== TEXT ===== */
+.collection-card h3 {
+    color: #4a3428;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.collection-card p {
+    font-size: 13px;
+    color: #6d5c50;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.collection-card a {
+    display: inline-block;
+    padding: 9px 20px;
+    border-radius: 30px;
     font-size: 13px;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
 }
 
-/* BUTTON STYLE */
-.btn-primary {
+/* BUTTON VARIANTS */
+.btn-main {
     background: #8b6b4f;
     color: white;
 }
 
-.btn-primary:hover {
+.btn-main:hover {
     background: #6f523c;
 }
 
-.btn-secondary {
-    background: #3f8f7f;
-    color: white;
+.btn-alt {
+    background: #c7b198;
+    color: #4a3428;
 }
 
-.btn-secondary:hover {
-    background: #2f6d61;
+.btn-alt:hover {
+    background: #b59e86;
+}
+
+/* ===== FOOTER ===== */
+.footer-note {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 12px;
+    color: #8b6b4f;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <div class="header-box">
-        <span style="background: rgba(255,255,255,0.2); padding:6px 14px; border-radius:20px; font-size:12px;">
-            KOLEKSI PERPUSTAKAAN
-        </span>
-        <h1>Koleksi Nazwa’s Library Corner</h1>
-        <p>Jelajahi koleksi buku tercetak, e-book & e-journal, serta media streaming literasi digital.</p>
+    <div class="hero">
+        <h1>Koleksi Perpustakaan</h1>
+        <p>
+            Temukan sumber informasi dalam berbagai format — mulai dari koleksi fisik, 
+            digital scholarly resources, hingga konten multimedia edukatif.
+        </p>
     </div>
 
-    <div class="card-grid">
+    <div class="collection-grid">
 
-        <!-- Buku Tercetak -->
-        <div class="card">
-            <div class="icon-box">
-                <i class="fas fa-book"></i>
+        <!-- Buku Fisik -->
+        <div class="collection-card">
+            <div class="icon-circle">
+                <i class="fas fa-book-open-reader"></i>
             </div>
-            <h3>Buku Tercetak</h3>
-            <p>Koleksi buku fisik dari berbagai bidang ilmu, referensi akademik, dan bacaan umum.</p>
-            <a href="#" class="btn-primary">Lihat Koleksi</a>
+            <h3>Buku Fisik</h3>
+            <p>
+                Koleksi cetak mencakup literatur akademik, referensi ilmiah,
+                serta bacaan umum untuk memperkaya wawasan dan literasi.
+            </p>
+            <a href="#" class="btn-main">Telusuri Buku</a>
         </div>
 
-        <!-- E-book -->
-        <div class="card">
-            <div class="icon-box">
-                <i class="fas fa-tablet-alt"></i>
+        <!-- Digital Resources -->
+        <div class="collection-card">
+            <div class="icon-circle">
+                <i class="fas fa-laptop-file"></i>
             </div>
-            <h3>E-Book & E-Journal</h3>
-            <p>Akses koleksi digital untuk riset, tugas kuliah, dan jurnal ilmiah berlangganan.</p>
-            <a href="#" class="btn-primary">Akses Digital</a>
+            <h3>Sumber Digital</h3>
+            <p>
+                Akses e-book, e-journal, dan database ilmiah yang mendukung
+                pembelajaran, penelitian, dan pengembangan akademik.
+            </p>
+            <a href="#" class="btn-main">Akses Digital</a>
         </div>
 
         <!-- Multimedia -->
-        <div class="card">
-            <div class="icon-box">
-                <i class="fas fa-play-circle"></i>
+        <div class="collection-card">
+            <div class="icon-circle">
+                <i class="fas fa-film"></i>
             </div>
             <h3>Koleksi Multimedia</h3>
-            <p>Video edukatif, dokumentasi literasi, dan podcast pilihan yang bisa diputar langsung.</p>
-            <a href="multimedia.html" target="_blank" class="btn-secondary">Buka Media</a>
+            <p>
+                Video edukatif, dokumentasi literasi, dan podcast inspiratif
+                yang dapat diputar langsung.
+            </p>
+            <a href="multimedia.html" target="_blank" class="btn-alt">Buka Multimedia</a>
         </div>
 
+    </div>
+
+    <div class="footer-note">
+        © 2026 Nazwa’s Library Corner — Digital Knowledge Space
     </div>
 
 </div>
