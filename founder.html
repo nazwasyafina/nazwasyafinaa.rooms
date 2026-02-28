@@ -6,6 +6,7 @@
 <title>Meet the Founder | Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 *{
@@ -16,10 +17,11 @@
 }
 
 body{
+  color:#4b3621;
+  padding-top:80px;
   background:
     radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent 40%),
     linear-gradient(180deg,#8b6b4f 0%, #c8a98f 50%, #f2e5dc 100%);
-  color:#4b3621;
   min-height:100vh;
 }
 
@@ -28,19 +30,32 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
+  background:#ffffff;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:0 60px;
+  padding:0 50px;
   height:70px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.05);
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   z-index:1000;
 }
 
 nav strong{
+  color:#4b3621;
   font-size:18px;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:70px;
+}
+
+.logo-img{
+  height:80px;
+  width:auto;
+  object-fit:contain;
 }
 
 nav a{
@@ -51,13 +66,24 @@ nav a{
   transition:0.3s;
 }
 
-nav a:hover{
-  color:#8b6b4f;
+nav a:hover{ color:#8b6b4f; }
+
+#authBtn{
+  background:#8b6b4f;
+  color:#ffffff !important;
+  padding:8px 22px;
+  border-radius:30px;
+  margin-left:30px;
+  transition:0.3s;
+}
+
+#authBtn:hover{
+  background:#b08968;
 }
 
 /* ===== SECTION ===== */
 .section{
-  padding:160px 20px 100px;
+  padding:100px 20px 100px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -75,14 +101,8 @@ nav a:hover{
 }
 
 @keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  from{ opacity:0; transform:translateY(30px);}
+  to{ opacity:1; transform:translateY(0);}
 }
 
 .container h1{
@@ -169,13 +189,72 @@ nav a:hover{
   transform:translateY(-3px);
 }
 
-/* ===== FOOTER ===== */
+/* ===== PRE FOOTER ===== */
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
+}
+
+.pre-col {
+  flex:1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+}
+
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
+/* FOOTER */
 footer{
   text-align:center;
-  padding:25px;
-  background:#4b3621;
-  color:white;
+  padding:20px;
+  background:#8b6b4f;
+  color:#ffffff;
   font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -210,10 +289,14 @@ footer{
 <body>
 
 <nav>
+ <div class="logo-area">
+  <img src="logo.PNG" alt="Logo" class="logo-img">
   <strong>Nazwa’s Library Corner</strong>
-  <div>
-    <a href="index.html">Beranda</a>
-  </div>
+ </div>
+ <div>
+  <a href="index.html#beranda">Beranda</a>
+  <a href="koleksi.html" target="_blank">Koleksi</a>
+ </div>
 </nav>
 
 <section class="section">
@@ -247,6 +330,39 @@ footer{
 
       </div>
     </div>
+  </div>
+</section>
+
+<section class="pre-footer">
+  <div class="pre-footer-container">
+
+    <div class="pre-col">
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat: 08.00 - 16.00</p>
+      <p>Sabtu: 09.00 - 14.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
+
+    <div class="pre-col">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
+      <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
+    </div>
+
+    <div class="pre-col">
+      <h4>Sosial Media</h4>
+      <p>
+        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
   </div>
 </section>
 
