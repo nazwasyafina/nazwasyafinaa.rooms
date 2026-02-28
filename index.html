@@ -250,18 +250,58 @@ nav a:hover{ color:#8b6b4f; }
   transform:scale(1.05);
 }
 
-.youtube-section{
-  text-align:center;
+.koleksi-section {
+  padding: 80px 10%;
+  background-color: #f9f6f2;
+  text-align: center;
 }
 
-.youtube-section h3{
-  font-size:32px;
+.koleksi-section h2 {
+  font-size: 32px;
+  color: #cd811c;
+  margin-bottom: 15px;
 }
 
-.youtube-section iframe{
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
-  margin-top:20px;
+.section-desc {
+  color: #2f2f2f;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+.koleksi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.koleksi-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.koleksi-card:hover {
+  transform: translateY(-5px);
+}
+
+.koleksi-card h3 {
+  color: #cd811c;
+  margin-bottom: 15px;
+}
+
+.koleksi-card p {
+  color: #2f2f2f;
+  line-height: 1.6;
+}
+
+.video-wrapper {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .library-profile {
   background: #f5eee6;
@@ -695,17 +735,52 @@ footer {
   </div>
 </section>
       
-<section class="section youtube-section" id="media">
-  <div>
-    <h3>Video Dokumentasi</h3>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/4w13jP-cshM"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+<section class="koleksi-section">
+  <div class="container">
+    <h2>Koleksi</h2>
+    <p class="section-desc">
+      Koleksi Perpustakaan Digital Nazwa’s Library Corner menyediakan berbagai sumber informasi 
+      yang terorganisir dan mudah diakses untuk mendukung kegiatan literasi dan pembelajaran.
+    </p>
+
+    <div class="koleksi-grid">
+      
+      <div class="koleksi-card">
+        <h3>Koleksi Buku</h3>
+        <p>
+          Menyediakan berbagai koleksi buku fiksi dan nonfiksi yang mendukung pengembangan 
+          pengetahuan, literasi, dan wawasan akademik.
+        </p>
+      </div>
+
+      <div class="koleksi-card">
+        <h3>Koleksi Digital</h3>
+        <p>
+          Berisi e-book, jurnal elektronik, dan repository digital yang dapat diakses 
+          sebagai sumber referensi pembelajaran berbasis teknologi.
+        </p>
+      </div>
+
+      <div class="koleksi-card">
+        <h3>Koleksi Media</h3>
+        <p>
+          Koleksi media digital berupa video edukatif dan konten multimedia 
+          yang mendukung literasi informasi dan pembelajaran interaktif.
+        </p>
+
+        <div class="video-wrapper">
+          <iframe width="100%" height="250" 
+            src="https://www.youtube.com/embed/4w13jP-cshM" 
+            title="Video Koleksi Media" 
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
-
 <footer>
   <section class="pre-footer">
   <div class="pre-footer-container">
