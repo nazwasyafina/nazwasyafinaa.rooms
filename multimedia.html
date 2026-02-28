@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multimedia - Nazwa’s Library Corner</title>
+<title>Multimedia | Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -17,13 +17,11 @@
 }
 
 body{
+  padding-top:100px;
   color:#4b3621;
-  padding-top:80px;
-  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 40%),
-              radial-gradient(circle at 80% 70%, rgba(139,107,79,0.25) 0%, transparent 45%),
-              linear-gradient(135deg,#f3e9e1,#d7c2b0,#c2a891);
-  background-attachment: fixed;
+  background: linear-gradient(135deg,#f5f0eb,#e0d6c8);
 }
+
 /* ===== NAVBAR ===== */
 nav{
   position:fixed;
@@ -66,7 +64,7 @@ nav a:hover{
   color:#8b6b4f;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CONTENT FULL SCREEN ===== */
 
 .multimedia-container{
   max-width:1200px;
@@ -80,16 +78,16 @@ nav a:hover{
 }
 
 .multimedia-container h2{
-  font-size:32px;
-  margin-bottom:20px;
+  font-size:28px;
+  margin-bottom:10px;
   color:#5c3d2e;
 }
 
 .multimedia-desc{
-  max-width:750px;
-  margin:0 auto 50px;
-  font-size:15px;
-  line-height:1.8;
+  max-width:700px;
+  margin:0 auto 30px;
+  font-size:14px;
+  line-height:1.6;
   color:#6b4f3a;
 }
 
@@ -99,52 +97,37 @@ nav a:hover{
   gap:20px;
 }
 
-.video-card iframe{
-  width:100%;
-  aspect-ratio:16/9;
-  border-radius:10px;
-  border:none;
-}
-  .video-card{
+.video-card{
+  background:#ffffff;
   padding:15px;
-}
-  .video-card h3{
-  font-size:15px;
-}
-
-.video-card p{
-  font-size:12px;
-  margin-bottom:10px;
-}
-
-.video-card:hover{
-  transform:translateY(-5px);
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  text-align:left;
 }
 
 .video-icon{
-  font-size:28px;
+  font-size:22px;
   color:#8b6b4f;
-  margin-bottom:15px;
+  margin-bottom:8px;
 }
 
 .video-card h3{
-  font-size:18px;
-  margin:10px 0;
+  font-size:14px;
+  margin-bottom:6px;
   color:#5c3d2e;
 }
 
 .video-card p{
-  font-size:14px;
+  font-size:12px;
+  margin-bottom:8px;
   color:#6b4f3a;
-  margin-bottom:15px;
-  line-height:1.6;
+  line-height:1.5;
 }
 
 .video-card iframe{
   width:100%;
   aspect-ratio:16/9;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  border-radius:10px;
   border:none;
 }
 
@@ -237,8 +220,8 @@ footer{
   <h2>Multimedia Edukasi Perpustakaan</h2>
 
   <p class="multimedia-desc">
-    Halaman ini berisi kumpulan video edukatif seputar literasi, perpustakaan, dan pengelolaan informasi.
-    Konten dipilih untuk mendukung pembelajaran serta memperluas wawasan di bidang Ilmu Perpustakaan dan Informasi.
+    Kumpulan video edukatif seputar literasi, transformasi digital perpustakaan,
+    dan peran pustakawan dalam pengelolaan informasi modern.
   </p>
 
   <div class="video-grid">
@@ -246,21 +229,21 @@ footer{
     <div class="video-card">
       <div class="video-icon"><i class="fas fa-book-open"></i></div>
       <h3>Literasi Informasi di Era Digital</h3>
-      <p>Video ini membahas pentingnya literasi informasi dalam menghadapi arus informasi digital serta peran perpustakaan dalam meningkatkan kemampuan berpikir kritis.</p>
+      <p>Pentingnya literasi informasi dalam menghadapi arus informasi digital.</p>
       <iframe src="https://www.youtube.com/embed/4w13jP-cshM" allowfullscreen></iframe>
     </div>
 
     <div class="video-card">
       <div class="video-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-      <h3>Webinar Transformasi Digital Perpustakaan</h3>
-      <p>Webinar ini membahas inovasi layanan perpustakaan, digitalisasi koleksi, dan strategi adaptasi teknologi dalam meningkatkan akses informasi.</p>
+      <h3>Webinar Transformasi Digital</h3>
+      <p>Inovasi layanan dan digitalisasi koleksi perpustakaan.</p>
       <iframe src="https://www.youtube.com/embed/ulvrXVMQK4A" allowfullscreen></iframe>
     </div>
 
     <div class="video-card">
       <div class="video-icon"><i class="fas fa-microphone-alt"></i></div>
-      <h3>Podcast: Peran Pustakawan di Era Modern</h3>
-      <p>Diskusi mengenai perubahan peran pustakawan dari pengelola koleksi menjadi fasilitator literasi digital dan manajer informasi berbasis teknologi.</p>
+      <h3>Podcast Peran Pustakawan Modern</h3>
+      <p>Perkembangan peran pustakawan di era teknologi informasi.</p>
       <iframe src="https://www.youtube.com/embed/K7-g4rZ7kjo" allowfullscreen></iframe>
     </div>
 
