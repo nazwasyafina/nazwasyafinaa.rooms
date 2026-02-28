@@ -408,13 +408,74 @@ nav a:hover{ color:#8b6b4f; }
 .koleksi-btn:hover {
   background: #6f523d;
 }
-/* ===== FOOTER ===== */
+/* ===== PRE FOOTER ===== */
+
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
+}
+
+.pre-col {
+  flex:1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+}
+
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
+/* FOOTER */
+
 footer{
   text-align:center;
   padding:20px;
   background:#8b6b4f;
   color:#ffffff;
   font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
@@ -467,89 +528,6 @@ footer{
     text-align:left;
   }
 }
-  /* ===== PRE FOOTER ===== */
-.pre-footer {
-  background: #8b6b4f;
-  color: #ffffff;
-  padding: 70px 80px 50px;
-}
-
-.pre-footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1100px;
-  margin: auto;
-  gap: 80px;
-}
-
-.pre-col {
-  flex: 1;
-}
-
-.pre-footer h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #f4d03f;
-  letter-spacing: 0.5px;
-  text-align: left;
-}
-
-.pre-footer p {
-  font-size: 16px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  line-height: 1.8;
-}
-.pre-footer i {
-  font-size: 15px;
-  margin-top: 3px;
-  color: #ffffff;
-}
-
-/* DESKRIPSI SOSIAL MEDIA */
-.pre-description {
-  font-size: 15px;
-  opacity: 0.9;
-  line-height: 1.7;
-  max-width: 260px;
-  margin-bottom: 18px;
-  text-align: left;
-}
-
-/* ICON SOSIAL MEDIA */
-.social-icons {
-  display: flex;
-  gap: 16px;
-}
-
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 18px;
-  transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: #f4d03f;
-  color: #8b6b4f;
-  border-color: #f4d03f;
-}
-
-/* PEMBATAS KE FOOTER */
-footer {
-  border-top: 1px solid rgba(255,255,255,0.3);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .pre-footer {
@@ -750,32 +728,27 @@ footer {
   </div>
 </section>
 <footer>
-  <section class="pre-footer">
+ <section class="pre-footer">
   <div class="pre-footer-container">
     
-    <!-- JAM OPERASIONAL -->
-   <div class="pre-col">
-  <h4>Jam Operasional</h4>
-  <p>Senin - Jumat: 08.00 - 16.00</p>
-  <p>Sabtu: 09.00 - 14.00</p>
-  <p>Minggu & Libur Nasional: Tutup</p>
-</div>
+    <div class="pre-col">
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat: 08.00 - 16.00</p>
+      <p>Sabtu: 09.00 - 14.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
 
-    <!-- KONTAK (TENGAH) -->
-    <div class="pre-col center-col">
+    <div class="pre-col">
       <h4>Kontak</h4>
       <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
       <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
       <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
     </div>
 
-    <!-- SOSIAL MEDIA -->
     <div class="pre-col">
       <h4>Sosial Media</h4>
-      <p class="pre-description">
-        Ikuti Nazwa’s Library Corner untuk update literasi,
-        pengelolaan informasi, dan pengembangan
-        perpustakaan digital.
+      <p>
+        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
       </p>
 
       <div class="social-icons">
@@ -787,9 +760,11 @@ footer {
 
   </div>
 </section>
-© 2026 Nazwa’s Library Corner 
-</footer>
 
+<footer>
+© 2026 Nazwa’s Library Corner
+</footer>
+  
 <!-- FIREBASE LOGIN DETECTOR -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
