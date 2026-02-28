@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koleksi | Nazwa’s Library Corner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f6f2;
+}
+
+/* HEADER */
+header {
+    background-color: #8b6b4f;
+    padding: 20px 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section-title h1 {
+    margin-bottom: 10px;
+    color: #5c4033;
+}
+
+.section-title p {
+    color: #7a6a5f;
+    font-size: 14px;
+}
+
+/* SEARCH BAR */
+.search-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search-box input {
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* KOLEKSI GRID */
+.koleksi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 0 60px 60px 60px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 15px 0 5px 0;
+    color: #5c4033;
+}
+
+.card p {
+    font-size: 13px;
+    color: #7a6a5f;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #8b6b4f;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.card button:hover {
+    background-color: #6f523c;
+}
+
+/* KOLEKSI MEDIA */
+.koleksi-media {
+    padding: 60px 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.video-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.video-card iframe {
+    border-radius: 10px;
+}
+
+.video-card h3 {
+    margin-top: 12px;
+    color: #5c4033;
+    font-size: 18px;
+}
+
+.video-card p {
+    font-size: 13px;
+    color: #7a6a5f;
+}
+
+/* FOOTER */
+footer {
+    background-color: #8b6b4f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Nazwa’s Library Corner</h2>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="koleksi.html">Koleksi</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+</header>
+
+<section class="section-title">
+    <h1>Koleksi Digital</h1>
+    <p>Temukan berbagai buku dan media edukatif untuk mendukung literasi dan pengetahuan.</p>
+</section>
+
+<div class="search-box">
+    <input type="text" placeholder="Cari judul buku atau media...">
+</div>
+
+<!-- KOLEKSI BUKU -->
+<section class="koleksi-container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Book">
+        <h3>Digital Literacy in Modern Era</h3>
+        <p>Kategori: Literasi Digital</p>
+        <button>Lihat Detail</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Book">
+        <h3>Information Management</h3>
+        <p>Kategori: Ilmu Informasi</p>
+        <button>Lihat Detail</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="Book">
+        <h3>Library Technology Guide</h3>
+        <p>Kategori: Teknologi Perpustakaan</p>
+        <button>Lihat Detail</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Book">
+        <h3>Archival Preservation</h3>
+        <p>Kategori: Kearsipan</p>
+        <button>Lihat Detail</button>
+    </div>
+
+</section>
+
+<!-- KOLEKSI MEDIA -->
+<section class="koleksi-media">
+    <div class="section-title">
+        <h1>Koleksi Media Digital</h1>
+        <p>Video edukatif dan dokumentasi literasi digital.</p>
+    </div>
+
+    <div class="video-card">
+        <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/4w13jP-cshM"
+            title="Video Literasi Digital"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+        <h3>Dokumentasi Literasi Digital</h3>
+        <p>Kategori: Media Edukasi</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Nazwa’s Library Corner 
+</footer>
+
+</body>
+</html>
