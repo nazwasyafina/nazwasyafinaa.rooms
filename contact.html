@@ -8,142 +8,159 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body {
-    margin: 0;
-    padding: 40px 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #8B5E3C, #C19A6B);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #8B5E3C, #C19A6B);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
+color:white;
 }
 
 .contact-container{
-  background:white;
-  padding:40px;
-  width:400px;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+max-width:650px;
+width:100%;
 }
 
 .contact-container h2{
-  text-align:center;
-  margin-bottom:15px;
-  color:#4b3621;
+text-align:center;
+font-size:32px;
+margin-bottom:15px;
+font-weight:700;
+}
+
+.contact-container p{
+text-align:center;
+font-size:14px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+/* FORM STYLE */
+
+form{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 .input-group{
-  margin-bottom:18px;
+margin-bottom:20px;
 }
 
 .input-group label{
-  display:block;
-  font-size:14px;
-  margin-bottom:6px;
-  color:#4b3621;
+display:block;
+font-size:14px;
+margin-bottom:6px;
+font-weight:500;
 }
 
 .input-group input,
 .input-group textarea{
-  width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #ddd;
-  font-size:14px;
-  font-family:'Poppins', sans-serif;
-  outline:none;
-}
-
-.input-group input::placeholder,
-.input-group textarea::placeholder{
-  font-family:'Poppins', sans-serif;
-  font-size:14px;
-  font-weight:400;
+width:100%;
+padding:12px 14px;
+border-radius:10px;
+border:none;
+font-size:14px;
+font-family:'Poppins', sans-serif;
+outline:none;
 }
 
 .input-group textarea{
-  resize:none;
-  height:100px;
+resize:none;
+height:110px;
 }
 
 button{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:25px;
-  background:#b08968;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
+width:100%;
+padding:13px;
+border:none;
+border-radius:30px;
+background:#f4d03f;
+color:#5a3b24;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-  background:#8b6b4f;
+background:#f7dc6f;
 }
 
 .success-message{
-  margin-top:15px;
-  text-align:center;
-  color:green;
-  font-size:14px;
+margin-top:15px;
+text-align:center;
+color:#ffffff;
+font-size:14px;
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="contact-container">
-  <h2>Contact Us</h2>
+<h2>Contact Us</h2>
 
-  <p style="text-align:center; font-size:14px; margin-bottom:20px; color:#6b4f3a;">
-    Punya pertanyaan, kritik, atau saran untuk Nazwa’s Library Corner? 
-    Silahkan kirimkan pesanmu melalui formulir di bawah ini. 
-  </p>
+<p>
+Punya pertanyaan, kritik, atau saran untuk Nazwa’s Library Corner? 
+Silahkan kirimkan pesanmu melalui formulir di bawah ini. 
+</p>
 
-  <form id="contactForm">
-    <div class="input-group">
-      <label>Nama</label>
-      <input type="text" id="nama" placeholder="Masukkan nama lengkap kamu" required>
-    </div>
+<form id="contactForm">
+<div class="input-group">
+<label>Nama</label>
+<input type="text" id="nama" placeholder="Masukkan nama lengkap kamu" required>
+</div>
 
-    <div class="input-group">
-      <label>Email</label>
-      <input type="email" id="email" placeholder="Masukkan email aktif kamu" required>
-    </div>
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" placeholder="Masukkan email aktif kamu" required>
+</div>
 
-    <div class="input-group">
-      <label>Pesan (Pertanyaan / Kritik / Saran)</label>
-      <textarea id="pesan" placeholder="Tulis pertanyaan, kritik, atau saran kamu di sini..." required></textarea>
-    </div>
+<div class="input-group">
+<label>Pesan (Pertanyaan / Kritik / Saran)</label>
+<textarea id="pesan" placeholder="Tulis pertanyaan, kritik, atau saran kamu di sini..." required></textarea>
+</div>
 
-    <button type="submit">Kirim Pesan</button>
-  </form>
+<button type="submit">Kirim Pesan</button>
+</form>
 
-  <p style="text-align:center; font-size:12px; margin-top:15px; color:#8b6b4f;">
-    Semua pesan yang masuk akan dibaca dan dihargai 🤎
-  </p>
+<p style="text-align:center; font-size:12px; margin-top:15px;">
+Semua pesan yang masuk akan dibaca dan dihargai 🤎
+</p>
 
-  <div class="success-message" id="successMsg"></div>
+<div class="success-message" id="successMsg"></div>
 </div>
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
+e.preventDefault();
 
-  const nama = document.getElementById("nama").value;
-  const email = document.getElementById("email").value;
-  const pesan = document.getElementById("pesan").value;
+const nama = document.getElementById("nama").value;
+const email = document.getElementById("email").value;
+const pesan = document.getElementById("pesan").value;
 
-  console.log("Nama:", nama);
-  console.log("Email:", email);
-  console.log("Pesan:", pesan);
+console.log("Nama:", nama);
+console.log("Email:", email);
+console.log("Pesan:", pesan);
 
-  document.getElementById("successMsg").innerText = 
-    "Terima kasih atas feedback Anda ❤️";
+document.getElementById("successMsg").innerText = 
+"Terima kasih atas feedback Anda ❤️";
 
-  document.getElementById("contactForm").reset();
+document.getElementById("contactForm").reset();
 });
 </script>
 
