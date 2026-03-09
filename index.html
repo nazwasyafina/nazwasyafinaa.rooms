@@ -311,12 +311,11 @@ nav a:hover{ color:#8b6b4f; }
   color: #2f2f2f;
 }
 
-.profile-right {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.profile-right{
+  flex:1;
+  display:flex;
+  gap:30px;
+  align-items:stretch;
 }
 
 .vision-box,
@@ -348,6 +347,20 @@ nav a:hover{ color:#8b6b4f; }
   line-height: 1.8;
 }
 
+.profile-toggle-wrapper{
+  text-align:center;
+  margin-top:30px;
+}
+
+#profileDetails{
+  display:none;
+  margin-top:40px;
+}
+
+.vision-box,
+.mission-box{
+  flex:1;
+}
 /* Decorative soft background shapes */
 .library-profile::before {
   content: "";
@@ -649,7 +662,7 @@ footer{
   <div>
     <a href="#beranda">Beranda</a>
     <a href="#profil">Profil</a>
-    <a href="#koleksi">Koleksi</a>
+    <a href="koleksi.html" target="_blank">Koleksi</a>
     <a href="founder.html" target="_blank">Founder</a>
     <a href="contact.html" target="_blank">Contact Us</a>
     <a href="login.html" id="authBtn" target="_blank">Login</a>
@@ -679,16 +692,21 @@ footer{
         <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
       </p>
       
-       <p>
+      <p>
        Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
       </p>
 
-      <p>
-       Dengan memadukan nilai-nilai dasar ilmu perpustakaan dan pemanfaatan teknologi, <strong>Nazwa’s Library Corner</strong> hadir sebagai pusat akses pengetahuan yang mendorong pembelajaran berkelanjutan. Perpustakaan ini berperan dalam menumbuhkan budaya literasi, meningkatkan kesadaran akan pentingnya informasi yang berkualitas, serta membangun ekosistem belajar yang adaptif terhadap perkembangan zaman.
-      </p>
+      <!-- TOMBOL VISI MISI -->
+      <div class="profile-toggle-wrapper">
+        <a href="javascript:void(0)" class="link-btn" id="profileToggle">
+          Visi & Misi
+        </a>
+      </div>
     </div>
 
-    <div class="profile-right">
+    <!-- VISI MISI TERSEMBUNYI -->
+    <div class="profile-right" id="profileDetails">
+
       <div class="vision-box">
         <h3>
           <i class="fa-solid fa-eye"></i> Visi
@@ -708,6 +726,7 @@ footer{
           <li>Mendorong budaya literasi dan pembelajaran di tengah masyarakat.</li>
         </ul>
       </div>
+
     </div>
 
   </div>
@@ -793,6 +812,19 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 </script>
+<script>
+const toggleBtn = document.getElementById("profileToggle");
+const profileDetails = document.getElementById("profileDetails");
 
+toggleBtn.addEventListener("click", function(){
+
+  if(profileDetails.style.display === "none" || profileDetails.style.display === ""){
+    profileDetails.style.display = "flex";
+  } else {
+    profileDetails.style.display = "none";
+  }
+
+});
+</script>
 </body>
 </html>
