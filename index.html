@@ -281,13 +281,10 @@ nav a:hover{ color:#8b6b4f; }
 }
 
 .profile-container {
-  display: flex;
-  gap: 70px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  max-width:1000px;
+  margin:auto;
 }
-
+  
 .profile-left {
   flex: 1;
   min-width: 300px;
@@ -311,11 +308,21 @@ nav a:hover{ color:#8b6b4f; }
   color: #2f2f2f;
 }
 
+.profile-toggle-wrapper{
+  text-align:center;
+  margin-top:30px;
+}
+
+#profileDetails{
+  display:none;
+  margin-top:40px;
+}
+
 .profile-right{
-  flex:1;
   display:flex;
   gap:30px;
-  align-items:stretch;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .vision-box,
@@ -326,6 +333,8 @@ nav a:hover{ color:#8b6b4f; }
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: 0.3s ease;
   margin-top: 30px;
+  flex:1;
+  min-width:280px;
 }
 
 .vision-box:hover,
@@ -345,21 +354,6 @@ nav a:hover{ color:#8b6b4f; }
 .mission-box ul {
   padding-left: 20px;
   line-height: 1.8;
-}
-
-.profile-toggle-wrapper{
-  text-align:center;
-  margin-top:30px;
-}
-
-#profileDetails{
-  display:none;
-  margin-top:40px;
-}
-
-.vision-box,
-.mission-box{
-  flex:1;
 }
 /* Decorative soft background shapes */
 .library-profile::before {
@@ -683,10 +677,11 @@ footer{
 <section class="section library-profile" id="profil">
   <div class="profile-container">
 
+    <h2 class="profile-title">
+      Profil Perpustakaan
+    </h2>
+
     <div class="profile-left">
-      <h2>
-        Profil Perpustakaan
-      </h2>
 
       <p>
         <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
@@ -696,15 +691,16 @@ footer{
        Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
       </p>
 
-      <!-- TOMBOL VISI MISI -->
+      <!-- Tombol -->
       <div class="profile-toggle-wrapper">
         <a href="javascript:void(0)" class="link-btn" id="profileToggle">
           Visi & Misi
         </a>
       </div>
+
     </div>
 
-    <!-- VISI MISI TERSEMBUNYI -->
+    <!-- VISI MISI -->
     <div class="profile-right" id="profileDetails">
 
       <div class="vision-box">
@@ -813,6 +809,7 @@ onAuthStateChanged(auth, (user) => {
 });
 </script>
 <script>
+
 const toggleBtn = document.getElementById("profileToggle");
 const profileDetails = document.getElementById("profileDetails");
 
@@ -825,6 +822,7 @@ toggleBtn.addEventListener("click", function(){
   }
 
 });
+
 </script>
 </body>
 </html>
