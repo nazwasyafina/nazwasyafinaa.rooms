@@ -3,55 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events | Nazwa’s Library Corner</title>
 
-<title>Kegiatan Perpustakaan</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+color:#4b3621;
+background:#f6f1ea;
+}
+
+/* NAVBAR SAMA PERSIS */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#ffffff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 50px;
+height:70px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+nav strong{
+color:#4b3621;
+font-size:18px;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:8px;
+height:70px;
+}
+
+.logo-img{
+height:80px;
+}
+
+nav a{
+text-decoration:none;
+color:#4b3621;
+margin-left:30px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#8b6b4f;
+}
+
+#authBtn{
+background:#8b6b4f;
+color:white;
+padding:8px 22px;
+border-radius:30px;
+}
 
 /* HERO */
 
 .event-hero{
-height:260px;
-display:flex;
-align-items:center;
-justify-content:center;
+padding-top:140px;
+padding-bottom:60px;
 text-align:center;
+background:linear-gradient(rgba(59,37,22,0.7),rgba(59,37,22,0.7)),
+url('foto bground.jpg');
+background-size:cover;
 color:white;
-
-background:
-linear-gradient(rgba(40,30,20,.8),rgba(40,30,20,.8)),
-url("assets/bg-library.jpg") center/cover;
 }
 
 .event-hero h1{
-font-family:'Playfair Display',serif;
 font-size:38px;
 margin-bottom:10px;
 }
 
 .event-hero p{
-opacity:.9;
+opacity:0.9;
 }
 
+/* FILTER */
 
-/* CONTAINER */
+.filter-bar{
+display:flex;
+justify-content:center;
+gap:10px;
+margin:40px 0;
+flex-wrap:wrap;
+}
+
+.filter-btn{
+padding:8px 18px;
+border-radius:25px;
+border:1px solid #d8c8b8;
+background:white;
+cursor:pointer;
+}
+
+.filter-btn.active{
+background:#8b6b4f;
+color:white;
+}
+
+/* EVENT GRID */
 
 .event-container{
 max-width:1100px;
 margin:auto;
-padding:60px 30px;
+padding:0 30px 80px;
 }
-
-
-/* GRID */
 
 .event-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:28px;
+gap:24px;
 }
 
 @media(max-width:900px){
@@ -60,40 +136,31 @@ grid-template-columns:repeat(2,1fr);
 }
 }
 
-@media(max-width:600px){
+@media(max-width:500px){
 .event-grid{
 grid-template-columns:1fr;
 }
 }
 
-
 /* CARD */
 
 .event-card{
-
-background:white;
+background:#fff;
 border-radius:16px;
 overflow:hidden;
-
-border:1px solid #e5ded6;
-
-transition:.3s;
-cursor:pointer;
+border:1px solid #e8e2da;
+text-decoration:none;
+color:inherit;
+transition:0.3s;
 }
 
 .event-card:hover{
-
 transform:translateY(-6px);
-box-shadow:0 12px 35px rgba(0,0,0,.12);
-
+box-shadow:0 14px 40px rgba(0,0,0,0.12);
 }
 
-
-/* IMAGE */
-
 .event-img{
-
-height:200px;
+height:180px;
 overflow:hidden;
 }
 
@@ -101,137 +168,138 @@ overflow:hidden;
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.5s;
 }
 
-.event-card:hover img{
-transform:scale(1.08);
+.event-date{
+position:absolute;
+margin:12px;
+background:white;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:700;
+color:#8b6b4f;
 }
-
-
-/* BODY */
 
 .event-body{
-padding:20px;
+padding:18px;
 }
 
 .event-body h3{
-
-font-family:'Playfair Display',serif;
-font-size:18px;
+font-size:15px;
 margin-bottom:8px;
-color:#3a2c20;
-
 }
 
 .event-body p{
-
-font-size:14px;
-color:#666;
-line-height:1.6;
-margin-bottom:14px;
-
-}
-
-
-/* META */
-
-.event-meta{
-
-display:flex;
-justify-content:space-between;
 font-size:13px;
-color:#888;
-
-}
-
-
-/* LIGHTBOX */
-
-.lightbox{
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.85);
-
-display:none;
-align-items:center;
-justify-content:center;
-padding:20px;
-
-z-index:999;
-}
-
-.lightbox.active{
-display:flex;
-}
-
-.lightbox-content{
-
-background:white;
-max-width:650px;
-width:100%;
-
-border-radius:16px;
-overflow:hidden;
-}
-
-.lightbox img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.lb-body{
-padding:25px;
-}
-
-.lb-body h2{
-font-family:'Playfair Display',serif;
+color:#6d5b4c;
 margin-bottom:10px;
 }
 
-.lb-close{
+.event-foot{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+color:#8b6b4f;
+border-top:1px solid #f0ece6;
+padding-top:10px;
+}
 
-position:absolute;
-top:20px;
-right:25px;
+/* PRE FOOTER */
 
-font-size:30px;
+.pre-footer{
+background:#8b6b4f;
 color:white;
-cursor:pointer;
+padding:70px 80px 50px;
+}
 
+.pre-footer-container{
+display:flex;
+justify-content:space-between;
+max-width:1100px;
+margin:auto;
+gap:60px;
+}
+
+.pre-footer h4{
+color:#f4d03f;
+margin-bottom:20px;
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.social-icons a{
+width:42px;
+height:42px;
+border:1px solid rgba(255,255,255,0.6);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#8b6b4f;
+color:white;
+font-size:13px;
 }
 
 </style>
 </head>
 
-
 <body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.PNG" class="logo-img">
+<strong>Nazwa’s Library Corner</strong>
+</div>
+
+<div>
+<a href="index.html#beranda">Beranda</a>
+<a href="index.html#profil">Profil</a>
+<a href="koleksi.html">Koleksi</a>
+<a href="founder.html">Founder</a>
+<a href="contact.html">Contact Us</a>
+<a href="login.html" id="authBtn">Login</a>
+</div>
+
+</nav>
 
 
 <!-- HERO -->
 
 <section class="event-hero">
 
-<div>
-
 <h1>Kegiatan Perpustakaan</h1>
-
-<p>Dokumentasi kegiatan literasi dan pengembangan perpustakaan</p>
-
-</div>
+<p>Berbagai kegiatan literasi dan pengembangan perpustakaan</p>
 
 </section>
 
 
+<!-- FILTER -->
 
-<!-- CONTENT -->
+<div class="filter-bar">
+
+<button class="filter-btn active" data-filter="all">Semua</button>
+<button class="filter-btn" data-filter="workshop">Workshop</button>
+<button class="filter-btn" data-filter="sosialisasi">Sosialisasi</button>
+<button class="filter-btn" data-filter="observasi">Observasi</button>
+
+</div>
+
 
 <section class="event-container">
 
@@ -240,58 +308,58 @@ cursor:pointer;
 
 <!-- EVENT 1 -->
 
-<div class="event-card" onclick="openEvent(0)">
+<div class="event-card" data-category="workshop">
 
 <div class="event-img">
-<img src="assets/events/event1.jpg">
+<img src="workshop.jpeg">
 </div>
 
 <div class="event-body">
 
 <h3>Workshop Penanggulangan Arsip Bencana</h3>
 
-<p>Pelatihan pengelolaan arsip dalam menghadapi bencana banjir di lingkungan sekolah.</p>
+<p>Pelatihan pengelolaan arsip untuk menghadapi bencana banjir di SD Angkasa Medan.</p>
 
-<div class="event-meta">
-<span>3 Juli 2025</span>
+<div class="event-foot">
 <span>SD Angkasa Medan</span>
+<span>2025</span>
 </div>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- EVENT 2 -->
 
-<div class="event-card" onclick="openEvent(1)">
+<div class="event-card" data-category="sosialisasi">
 
 <div class="event-img">
-<img src="assets/events/event2.jpg">
+<img src="sosialisasi.jpeg">
 </div>
 
 <div class="event-body">
 
 <h3>Sosialisasi Digitalisasi Layanan Perpustakaan</h3>
 
-<p>Kegiatan pengenalan layanan perpustakaan berbasis digital kepada siswa.</p>
+<p>Instalisasi SLiMS di SMA Harapan 1 Medan.</p>
 
-<div class="event-meta">
-<span>10 Nov 2025</span>
-<span>SMA Harapan 1</span>
+<div class="event-foot">
+<span>SMA Harapan 1 Medan</span>
+<span>2025</span>
 </div>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- EVENT 3 -->
 
-<div class="event-card" onclick="openEvent(2)">
+<div class="event-card" data-category="observasi">
 
 <div class="event-img">
-<img src="assets/events/event3.jpg">
+<img src="observasi.jpeg">
 </div>
 
 <div class="event-body">
@@ -300,12 +368,13 @@ cursor:pointer;
 
 <p>Analisis kelayakan sistem informasi di Perpustakaan Universitas Medan Area.</p>
 
-<div class="event-meta">
-<span>20 Sep 2025</span>
+<div class="event-foot">
 <span>Universitas Medan Area</span>
+<span>2025</span>
 </div>
 
 </div>
+
 </div>
 
 
@@ -313,73 +382,72 @@ cursor:pointer;
 </section>
 
 
+<!-- PRE FOOTER (SAMA SEPERTI INDEX) -->
 
-<!-- LIGHTBOX -->
+<section class="pre-footer">
 
-<div class="lightbox" id="lightbox">
+<div class="pre-footer-container">
 
-<div class="lb-close" onclick="closeEvent()">×</div>
+<div>
+<h4>Jam Operasional</h4>
+<p>Senin - Jumat: 08.00 - 16.00</p>
+<p>Sabtu: 09.00 - 14.00</p>
+<p>Minggu & Libur Nasional: Tutup</p>
+</div>
 
-<div class="lightbox-content">
+<div>
+<h4>Kontak</h4>
+<p>kontak@nlcorner.com</p>
+<p>(+62) 896 2075 6016</p>
+<p>Sumatera Utara, Indonesia</p>
+</div>
 
-<img id="lb-img">
+<div>
+<h4>Sosial Media</h4>
 
-<div class="lb-body">
-
-<h2 id="lb-title"></h2>
-
-<p id="lb-desc"></p>
-
+<div class="social-icons">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
 </div>
 
 </div>
 
 </div>
 
+</section>
+
+
+<footer>
+© 2026 Nazwa’s Library Corner
+</footer>
 
 
 <script>
 
-const events=[
+/* FILTER EVENT */
 
-{
-img:"assets/events/event1.jpg",
-title:"Workshop Penanggulangan Arsip Bencana",
-desc:"Workshop ini membahas langkah-langkah penyelamatan arsip ketika terjadi bencana banjir di sekolah. Kegiatan dilaksanakan di SD Angkasa Medan pada 3 Juli 2025."
-},
+const filterBtns=document.querySelectorAll(".filter-btn")
+const cards=document.querySelectorAll(".event-card")
 
-{
-img:"assets/events/event2.jpg",
-title:"Sosialisasi Digitalisasi Layanan Perpustakaan",
-desc:"Kegiatan sosialisasi ini bertujuan memperkenalkan layanan perpustakaan berbasis digital kepada siswa SMA Harapan 1 Medan."
-},
+filterBtns.forEach(btn=>{
+btn.addEventListener("click",()=>{
 
-{
-img:"assets/events/event3.jpg",
-title:"Observasi Sistem Informasi Perpustakaan",
-desc:"Observasi dan analisis kelayakan sistem informasi di Perpustakaan Universitas Medan Area untuk mendukung pengembangan layanan informasi."
+filterBtns.forEach(b=>b.classList.remove("active"))
+btn.classList.add("active")
+
+const filter=btn.dataset.filter
+
+cards.forEach(card=>{
+if(filter==="all" || card.dataset.category===filter){
+card.style.display="block"
+}else{
+card.style.display="none"
 }
+})
 
-];
-
-
-function openEvent(i){
-
-document.getElementById("lightbox").classList.add("active")
-
-document.getElementById("lb-img").src=events[i].img
-
-document.getElementById("lb-title").innerText=events[i].title
-
-document.getElementById("lb-desc").innerText=events[i].desc
-
-}
-
-function closeEvent(){
-
-document.getElementById("lightbox").classList.remove("active")
-
-}
+})
+})
 
 </script>
 
