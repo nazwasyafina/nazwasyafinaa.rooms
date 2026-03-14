@@ -1,80 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Events & Kegiatan</title>
+<title>Kegiatan Perpustakaan</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
 <style>
-
-/* JAM HEADER */
-
-.jam-header{
-background:#1a1a2e;
-color:#e6c96e;
-text-align:center;
-padding:8px;
-font-size:14px;
-}
-
 
 /* HERO */
 
 .event-hero{
-
-min-height:260px;
+height:260px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
 color:white;
 
 background:
-linear-gradient(rgba(30,25,18,.85),rgba(30,25,18,.85)),
-url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover;
-
-border-bottom:4px solid #B8954A;
-
+linear-gradient(rgba(40,30,20,.8),rgba(40,30,20,.8)),
+url("assets/bg-library.jpg") center/cover;
 }
 
 .event-hero h1{
-
 font-family:'Playfair Display',serif;
-font-size:36px;
-
+font-size:38px;
+margin-bottom:10px;
 }
 
-.event-hero span{
-color:#e6c96e;
+.event-hero p{
+opacity:.9;
 }
 
 
 /* CONTAINER */
 
 .event-container{
-
 max-width:1100px;
 margin:auto;
-padding:60px 25px;
-
+padding:60px 30px;
 }
 
 
 /* GRID */
 
 .event-grid{
-
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-
+gap:28px;
 }
 
 @media(max-width:900px){
@@ -95,47 +72,55 @@ grid-template-columns:1fr;
 .event-card{
 
 background:white;
-border-radius:14px;
+border-radius:16px;
 overflow:hidden;
 
-border:1px solid #e7dfd4;
-
-cursor:pointer;
+border:1px solid #e5ded6;
 
 transition:.3s;
-
+cursor:pointer;
 }
 
 .event-card:hover{
 
 transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,.1);
+box-shadow:0 12px 35px rgba(0,0,0,.12);
 
 }
+
+
+/* IMAGE */
 
 .event-img{
 
-height:190px;
+height:200px;
 overflow:hidden;
-
 }
 
 .event-img img{
-
 width:100%;
 height:100%;
 object-fit:cover;
-
+transition:.5s;
 }
 
+.event-card:hover img{
+transform:scale(1.08);
+}
+
+
+/* BODY */
+
 .event-body{
-padding:18px;
+padding:20px;
 }
 
 .event-body h3{
 
 font-family:'Playfair Display',serif;
+font-size:18px;
 margin-bottom:8px;
+color:#3a2c20;
 
 }
 
@@ -143,15 +128,18 @@ margin-bottom:8px;
 
 font-size:14px;
 color:#666;
-margin-bottom:12px;
+line-height:1.6;
+margin-bottom:14px;
 
 }
+
+
+/* META */
 
 .event-meta{
 
 display:flex;
 justify-content:space-between;
-
 font-size:13px;
 color:#888;
 
@@ -174,44 +162,44 @@ background:rgba(0,0,0,.85);
 display:none;
 align-items:center;
 justify-content:center;
-
 padding:20px;
 
-z-index:9999;
-
+z-index:999;
 }
 
-.lightbox.open{
+.lightbox.active{
 display:flex;
 }
 
-.lb-box{
+.lightbox-content{
 
 background:white;
 max-width:650px;
 width:100%;
 
-border-radius:14px;
+border-radius:16px;
 overflow:hidden;
-
 }
 
-.lb-box img{
-
+.lightbox img{
 width:100%;
-height:260px;
+height:280px;
 object-fit:cover;
-
 }
 
 .lb-body{
 padding:25px;
 }
 
+.lb-body h2{
+font-family:'Playfair Display',serif;
+margin-bottom:10px;
+}
+
 .lb-close{
 
 position:absolute;
-top:25px;
+top:20px;
 right:25px;
 
 font-size:30px;
@@ -221,48 +209,10 @@ cursor:pointer;
 }
 
 </style>
-
 </head>
+
+
 <body>
-
-
-<!-- JAM HEADER -->
-
-<div class="jam-header">
-
-<i class="fas fa-clock"></i> <span id="jam"></span>
-|
-<span id="tanggalHari"></span>
-
-</div>
-
-
-<!-- HEADER (SAMA SEPERTI HALAMAN LAIN) -->
-
-<header>
-
-<div class="header-content">
-
-<div class="logo">
-
-<img src="../assets/logo/logo.png" style="height:50px;margin-right:10px">
-
-<h1>Litera<span>Publica</span></h1>
-
-</div>
-
-<a href="../login.html" class="login-box">
-<h3>LOGIN</h3>
-</a>
-
-</div>
-
-</header>
-
-
-<!-- NAVBAR FETCH -->
-
-<div id="navbar-placeholder"></div>
 
 
 <!-- HERO -->
@@ -271,7 +221,7 @@ cursor:pointer;
 
 <div>
 
-<h1>Kegiatan <span>Perpustakaan</span></h1>
+<h1>Kegiatan Perpustakaan</h1>
 
 <p>Dokumentasi kegiatan literasi dan pengembangan perpustakaan</p>
 
@@ -281,76 +231,78 @@ cursor:pointer;
 
 
 
-<!-- EVENT CONTENT -->
+<!-- CONTENT -->
 
 <section class="event-container">
 
 <div class="event-grid">
 
 
+<!-- EVENT 1 -->
+
 <div class="event-card" onclick="openEvent(0)">
 
 <div class="event-img">
-<img src="../assets/events/arsip.jpeg">
+<img src="assets/events/event1.jpg">
 </div>
 
 <div class="event-body">
 
-<h3>Sosialisasi Pengelolaan Arsip</h3>
+<h3>Workshop Penanggulangan Arsip Bencana</h3>
 
-<p>Kegiatan pengenalan pengelolaan arsip yang baik di sekolah.</p>
+<p>Pelatihan pengelolaan arsip dalam menghadapi bencana banjir di lingkungan sekolah.</p>
 
 <div class="event-meta">
-
-<span>31 Mei 2026</span>
-<span>SDN 060898</span>
-
+<span>3 Juli 2025</span>
+<span>SD Angkasa Medan</span>
 </div>
 
 </div>
 </div>
 
+
+
+<!-- EVENT 2 -->
 
 <div class="event-card" onclick="openEvent(1)">
 
 <div class="event-img">
-<img src="../assets/events/workshop.jpeg">
+<img src="assets/events/event2.jpg">
 </div>
 
 <div class="event-body">
 
-<h3>Workshop Sistem Informasi</h3>
+<h3>Sosialisasi Digitalisasi Layanan Perpustakaan</h3>
 
-<p>Pelatihan penggunaan sistem informasi untuk perpustakaan sekolah.</p>
+<p>Kegiatan pengenalan layanan perpustakaan berbasis digital kepada siswa.</p>
 
 <div class="event-meta">
-
-<span>13 Nov 2025</span>
-<span>SMP 7 Medan</span>
-
+<span>10 Nov 2025</span>
+<span>SMA Harapan 1</span>
 </div>
 
 </div>
 </div>
 
+
+
+<!-- EVENT 3 -->
 
 <div class="event-card" onclick="openEvent(2)">
 
 <div class="event-img">
-<img src="../assets/events/dokumentasi.jpeg">
+<img src="assets/events/event3.jpg">
 </div>
 
 <div class="event-body">
 
-<h3>Kegiatan Mahasiswa Perpustakaan</h3>
+<h3>Observasi Sistem Informasi Perpustakaan</h3>
 
-<p>Kebersamaan mahasiswa dalam kegiatan akademik perpustakaan.</p>
+<p>Analisis kelayakan sistem informasi di Perpustakaan Universitas Medan Area.</p>
 
 <div class="event-meta">
-
-<span>10 Feb 2026</span>
-<span>Perpustakaan USU</span>
-
+<span>20 Sep 2025</span>
+<span>Universitas Medan Area</span>
 </div>
 
 </div>
@@ -358,7 +310,6 @@ cursor:pointer;
 
 
 </div>
-
 </section>
 
 
@@ -369,13 +320,14 @@ cursor:pointer;
 
 <div class="lb-close" onclick="closeEvent()">×</div>
 
-<div class="lb-box">
+<div class="lightbox-content">
 
 <img id="lb-img">
 
 <div class="lb-body">
 
 <h2 id="lb-title"></h2>
+
 <p id="lb-desc"></p>
 
 </div>
@@ -386,92 +338,46 @@ cursor:pointer;
 
 
 
-<!-- FOOTER FETCH -->
-
-<div id="footer-placeholder"></div>
-
-
-
 <script>
-
-/* JAM */
-
-const hari=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']
-const bulan=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des']
-
-function jam(){
-
-const w=new Date()
-
-document.getElementById("jam").innerText=w.toLocaleTimeString('id-ID')
-
-document.getElementById("tanggalHari").innerText=
-hari[w.getDay()]+" "+w.getDate()+" "+bulan[w.getMonth()]+" "+w.getFullYear()
-
-}
-
-setInterval(jam,1000)
-jam()
-
-
-/* FETCH NAVBAR */
-
-fetch('../layout/navbar.html')
-.then(res=>res.text())
-.then(data=>{
-document.getElementById('navbar-placeholder').innerHTML=data
-})
-
-
-/* FETCH FOOTER */
-
-fetch('../layout/footer.html')
-.then(res=>res.text())
-.then(data=>{
-document.getElementById('footer-placeholder').innerHTML=data
-})
-
-
-
-/* LIGHTBOX DATA */
 
 const events=[
 
 {
-img:"../assets/events/arsip.jpeg",
-title:"Sosialisasi Pengelolaan Arsip",
-desc:"Kegiatan sosialisasi untuk mengenalkan cara mengelola arsip sekolah dengan lebih terstruktur."
+img:"assets/events/event1.jpg",
+title:"Workshop Penanggulangan Arsip Bencana",
+desc:"Workshop ini membahas langkah-langkah penyelamatan arsip ketika terjadi bencana banjir di sekolah. Kegiatan dilaksanakan di SD Angkasa Medan pada 3 Juli 2025."
 },
 
 {
-img:"../assets/events/workshop.jpeg",
-title:"Workshop Sistem Informasi",
-desc:"Workshop penggunaan sistem informasi perpustakaan untuk membantu pengelolaan koleksi buku."
+img:"assets/events/event2.jpg",
+title:"Sosialisasi Digitalisasi Layanan Perpustakaan",
+desc:"Kegiatan sosialisasi ini bertujuan memperkenalkan layanan perpustakaan berbasis digital kepada siswa SMA Harapan 1 Medan."
 },
 
 {
-img:"../assets/events/dokumentasi.jpeg",
-title:"Kegiatan Mahasiswa Perpustakaan",
-desc:"Dokumentasi kegiatan mahasiswa dalam kegiatan literasi dan pengembangan perpustakaan."
+img:"assets/events/event3.jpg",
+title:"Observasi Sistem Informasi Perpustakaan",
+desc:"Observasi dan analisis kelayakan sistem informasi di Perpustakaan Universitas Medan Area untuk mendukung pengembangan layanan informasi."
 }
 
-]
+];
 
 
 function openEvent(i){
 
-document.getElementById("lightbox").classList.add("open")
+document.getElementById("lightbox").classList.add("active")
 
 document.getElementById("lb-img").src=events[i].img
+
 document.getElementById("lb-title").innerText=events[i].title
+
 document.getElementById("lb-desc").innerText=events[i].desc
 
 }
 
-
 function closeEvent(){
 
-document.getElementById("lightbox").classList.remove("open")
+document.getElementById("lightbox").classList.remove("active")
 
 }
 
