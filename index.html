@@ -537,10 +537,15 @@ color:rgba(255,255,255,0.65);
 
 /* ICON */
 
-.kb-emoji{
-font-size:28px;
-margin-bottom:10px;
-display:block;
+.kb-icon{
+  font-size:26px;
+  color:#8b6b4f;
+  margin-bottom:10px;
+  display:block;
+}
+
+.kb-card.featured .kb-icon{
+  color:#f4d7b5;
 }
 
 /* TITLE */
@@ -940,72 +945,94 @@ footer{
 
 <div class="koleksi-inner">
 
+<section id="koleksi">
+
+  <div class="koleksi-inner">
+
+```
 <div class="koleksi-layout">
 
-<!-- INTRO -->
-<div class="koleksi-intro">
+  <!-- INTRO -->
+  <div class="koleksi-intro">
 
-<h2>Koleksi Perpustakaan</h2>
+    <h2>Koleksi Perpustakaan</h2>
 
-<p>
-Temukan berbagai koleksi bacaan, referensi akademik,
+    <p>
+      Temukan berbagai koleksi bacaan, referensi akademik,
 dan sumber informasi yang telah dikurasi untuk
-mendukung kebutuhan literasi masyarakat.
-</p>
+mendukung kebutuhan literasi Anda.
+    </p>
 
-<div class="koleksi-count">
-<div class="big">500+</div>
-<div class="label">Total Koleksi</div>
+    <div class="koleksi-count">
+      <div class="big">500+</div>
+      <div class="label">Total Koleksi</div>
+    </div>
+
+    <a href="koleksi.html" class="btn-galeri" target="_blank">
+      Lihat Semua Koleksi
+      <span class="arrow-icon">→</span>
+    </a>
+
+  </div>
+
+  <!-- BENTO GRID -->
+  <div class="koleksi-bento">
+
+    <div class="kb-card featured">
+      <i class="fas fa-book-open kb-icon"></i>
+      <div class="kb-name">Monograf</div>
+      <div class="kb-desc">
+        Koleksi buku yang membahas suatu topik secara mendalam
+        dan digunakan sebagai sumber utama dalam pembelajaran.
+      </div>
+      <span class="kb-badge">Koleksi Utama</span>
+    </div>
+
+    <div class="kb-card">
+      <i class="fas fa-atlas kb-icon"></i>
+      <div class="kb-name">Referensi</div>
+      <div class="kb-desc">
+        Ensiklopedia, kamus, direktori, dan sumber rujukan
+        yang digunakan untuk menemukan informasi secara cepat.
+      </div>
+    </div>
+
+    <div class="kb-card">
+      <i class="fas fa-newspaper kb-icon"></i>
+      <div class="kb-name">Terbitan Berkala</div>
+      <div class="kb-desc">
+        Majalah, jurnal, dan publikasi periodik yang
+        diterbitkan secara berkala.
+      </div>
+    </div>
+
+    <div class="kb-card">
+      <i class="fas fa-graduation-cap kb-icon"></i>
+      <div class="kb-name">Karya Ilmiah</div>
+      <div class="kb-desc">
+        Skripsi, laporan penelitian, dan karya akademik
+        yang dihasilkan oleh civitas akademika.
+      </div>
+      <span class="kb-tag">PDF</span>
+    </div>
+
+    <div class="kb-card">
+      <i class="fas fa-laptop kb-icon"></i>
+      <div class="kb-name">Koleksi Digital</div>
+      <div class="kb-desc">
+        E-book dan sumber informasi digital yang dapat
+        diakses secara daring melalui sistem perpustakaan.
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
-<a href="koleksi.html" class="btn-galeri" target="_blank">
-Lihat Semua Koleksi
-<span class="arrow-icon">→</span>
-</a>
-
-</div>
-
-<!-- BENTO GRID -->
-<div class="koleksi-bento">
-
-<div class="kb-card featured">
-<span class="kb-emoji">📚</span>
-<div class="kb-name">Buku Referensi</div>
-<div class="kb-desc">Koleksi buku akademik dan literatur ilmiah.</div>
-<span class="kb-badge">POPULAR</span>
-</div>
-
-<div class="kb-card">
-<span class="kb-emoji">📖</span>
-<div class="kb-name">Novel</div>
-<div class="kb-desc">Koleksi fiksi dari berbagai penulis.</div>
-</div>
-
-<div class="kb-card">
-<span class="kb-emoji">📰</span>
-<div class="kb-name">Artikel</div>
-<div class="kb-desc">Artikel ilmiah dan populer.</div>
-</div>
-
-<div class="kb-card">
-<span class="kb-emoji">🎓</span>
-<div class="kb-name">Skripsi</div>
-<div class="kb-desc">Karya ilmiah mahasiswa.</div>
-<span class="kb-tag">PDF</span>
-</div>
-
-<div class="kb-card">
-<span class="kb-emoji">📜</span>
-<div class="kb-name">E-Book</div>
-<div class="kb-desc">Buku digital berbagai bidang.</div>
-</div>
-
-</div>
-
-</div>
-</div>
+  </div>
 
 </section>
+
 <section class="pre-footer">
   <div class="pre-footer-container">
     
