@@ -380,194 +380,118 @@ nav a:hover{ color:#8b6b4f; }
   left: -80px;
   opacity: 0.3;
 }
-/* ══════════════════════════════════════════
-           KOLEKSI
-══════════════════════════════════════════ */
+
+  /* ═══════════════════════════════════════
+KOLEKSI
+═══════════════════════════════════════ */
 
 #koleksi{
-  background:#f9f6f2;
-  padding:80px 0;
+background:#f9f6f2;
+padding:80px 0;
 }
 
 .koleksi-inner{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 32px;
+max-width:1100px;
+margin:0 auto;
+padding:0 32px;
 }
 
 .koleksi-layout{
-  display:grid;
-  grid-template-columns:260px 1fr;
-  gap:44px;
-  align-items:start;
+display:grid;
+grid-template-columns:280px 1fr;
+gap:40px;
+align-items:start;
 }
 
 @media (max-width:900px){
-  .koleksi-layout{
-    grid-template-columns:1fr;
-  }
+.koleksi-layout{
+grid-template-columns:1fr;
+}
+}
+
+/* ═════════ INTRO KOLEKSI (STYLE BARU) ═════════ */
+
+.koleksi-intro{
+background:#ffffff;
+border:1px solid #e6d8c9;
+border-radius:18px;
+padding:28px;
+box-shadow:0 10px 28px rgba(0,0,0,0.06);
+position:relative;
+}
+
+.koleksi-intro::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:60px;
+height:4px;
+background:#b08968;
+border-radius:4px;
 }
 
 .koleksi-intro h2{
-  font-size:28px;
-  font-weight:700;
-  color:#4b3621;
-  margin-bottom:12px;
+font-size:26px;
+font-weight:700;
+color:#4b3621;
+margin-bottom:14px;
 }
 
 .koleksi-intro p{
-  font-size:14px;
-  color:#6d5b4c;
-  line-height:1.7;
-  margin-bottom:22px;
+font-size:14px;
+color:#6d5b4c;
+line-height:1.7;
+margin-bottom:26px;
 }
+
+/* TOTAL KOLEKSI */
 
 .koleksi-count{
-  background:#4b3621;
-  border-radius:14px;
-  padding:20px 22px;
-  margin-bottom:20px;
-  position:relative;
-  overflow:hidden;
-}
-
-.koleksi-count::before{
-  content:'';
-  position:absolute;
-  bottom:-30px;
-  right:-30px;
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(176,137,104,0.3) 0%, transparent 70%);
+display:flex;
+align-items:center;
+gap:14px;
+padding:16px 18px;
+border-radius:12px;
+background:#f5eee6;
+border:1px dashed #d6c4b2;
+margin-bottom:22px;
 }
 
 .koleksi-count .big{
-  font-size:40px;
-  font-weight:700;
-  color:#f4d7b5;
-  line-height:1;
+font-size:30px;
+font-weight:700;
+color:#8b6b4f;
 }
 
 .koleksi-count .label{
-  font-size:12px;
-  color:rgba(255,255,255,0.7);
-  margin-top:4px;
+font-size:13px;
+color:#6d5b4c;
 }
 
+/* BUTTON */
+
 .btn-galeri{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:11px 22px;
-  background:linear-gradient(135deg,#8b6b4f,#b08968);
-  color:#fff;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.3s;
-  box-shadow:0 4px 16px rgba(139,107,79,0.28);
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:11px 22px;
+background:linear-gradient(135deg,#8b6b4f,#b08968);
+color:#fff;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 4px 16px rgba(139,107,79,0.28);
 }
 
 .btn-galeri:hover{
-  background:linear-gradient(135deg,#6f523d,#8b6b4f);
-  transform:translateY(-2px);
+background:linear-gradient(135deg,#6f523d,#8b6b4f);
+transform:translateY(-2px);
 }
 
-.arrow-icon{
-  font-size:12px;
-}
-
-.koleksi-bento{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-@media (max-width:580px){
-  .koleksi-bento{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-.kb-card{
-  border-radius:16px;
-  padding:20px 18px;
-  border:1px solid #e6d8c9;
-  background:#ffffff;
-  transition:0.3s;
-  position:relative;
-}
-
-.kb-card:hover{
-  border-color:#b08968;
-  box-shadow:0 10px 28px rgba(139,107,79,0.18);
-  transform:translateY(-3px);
-}
-
-.kb-card.featured{
-  grid-column:1 / 3;
-  background:#4b3621;
-  border-color:#8b6b4f;
-  padding:26px 26px 22px;
-}
-
-.kb-card.featured:hover{
-  box-shadow:0 12px 32px rgba(0,0,0,0.25);
-}
-
-.kb-emoji{
-  font-size:28px;
-  margin-bottom:10px;
-  display:block;
-}
-
-.kb-name{
-  font-size:14px;
-  font-weight:700;
-  color:#2f2f2f;
-}
-
-.kb-card.featured .kb-name{
-  color:#fff;
-  font-size:16px;
-}
-
-.kb-desc{
-  font-size:12px;
-  color:#7a7570;
-  margin-top:4px;
-}
-
-.kb-card.featured .kb-desc{
-  color:rgba(255,255,255,0.6);
-}
-
-.kb-badge{
-  display:inline-block;
-  margin-top:10px;
-  font-size:10px;
-  font-weight:700;
-  padding:4px 10px;
-  border-radius:20px;
-  background:rgba(176,137,104,0.2);
-  border:1px solid rgba(176,137,104,0.35);
-  color:#8b6b4f;
-}
-
-.kb-tag{
-  position:absolute;
-  top:10px;
-  right:10px;
-  font-size:9px;
-  font-weight:700;
-  background:#f2e5dc;
-  color:#8b6b4f;
-  padding:3px 8px;
-  border-radius:8px;
-}
-/* ===== BENTO LAYOUT VARIASI 2 ===== */
+/* ═════════ BENTO GRID ═════════ */
 
 .koleksi-bento{
 display:grid;
@@ -576,33 +500,132 @@ grid-auto-rows:120px;
 gap:14px;
 }
 
-/* Featured jadi tinggi di kiri */
+@media (max-width:580px){
+.koleksi-bento{
+grid-template-columns:1fr 1fr;
+}
+}
+
+/* CARD */
+
+.kb-card{
+border-radius:16px;
+padding:20px 18px;
+border:1px solid #e6d8c9;
+background:#ffffff;
+transition:0.3s;
+position:relative;
+}
+
+.kb-card:hover{
+border-color:#b08968;
+box-shadow:0 10px 28px rgba(139,107,79,0.18);
+transform:translateY(-3px);
+}
+
+/* FEATURED CARD */
+
+.kb-card.featured{
+background:#4b3621;
+border-color:#8b6b4f;
+padding:26px;
+}
+
+.kb-card.featured .kb-name{
+color:#fff;
+font-size:16px;
+}
+
+.kb-card.featured .kb-desc{
+color:rgba(255,255,255,0.65);
+}
+
+/* ICON */
+
+.kb-emoji{
+font-size:28px;
+margin-bottom:10px;
+display:block;
+}
+
+/* TITLE */
+
+.kb-name{
+font-size:14px;
+font-weight:700;
+color:#2f2f2f;
+}
+
+/* DESC */
+
+.kb-desc{
+font-size:12px;
+color:#7a7570;
+margin-top:4px;
+}
+
+/* BADGE */
+
+.kb-badge{
+display:inline-block;
+margin-top:10px;
+font-size:10px;
+font-weight:700;
+padding:4px 10px;
+border-radius:20px;
+background:rgba(176,137,104,0.2);
+border:1px solid rgba(176,137,104,0.35);
+color:#8b6b4f;
+}
+
+/* TAG */
+
+.kb-tag{
+position:absolute;
+top:10px;
+right:10px;
+font-size:9px;
+font-weight:700;
+background:#f2e5dc;
+color:#8b6b4f;
+padding:3px 8px;
+border-radius:8px;
+}
+
+/* ═════════ CUSTOM BENTO LAYOUT (UNIQUE) ═════════ */
+
+/* Featured tinggi di kiri */
+
 .kb-card.featured{
 grid-column:1 / 2;
 grid-row:1 / 3;
 }
 
-/* Novel jadi lebar di atas */
+/* Novel lebar di atas */
+
 .koleksi-bento .kb-card:nth-child(2){
 grid-column:2 / 4;
-grid-row:1 / 2;
 }
 
-/* Artikel tetap kotak */
+/* Artikel normal */
+
 .koleksi-bento .kb-card:nth-child(3){
 grid-column:2 / 3;
 }
 
-/* Skripsi jadi tinggi di kanan */
+/* Skripsi tinggi di kanan */
+
 .koleksi-bento .kb-card:nth-child(4){
 grid-column:3 / 4;
 grid-row:2 / 4;
 }
 
-/* Ebook jadi lebar di bawah */
+/* Ebook lebar bawah */
+
 .koleksi-bento .kb-card:nth-child(5){
 grid-column:1 / 3;
 }
+
 
 /* ===== PRE FOOTER ===== */
 
