@@ -380,7 +380,127 @@ nav a:hover{ color:#8b6b4f; }
   left: -80px;
   opacity: 0.3;
 }
+/* ═══════════════════════════════════════
+LAYANAN PERPUSTAKAAN
+═══════════════════════════════════════ */
 
+#layanan{
+background:linear-gradient(
+180deg,
+#f2e5dc 0%,
+#f7efe9 60%,
+#f9f6f2 100%
+);
+padding:80px 0;
+}
+
+.layanan-inner{
+max-width:1100px;
+margin:auto;
+padding:0 32px;
+}
+
+.layanan-head{
+margin-bottom:40px;
+text-align:center;
+}
+
+.layanan-head h2{
+font-size:32px;
+font-weight:700;
+color:#4b3621;
+}
+
+/* GRID */
+
+.layanan-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:16px;
+}
+
+@media (max-width:960px){
+.layanan-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media (max-width:580px){
+.layanan-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* CARD */
+
+.layanan-card{
+background:#ffffff;
+border:1px solid #e6d8c9;
+border-radius:16px;
+padding:26px 18px;
+text-align:center;
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+.layanan-card::after{
+content:'';
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+height:3px;
+background:linear-gradient(90deg,#8b6b4f,#b08968);
+transform:scaleX(0);
+transition:transform 0.3s ease;
+transform-origin:left;
+}
+
+.layanan-card:hover{
+border-color:#b08968;
+box-shadow:0 10px 28px rgba(139,107,79,0.18);
+transform:translateY(-5px);
+}
+
+.layanan-card:hover::after{
+transform:scaleX(1);
+}
+
+/* ICON */
+
+.lc-icon{
+width:54px;
+height:54px;
+border-radius:14px;
+background:linear-gradient(
+135deg,
+rgba(139,107,79,0.15),
+rgba(139,107,79,0.05)
+);
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 14px;
+font-size:20px;
+color:#8b6b4f;
+transition:0.3s;
+}
+
+.layanan-card:hover .lc-icon{
+background:linear-gradient(135deg,#8b6b4f,#b08968);
+color:#fff;
+transform:rotate(-6deg) scale(1.1);
+}
+
+/* TITLE */
+
+.lc-title{
+font-size:13px;
+font-weight:700;
+color:#2f2f2f;
+line-height:1.4;
+}
   /* ═══════════════════════════════════════
 KOLEKSI
 ═══════════════════════════════════════ */
@@ -945,7 +1065,47 @@ footer{
 
 </div>
 </section>
-      
+<section id="layanan">
+
+<div class="layanan-inner">
+
+<div class="layanan-head">
+<h2>Layanan Perpustakaan</h2>
+</div>
+
+<div class="layanan-grid">
+
+<div class="layanan-card">
+<div class="lc-icon"><i class="fas fa-book-reader"></i></div>
+<div class="lc-title">Layanan Membaca di Tempat</div>
+</div>
+
+<div class="layanan-card">
+<div class="lc-icon"><i class="fas fa-exchange-alt"></i></div>
+<div class="lc-title">Peminjaman & Pengembalian Buku</div>
+</div>
+
+<div class="layanan-card">
+<div class="lc-icon"><i class="fas fa-laptop"></i></div>
+<div class="lc-title">Akses Koleksi Digital</div>
+</div>
+
+<div class="layanan-card">
+<div class="lc-icon"><i class="fas fa-search"></i></div>
+<div class="lc-title">Layanan Penelusuran Informasi</div>
+</div>
+
+<div class="layanan-card">
+<div class="lc-icon"><i class="fas fa-users"></i></div>
+<div class="lc-title">Kegiatan Literasi & Edukasi</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+  
 <section id="koleksi">
 <div class="koleksi-inner">
 <div class="koleksi-layout">
