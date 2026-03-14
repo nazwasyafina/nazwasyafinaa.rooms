@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Events & Kegiatan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+/* JAM HEADER */
+
+.jam-header{
+background:#1a1a2e;
+color:#e6c96e;
+text-align:center;
+padding:8px;
+font-size:14px;
+}
+
+
+/* HERO */
+
+.event-hero{
+
+min-height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+color:white;
+
+background:
+linear-gradient(rgba(30,25,18,.85),rgba(30,25,18,.85)),
+url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover;
+
+border-bottom:4px solid #B8954A;
+
+}
+
+.event-hero h1{
+
+font-family:'Playfair Display',serif;
+font-size:36px;
+
+}
+
+.event-hero span{
+color:#e6c96e;
+}
+
+
+/* CONTAINER */
+
+.event-container{
+
+max-width:1100px;
+margin:auto;
+padding:60px 25px;
+
+}
+
+
+/* GRID */
+
+.event-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+@media(max-width:900px){
+.event-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.event-grid{
+grid-template-columns:1fr;
+}
+}
+
+
+/* CARD */
+
+.event-card{
+
+background:white;
+border-radius:14px;
+overflow:hidden;
+
+border:1px solid #e7dfd4;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.event-card:hover{
+
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.event-img{
+
+height:190px;
+overflow:hidden;
+
+}
+
+.event-img img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.event-body{
+padding:18px;
+}
+
+.event-body h3{
+
+font-family:'Playfair Display',serif;
+margin-bottom:8px;
+
+}
+
+.event-body p{
+
+font-size:14px;
+color:#666;
+margin-bottom:12px;
+
+}
+
+.event-meta{
+
+display:flex;
+justify-content:space-between;
+
+font-size:13px;
+color:#888;
+
+}
+
+
+/* LIGHTBOX */
+
+.lightbox{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.85);
+
+display:none;
+align-items:center;
+justify-content:center;
+
+padding:20px;
+
+z-index:9999;
+
+}
+
+.lightbox.open{
+display:flex;
+}
+
+.lb-box{
+
+background:white;
+max-width:650px;
+width:100%;
+
+border-radius:14px;
+overflow:hidden;
+
+}
+
+.lb-box img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+}
+
+.lb-body{
+padding:25px;
+}
+
+.lb-close{
+
+position:absolute;
+top:25px;
+right:25px;
+
+font-size:30px;
+color:white;
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!-- JAM HEADER -->
+
+<div class="jam-header">
+
+<i class="fas fa-clock"></i> <span id="jam"></span>
+|
+<span id="tanggalHari"></span>
+
+</div>
+
+
+<!-- HEADER (SAMA SEPERTI HALAMAN LAIN) -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="../assets/logo/logo.png" style="height:50px;margin-right:10px">
+
+<h1>Litera<span>Publica</span></h1>
+
+</div>
+
+<a href="../login.html" class="login-box">
+<h3>LOGIN</h3>
+</a>
+
+</div>
+
+</header>
+
+
+<!-- NAVBAR FETCH -->
+
+<div id="navbar-placeholder"></div>
+
+
+<!-- HERO -->
+
+<section class="event-hero">
+
+<div>
+
+<h1>Kegiatan <span>Perpustakaan</span></h1>
+
+<p>Dokumentasi kegiatan literasi dan pengembangan perpustakaan</p>
+
+</div>
+
+</section>
+
+
+
+<!-- EVENT CONTENT -->
+
+<section class="event-container">
+
+<div class="event-grid">
+
+
+<div class="event-card" onclick="openEvent(0)">
+
+<div class="event-img">
+<img src="../assets/events/arsip.jpeg">
+</div>
+
+<div class="event-body">
+
+<h3>Sosialisasi Pengelolaan Arsip</h3>
+
+<p>Kegiatan pengenalan pengelolaan arsip yang baik di sekolah.</p>
+
+<div class="event-meta">
+
+<span>31 Mei 2026</span>
+<span>SDN 060898</span>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="event-card" onclick="openEvent(1)">
+
+<div class="event-img">
+<img src="../assets/events/workshop.jpeg">
+</div>
+
+<div class="event-body">
+
+<h3>Workshop Sistem Informasi</h3>
+
+<p>Pelatihan penggunaan sistem informasi untuk perpustakaan sekolah.</p>
+
+<div class="event-meta">
+
+<span>13 Nov 2025</span>
+<span>SMP 7 Medan</span>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="event-card" onclick="openEvent(2)">
+
+<div class="event-img">
+<img src="../assets/events/dokumentasi.jpeg">
+</div>
+
+<div class="event-body">
+
+<h3>Kegiatan Mahasiswa Perpustakaan</h3>
+
+<p>Kebersamaan mahasiswa dalam kegiatan akademik perpustakaan.</p>
+
+<div class="event-meta">
+
+<span>10 Feb 2026</span>
+<span>Perpustakaan USU</span>
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<div class="lb-close" onclick="closeEvent()">×</div>
+
+<div class="lb-box">
+
+<img id="lb-img">
+
+<div class="lb-body">
+
+<h2 id="lb-title"></h2>
+<p id="lb-desc"></p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- FOOTER FETCH -->
+
+<div id="footer-placeholder"></div>
+
+
+
+<script>
+
+/* JAM */
+
+const hari=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']
+const bulan=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des']
+
+function jam(){
+
+const w=new Date()
+
+document.getElementById("jam").innerText=w.toLocaleTimeString('id-ID')
+
+document.getElementById("tanggalHari").innerText=
+hari[w.getDay()]+" "+w.getDate()+" "+bulan[w.getMonth()]+" "+w.getFullYear()
+
+}
+
+setInterval(jam,1000)
+jam()
+
+
+/* FETCH NAVBAR */
+
+fetch('../layout/navbar.html')
+.then(res=>res.text())
+.then(data=>{
+document.getElementById('navbar-placeholder').innerHTML=data
+})
+
+
+/* FETCH FOOTER */
+
+fetch('../layout/footer.html')
+.then(res=>res.text())
+.then(data=>{
+document.getElementById('footer-placeholder').innerHTML=data
+})
+
+
+
+/* LIGHTBOX DATA */
+
+const events=[
+
+{
+img:"../assets/events/arsip.jpeg",
+title:"Sosialisasi Pengelolaan Arsip",
+desc:"Kegiatan sosialisasi untuk mengenalkan cara mengelola arsip sekolah dengan lebih terstruktur."
+},
+
+{
+img:"../assets/events/workshop.jpeg",
+title:"Workshop Sistem Informasi",
+desc:"Workshop penggunaan sistem informasi perpustakaan untuk membantu pengelolaan koleksi buku."
+},
+
+{
+img:"../assets/events/dokumentasi.jpeg",
+title:"Kegiatan Mahasiswa Perpustakaan",
+desc:"Dokumentasi kegiatan mahasiswa dalam kegiatan literasi dan pengembangan perpustakaan."
+}
+
+]
+
+
+function openEvent(i){
+
+document.getElementById("lightbox").classList.add("open")
+
+document.getElementById("lb-img").src=events[i].img
+document.getElementById("lb-title").innerText=events[i].title
+document.getElementById("lb-desc").innerText=events[i].desc
+
+}
+
+
+function closeEvent(){
+
+document.getElementById("lightbox").classList.remove("open")
+
+}
+
+</script>
+
+</body>
+</html>
