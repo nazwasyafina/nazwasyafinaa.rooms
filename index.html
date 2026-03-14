@@ -380,41 +380,192 @@ nav a:hover{ color:#8b6b4f; }
   left: -80px;
   opacity: 0.3;
 }
-  /* ===== SECTION KOLEKSI PREVIEW ===== */
+/* ══════════════════════════════════════════
+           KOLEKSI
+══════════════════════════════════════════ */
 
-.koleksi-preview {
-  padding: 100px 20px;
-  text-align: center;
-  background: #f9f6f2;
+#koleksi{
+  background:#f9f6f2;
+  padding:80px 0;
 }
 
-.koleksi-preview h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #5c3d2e;
+.koleksi-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 32px;
 }
 
-.koleksi-desc {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
+.koleksi-layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:44px;
+  align-items:start;
 }
 
-.koleksi-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #8b6b4f;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s ease;
+@media (max-width:900px){
+  .koleksi-layout{
+    grid-template-columns:1fr;
+  }
 }
 
-.koleksi-btn:hover {
-  background: #6f523d;
+.koleksi-intro h2{
+  font-size:28px;
+  font-weight:700;
+  color:#4b3621;
+  margin-bottom:12px;
+}
+
+.koleksi-intro p{
+  font-size:14px;
+  color:#6d5b4c;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+
+.koleksi-count{
+  background:#4b3621;
+  border-radius:14px;
+  padding:20px 22px;
+  margin-bottom:20px;
+  position:relative;
+  overflow:hidden;
+}
+
+.koleksi-count::before{
+  content:'';
+  position:absolute;
+  bottom:-30px;
+  right:-30px;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(176,137,104,0.3) 0%, transparent 70%);
+}
+
+.koleksi-count .big{
+  font-size:40px;
+  font-weight:700;
+  color:#f4d7b5;
+  line-height:1;
+}
+
+.koleksi-count .label{
+  font-size:12px;
+  color:rgba(255,255,255,0.7);
+  margin-top:4px;
+}
+
+.btn-galeri{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 22px;
+  background:linear-gradient(135deg,#8b6b4f,#b08968);
+  color:#fff;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 4px 16px rgba(139,107,79,0.28);
+}
+
+.btn-galeri:hover{
+  background:linear-gradient(135deg,#6f523d,#8b6b4f);
+  transform:translateY(-2px);
+}
+
+.arrow-icon{
+  font-size:12px;
+}
+
+.koleksi-bento{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+@media (max-width:580px){
+  .koleksi-bento{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.kb-card{
+  border-radius:16px;
+  padding:20px 18px;
+  border:1px solid #e6d8c9;
+  background:#ffffff;
+  transition:0.3s;
+  position:relative;
+}
+
+.kb-card:hover{
+  border-color:#b08968;
+  box-shadow:0 10px 28px rgba(139,107,79,0.18);
+  transform:translateY(-3px);
+}
+
+.kb-card.featured{
+  grid-column:1 / 3;
+  background:#4b3621;
+  border-color:#8b6b4f;
+  padding:26px 26px 22px;
+}
+
+.kb-card.featured:hover{
+  box-shadow:0 12px 32px rgba(0,0,0,0.25);
+}
+
+.kb-emoji{
+  font-size:28px;
+  margin-bottom:10px;
+  display:block;
+}
+
+.kb-name{
+  font-size:14px;
+  font-weight:700;
+  color:#2f2f2f;
+}
+
+.kb-card.featured .kb-name{
+  color:#fff;
+  font-size:16px;
+}
+
+.kb-desc{
+  font-size:12px;
+  color:#7a7570;
+  margin-top:4px;
+}
+
+.kb-card.featured .kb-desc{
+  color:rgba(255,255,255,0.6);
+}
+
+.kb-badge{
+  display:inline-block;
+  margin-top:10px;
+  font-size:10px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:20px;
+  background:rgba(176,137,104,0.2);
+  border:1px solid rgba(176,137,104,0.35);
+  color:#8b6b4f;
+}
+
+.kb-tag{
+  position:absolute;
+  top:10px;
+  right:10px;
+  font-size:9px;
+  font-weight:700;
+  background:#f2e5dc;
+  color:#8b6b4f;
+  padding:3px 8px;
+  border-radius:8px;
 }
 /* ===== PRE FOOTER ===== */
 
@@ -730,19 +881,75 @@ footer{
 </div>
 </section>
       
-<section class="koleksi-preview" id="koleksi">
-  <div class="container">
-    <h2>Koleksi Perpustakaan</h2>
+<section id="koleksi">
 
-    <p class="koleksi-desc">
-      Temukan berbagai koleksi bacaan, referensi akademik, dan sumber informasi
-      yang telah dikurasi untuk mendukung kebutuhan literasi dan pembelajaran Anda.
-    </p>
+<div class="koleksi-inner">
 
-  <a href="koleksi.html" class="koleksi-btn" target="_blank">
-  Lihat Semua Koleksi
+<div class="koleksi-layout">
+
+<!-- INTRO -->
+<div class="koleksi-intro">
+
+<h2>Koleksi Perpustakaan</h2>
+
+<p>
+Temukan berbagai koleksi bacaan, referensi akademik,
+dan sumber informasi yang telah dikurasi untuk
+mendukung kebutuhan literasi masyarakat.
+</p>
+
+<div class="koleksi-count">
+<div class="big">500+</div>
+<div class="label">Total Koleksi</div>
+</div>
+
+<a href="koleksi.html" class="btn-galeri" target="_blank">
+Lihat Semua Koleksi
+<span class="arrow-icon">→</span>
 </a>
-  </div>
+
+</div>
+
+<!-- BENTO GRID -->
+<div class="koleksi-bento">
+
+<div class="kb-card featured">
+<span class="kb-emoji">📚</span>
+<div class="kb-name">Buku Referensi</div>
+<div class="kb-desc">Koleksi buku akademik dan literatur ilmiah.</div>
+<span class="kb-badge">POPULAR</span>
+</div>
+
+<div class="kb-card">
+<span class="kb-emoji">📖</span>
+<div class="kb-name">Novel</div>
+<div class="kb-desc">Koleksi fiksi dari berbagai penulis.</div>
+</div>
+
+<div class="kb-card">
+<span class="kb-emoji">📰</span>
+<div class="kb-name">Artikel</div>
+<div class="kb-desc">Artikel ilmiah dan populer.</div>
+</div>
+
+<div class="kb-card">
+<span class="kb-emoji">🎓</span>
+<div class="kb-name">Skripsi</div>
+<div class="kb-desc">Karya ilmiah mahasiswa.</div>
+<span class="kb-tag">PDF</span>
+</div>
+
+<div class="kb-card">
+<span class="kb-emoji">📜</span>
+<div class="kb-name">E-Book</div>
+<div class="kb-desc">Buku digital berbagai bidang.</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </section>
 <section class="pre-footer">
   <div class="pre-footer-container">
