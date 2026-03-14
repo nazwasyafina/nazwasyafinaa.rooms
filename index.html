@@ -384,6 +384,10 @@ nav a:hover{ color:#8b6b4f; }
 LAYANAN PERPUSTAKAAN
 ═══════════════════════════════════════ */
 
+/* ═══════════════════════════════════════
+LAYANAN PERPUSTAKAAN
+═══════════════════════════════════════ */
+
 #layanan{
 background:#f9f6f2;
 padding:90px 0;
@@ -420,7 +424,7 @@ line-height:1.7;
 .layanan-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:22px;
+gap:24px;
 }
 
 @media (max-width:900px){
@@ -438,59 +442,57 @@ grid-template-columns:1fr;
 /* CARD */
 
 .layanan-card{
-background:#ffffff;
-border:1px solid #e6d8c9;
-border-radius:16px;
-padding:28px 24px;
-text-align:left;
-transition:0.3s;
-position:relative;
+text-decoration:none;
+color:inherit;
+display:block;
+
+padding:35px 28px;
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+rgba(139,107,79,0.9),
+rgba(176,137,104,0.85)
+);
+
+backdrop-filter:blur(10px);
+
+color:#ffffff;
+text-align:center;
+
+transition:0.35s;
+box-shadow:0 10px 30px rgba(139,107,79,0.18);
 }
 
-.layanan-card::before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-height:100%;
-width:4px;
-background:#b08968;
-border-radius:4px 0 0 4px;
-}
+/* HOVER */
 
 .layanan-card:hover{
-transform:translateY(-6px);
-box-shadow:0 14px 35px rgba(139,107,79,0.15);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 20px 45px rgba(139,107,79,0.30);
 }
 
 /* ICON */
 
 .lc-icon{
-font-size:24px;
-color:#8b6b4f;
-margin-bottom:12px;
+font-size:32px;
+margin-bottom:18px;
+color:#f4e7dc;
 }
 
 /* TITLE */
 
 .lc-title{
-font-size:16px;
+font-size:17px;
 font-weight:700;
-color:#2f2f2f;
-margin-bottom:6px;
+margin-bottom:8px;
 }
 
 /* DESC */
 
 .lc-desc{
 font-size:13px;
-color:#7a7570;
 line-height:1.6;
-}
-  .layanan-card{
-text-decoration:none;
-color:inherit;
-display:block;
+opacity:0.9;
 }
   /* ═══════════════════════════════════════
 KOLEKSI
