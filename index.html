@@ -385,13 +385,8 @@ LAYANAN PERPUSTAKAAN
 ═══════════════════════════════════════ */
 
 #layanan{
-background:linear-gradient(
-180deg,
-#f2e5dc 0%,
-#f7efe9 60%,
-#f9f6f2 100%
-);
-padding:80px 0;
+background:#f9f6f2;
+padding:90px 0;
 }
 
 .layanan-inner{
@@ -401,33 +396,42 @@ padding:0 32px;
 }
 
 .layanan-head{
-margin-bottom:40px;
 text-align:center;
+margin-bottom:50px;
 }
 
 .layanan-head h2{
 font-size:32px;
 font-weight:700;
 color:#4b3621;
+margin-bottom:10px;
+}
+
+.layanan-head p{
+max-width:600px;
+margin:auto;
+font-size:15px;
+color:#6d5b4c;
+line-height:1.7;
 }
 
 /* GRID */
 
 .layanan-grid{
 display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:16px;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
-@media (max-width:960px){
-.layanan-grid{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-@media (max-width:580px){
+@media (max-width:900px){
 .layanan-grid{
 grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:500px){
+.layanan-grid{
+grid-template-columns:1fr;
 }
 }
 
@@ -437,69 +441,56 @@ grid-template-columns:repeat(2,1fr);
 background:#ffffff;
 border:1px solid #e6d8c9;
 border-radius:16px;
-padding:26px 18px;
-text-align:center;
-transition:all 0.3s ease;
+padding:28px 24px;
+text-align:left;
+transition:0.3s;
 position:relative;
-overflow:hidden;
 }
 
-.layanan-card::after{
-content:'';
+.layanan-card::before{
+content:"";
 position:absolute;
-bottom:0;
 left:0;
-right:0;
-height:3px;
-background:linear-gradient(90deg,#8b6b4f,#b08968);
-transform:scaleX(0);
-transition:transform 0.3s ease;
-transform-origin:left;
+top:0;
+height:100%;
+width:4px;
+background:#b08968;
+border-radius:4px 0 0 4px;
 }
 
 .layanan-card:hover{
-border-color:#b08968;
-box-shadow:0 10px 28px rgba(139,107,79,0.18);
-transform:translateY(-5px);
-}
-
-.layanan-card:hover::after{
-transform:scaleX(1);
+transform:translateY(-6px);
+box-shadow:0 14px 35px rgba(139,107,79,0.15);
 }
 
 /* ICON */
 
 .lc-icon{
-width:54px;
-height:54px;
-border-radius:14px;
-background:linear-gradient(
-135deg,
-rgba(139,107,79,0.15),
-rgba(139,107,79,0.05)
-);
-display:flex;
-align-items:center;
-justify-content:center;
-margin:0 auto 14px;
-font-size:20px;
+font-size:24px;
 color:#8b6b4f;
-transition:0.3s;
-}
-
-.layanan-card:hover .lc-icon{
-background:linear-gradient(135deg,#8b6b4f,#b08968);
-color:#fff;
-transform:rotate(-6deg) scale(1.1);
+margin-bottom:12px;
 }
 
 /* TITLE */
 
 .lc-title{
-font-size:13px;
+font-size:16px;
 font-weight:700;
 color:#2f2f2f;
-line-height:1.4;
+margin-bottom:6px;
+}
+
+/* DESC */
+
+.lc-desc{
+font-size:13px;
+color:#7a7570;
+line-height:1.6;
+}
+  .layanan-card{
+text-decoration:none;
+color:inherit;
+display:block;
 }
   /* ═══════════════════════════════════════
 KOLEKSI
@@ -1067,42 +1058,56 @@ footer{
 </section>
 <section id="layanan">
 
-<div class="layanan-inner">
-
+  <div class="layanan-inner">
 <div class="layanan-head">
-<h2>Layanan Perpustakaan</h2>
+  <h2>Layanan Perpustakaan</h2>
+  <p>
+    Berbagai layanan disediakan untuk memudahkan pengguna dalam
+    mengakses koleksi, mengikuti kegiatan literasi, serta
+    memanfaatkan fasilitas perpustakaan secara optimal.
+  </p>
 </div>
 
 <div class="layanan-grid">
 
-<div class="layanan-card">
-<div class="lc-icon"><i class="fas fa-book-reader"></i></div>
-<div class="lc-title">Layanan Membaca di Tempat</div>
-</div>
+  <a href="sirkulasi.html" target="_blank" class="layanan-card">
+    <div class="lc-icon"><i class="fas fa-book"></i></div>
+    <div class="lc-title">Layanan Sirkulasi</div>
+    <div class="lc-desc">
+      Meliputi peminjaman buku, perpanjangan masa peminjaman,
+      serta pengembalian koleksi perpustakaan.
+    </div>
+  </a>
 
-<div class="layanan-card">
-<div class="lc-icon"><i class="fas fa-exchange-alt"></i></div>
-<div class="lc-title">Peminjaman & Pengembalian Buku</div>
-</div>
+  <a href="keanggotaan.html" target="_blank" class="layanan-card">
+    <div class="lc-icon"><i class="fas fa-id-card"></i></div>
+    <div class="lc-title">Keanggotaan Perpustakaan</div>
+    <div class="lc-desc">
+      Pendaftaran anggota untuk memperoleh akses ke koleksi
+      serta berbagai layanan perpustakaan.
+    </div>
+  </a>
 
-<div class="layanan-card">
-<div class="lc-icon"><i class="fas fa-laptop"></i></div>
-<div class="lc-title">Akses Koleksi Digital</div>
-</div>
+  <a href="literasi.html" target="_blank" class="layanan-card">
+    <div class="lc-icon"><i class="fas fa-book-reader"></i></div>
+    <div class="lc-title">Program Literasi</div>
+    <div class="lc-desc">
+      Kegiatan literasi seperti diskusi buku, kegiatan membaca,
+      dan program peningkatan minat baca masyarakat.
+    </div>
+  </a>
 
-<div class="layanan-card">
-<div class="lc-icon"><i class="fas fa-search"></i></div>
-<div class="lc-title">Layanan Penelusuran Informasi</div>
-</div>
-
-<div class="layanan-card">
-<div class="lc-icon"><i class="fas fa-users"></i></div>
-<div class="lc-title">Kegiatan Literasi & Edukasi</div>
-</div>
-
-</div>
+  <a href="edukasi.html" target="_blank" class="layanan-card">
+    <div class="lc-icon"><i class="fas fa-graduation-cap"></i></div>
+    <div class="lc-title">Layanan Edukasi</div>
+    <div class="lc-desc">
+      Program edukatif untuk mendukung kegiatan belajar
+      dan pengembangan pengetahuan masyarakat.
+    </div>
+  </a>
 
 </div>
+  </div>
 
 </section>
   
