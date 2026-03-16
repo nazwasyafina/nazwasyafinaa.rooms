@@ -1226,8 +1226,8 @@ footer{
         </a>
       </div>
       
-<div class="founder-section">
-
+<div class="founder-row">
+  
 <p class="founder-text">
 Ingin mengenal lebih jauh sosok di balik berdirinya 
 <strong>Nazwa’s Library Corner</strong>?
@@ -1239,13 +1239,6 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
 
 </div>
     </div>
-
-    <!-- VISI MISI -->
- <div class="profile-toggle-wrapper">
-<a href="javascript:void(0)" class="link-btn" id="profileToggle">
-Visi & Misi
-</a>
-</div>
 
 <!-- KOTAK VISI MISI -->
 <div id="visiMisiBox" class="visi-misi-box">
@@ -1564,14 +1557,14 @@ onAuthStateChanged(auth, (user) => {
 <script>
 
 const toggleBtn = document.getElementById("profileToggle");
-const profileDetails = document.getElementById("profileDetails");
+const visiBox = document.getElementById("visiMisiBox");
 
 toggleBtn.addEventListener("click", function(){
 
-  if(profileDetails.style.display === "none" || profileDetails.style.display === ""){
-    profileDetails.style.display = "flex";
+  if(visiBox.style.display === "none" || visiBox.style.display === ""){
+    visiBox.style.display = "flex";
   } else {
-    profileDetails.style.display = "none";
+    visiBox.style.display = "none";
   }
 
 });
