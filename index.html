@@ -366,9 +366,11 @@ nav a:hover{ color:#8b6b4f; }
   background:linear-gradient(to bottom,#cd811c,rgba(255,255,255,0.6));
 }
   .vision-mission-box:hover{
-  transform:translateY(-5px);
-  transition:0.3s;
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+background:linear-gradient(135deg,#6b4f38,#4b3621);
 }
+  
 .library-profile::after {
   content: "";
   position: absolute;
@@ -381,37 +383,41 @@ nav a:hover{ color:#8b6b4f; }
   opacity: 0.3;
 }
 /* ════════════ FOUNDER ═══════════ */
-.founder-section{
-margin-top:25px;
+/* FOUNDER ROW */
+
+.founder-row{
+margin-top:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
 text-align:center;
 }
 
 .founder-text{
 font-size:15px;
-line-height:1.8;
 color:#4b3621;
-margin-bottom:15px;
+line-height:1.7;
 }
 
 .founder-btn{
 display:inline-flex;
 align-items:center;
-gap:8px;
-padding:10px 22px;
-border-radius:30px;
-background:linear-gradient(135deg,#8b6b4f,#6b4f38);
+gap:6px;
+padding:8px 18px;
+border-radius:25px;
+background:#8b6b4f;
 color:white;
 text-decoration:none;
 font-size:14px;
 font-weight:500;
-transition:0.3s;
-box-shadow:0 6px 18px rgba(0,0,0,0.15);
+transition:0.25s;
 }
 
 .founder-btn:hover{
+background:#6b4f38;
 transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-background:linear-gradient(135deg,#6b4f38,#4b3621);
 }
 /* ════════════ LAYANAN PERPUSTAKAAN ═══════════ */
 
@@ -1235,31 +1241,37 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
     </div>
 
     <!-- VISI MISI -->
-    <div id="profileDetails">
+ <div class="profile-toggle-wrapper">
+<a href="javascript:void(0)" class="link-btn" id="profileToggle">
+Visi & Misi
+</a>
+</div>
 
-  <div class="vision-mission-box">
+<!-- KOTAK VISI MISI -->
+<div id="visiMisiBox" class="visi-misi-box">
+<p><strong>Visi:</strong> Menjadi perpustakaan yang mendukung literasi, pembelajaran, dan akses informasi bagi masyarakat.</p>
 
-    <div class="vision-part">
-      <h3>Visi</h3>
-      <p>
-        Menjadi ruang literasi yang inspiratif, inklusif, dan adaptif dalam
-        mendukung pengembangan pengetahuan serta budaya membaca masyarakat.
-      </p>
-    </div>
+<p><strong>Misi:</strong></p>
+<ul>
+<li>Menyediakan koleksi informasi yang relevan dan berkualitas.</li>
+<li>Mendorong budaya membaca dan literasi informasi.</li>
+<li>Menyediakan layanan perpustakaan yang inovatif dan mudah diakses.</li>
+</ul>
+</div>
 
-    <div class="divider-vertical"></div>
+<!-- FOUNDER -->
+<div class="founder-row">
 
-    <div class="mission-part">
-      <h3>Misi</h3>
-      <ul>
-        <li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
-        <li>Mengembangkan layanan perpustakaan yang adaptif terhadap teknologi.</li>
-        <li>Mendorong budaya literasi dan pembelajaran di masyarakat.</li>
-      </ul>
-    </div>
+<span class="founder-text">
+Ingin mengenal lebih jauh sosok di balik berdirinya
+<strong>Nazwa’s Library Corner?</strong>
+</span>
 
-  </div>
+<a href="founder.html" class="founder-btn">
+<i class="fa-solid fa-user"></i> Lihat Founder
+</a>
 
+</div>
 </div>
 </section>
 <section id="layanan">
