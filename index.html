@@ -1219,41 +1219,14 @@ footer{
        Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
       </p>
 
-      <!-- Tombol -->
-      <div class="profile-toggle-wrapper">
-        <a href="javascript:void(0)" class="link-btn" id="profileToggle">
-          Visi & Misi
-        </a>
-      </div>
-      
-<div class="founder-row">
-  
-<p class="founder-text">
-Ingin mengenal lebih jauh sosok di balik berdirinya 
-<strong>Nazwa’s Library Corner</strong>?
-</p>
-
-<a href="founder.html" class="founder-btn">
-<i class="fa-solid fa-user"></i> Lihat Founder
+  <div class="profile-toggle-wrapper">
+<a href="javascript:void(0)" class="link-btn" id="profileToggle">
+Visi & Misi
 </a>
-
-</div>
-    </div>
-
-<!-- KOTAK VISI MISI -->
-<div id="visiMisiBox" class="visi-misi-box">
-<p><strong>Visi:</strong> Menjadi perpustakaan yang mendukung literasi, pembelajaran, dan akses informasi bagi masyarakat.</p>
-
-<p><strong>Misi:</strong></p>
-<ul>
-<li>Menyediakan koleksi informasi yang relevan dan berkualitas.</li>
-<li>Mendorong budaya membaca dan literasi informasi.</li>
-<li>Menyediakan layanan perpustakaan yang inovatif dan mudah diakses.</li>
-</ul>
 </div>
 
 <!-- FOUNDER -->
-<div class="founder-row">
+<div class="founder-row" id="founderRow">
 
 <span class="founder-text">
 Ingin mengenal lebih jauh sosok di balik berdirinya
@@ -1265,6 +1238,30 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
 </a>
 
 </div>
+
+<!-- BOX VISI MISI -->
+<div id="visiMisiBox" class="visi-misi-box">
+
+<div class="vision-part">
+<h3>Visi</h3>
+<p>
+Menjadi ruang literasi yang inspiratif, inklusif, 
+dan adaptif dalam mendukung pengembangan pengetahuan 
+serta budaya membaca masyarakat.
+</p>
+</div>
+
+<div class="divider-vertical"></div>
+
+<div class="mission-part">
+<h3>Misi</h3>
+<ul>
+<li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
+<li>Mengembangkan layanan perpustakaan yang adaptif terhadap teknologi.</li>
+<li>Mendorong budaya literasi dan pembelajaran di masyarakat.</li>
+</ul>
+</div>
+
 </div>
 </section>
 <section id="layanan">
@@ -1558,14 +1555,25 @@ onAuthStateChanged(auth, (user) => {
 
 const toggleBtn = document.getElementById("profileToggle");
 const visiBox = document.getElementById("visiMisiBox");
+const founder = document.getElementById("founderRow");
 
 toggleBtn.addEventListener("click", function(){
 
-  if(visiBox.style.display === "none" || visiBox.style.display === ""){
-    visiBox.style.display = "flex";
-  } else {
-    visiBox.style.display = "none";
-  }
+if(visiBox.style.display === "none" || visiBox.style.display === ""){
+
+visiBox.style.display = "flex";
+
+/* pindahkan founder ke bawah box */
+visiBox.after(founder);
+
+}else{
+
+visiBox.style.display = "none";
+
+/* kembalikan founder ke bawah tombol */
+toggleBtn.parentElement.after(founder);
+
+}
 
 });
 
