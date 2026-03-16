@@ -381,25 +381,37 @@ nav a:hover{ color:#8b6b4f; }
   opacity: 0.3;
 }
 /* ════════════ FOUNDER ═══════════ */
-.founder-info{
-margin-top:20px;
+.founder-section{
+margin-top:25px;
 text-align:center;
-font-size:14px;
+}
+
+.founder-text{
+font-size:15px;
+line-height:1.8;
 color:#4b3621;
+margin-bottom:15px;
 }
 
-.founder-link{
-color:#8b6b4f;
-font-weight:600;
+.founder-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 22px;
+border-radius:30px;
+background:linear-gradient(135deg,#8b6b4f,#6b4f38);
+color:white;
 text-decoration:none;
-border-bottom:1px solid rgba(139,107,79,0.4);
-padding-bottom:2px;
-transition:0.2s;
+font-size:14px;
+font-weight:500;
+transition:0.3s;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-.founder-link:hover{
-color:#6b4f38;
-border-color:#6b4f38;
+.founder-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+background:linear-gradient(135deg,#6b4f38,#4b3621);
 }
 /* ════════════ LAYANAN PERPUSTAKAAN ═══════════ */
 
@@ -1207,12 +1219,18 @@ footer{
           Visi & Misi
         </a>
       </div>
-<div class="founder-info">
-  <p>
-    Ingin mengetahui lebih lanjut mengenai sosok di balik berdirinya 
-    <strong>Nazwa’s Library Corner</strong>? 
-    <a href="founder.html" class="founder-link">Cari tahu tentang founder</a>.
-  </p>
+      
+<div class="founder-section">
+
+<p class="founder-text">
+Ingin mengenal lebih jauh sosok di balik berdirinya 
+<strong>Nazwa’s Library Corner</strong>?
+</p>
+
+<a href="founder.html" class="founder-btn">
+<i class="fa-solid fa-user"></i> Lihat Founder
+</a>
+
 </div>
     </div>
 
