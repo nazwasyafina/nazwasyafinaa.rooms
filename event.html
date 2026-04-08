@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Nazwa’s Library Corner</title>
+<title>Events - Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +22,7 @@ color:#4b3621;
 background:#f6f1ea;
 }
 
-/* NAVBAR */
+/* NAVBAR SAMA PERSIS */
 
 nav{
 position:fixed;
@@ -38,18 +38,20 @@ box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
+nav strong{
+color:#4b3621;
+font-size:18px;
+}
+
 .logo-area{
 display:flex;
 align-items:center;
 gap:8px;
+height:70px;
 }
 
 .logo-img{
 height:80px;
-}
-
-nav strong{
-font-size:18px;
 }
 
 nav a{
@@ -70,85 +72,144 @@ padding:8px 22px;
 border-radius:30px;
 }
 
-/* CONTACT SECTION */
+/* HERO */
 
-.contact-section{
+.event-hero{
 padding-top:140px;
-padding-bottom:80px;
+padding-bottom:60px;
+text-align:center;
+background:linear-gradient(rgba(59,37,22,0.7),rgba(59,37,22,0.7)),
+url('foto bground.jpg');
+background-size:cover;
+color:white;
+}
+
+.event-hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.event-hero p{
+opacity:0.9;
+}
+
+/* FILTER */
+
+.filter-bar{
 display:flex;
 justify-content:center;
+gap:10px;
+margin:40px 0;
+flex-wrap:wrap;
 }
 
-.contact-container{
-max-width:600px;
-width:100%;
-text-align:center;
-}
-
-.contact-container h2{
-font-size:34px;
-font-weight:700;
-margin-bottom:15px;
-}
-
-.contact-container p{
-font-size:14px;
-line-height:1.7;
-margin-bottom:30px;
-}
-
-form{
-display:flex;
-flex-direction:column;
-gap:18px;
-}
-
-.input-group{
-text-align:left;
-}
-
-.input-group label{
-font-size:14px;
-margin-bottom:6px;
-font-weight:500;
-display:block;
-}
-
-.input-group input,
-.input-group textarea{
-width:100%;
-padding:13px 15px;
-border-radius:12px;
-border:1px solid rgba(0,0,0,0.08);
+.filter-btn{
+padding:8px 18px;
+border-radius:25px;
+border:1px solid #d8c8b8;
 background:white;
-font-size:14px;
-outline:none;
-}
-
-.input-group textarea{
-resize:none;
-height:110px;
-}
-
-button{
-margin-top:5px;
-padding:13px;
-border:none;
-border-radius:30px;
-background:#8b6b4f;
-color:white;
-font-weight:600;
 cursor:pointer;
 }
 
-button:hover{
-background:#6e533c;
+.filter-btn.active{
+background:#8b6b4f;
+color:white;
 }
 
-.success-message{
-margin-top:15px;
-color:#2f6f3e;
-font-size:14px;
+/* EVENT GRID */
+
+.event-container{
+max-width:1100px;
+margin:auto;
+padding:0 30px 80px;
+}
+
+.event-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+@media(max-width:900px){
+.event-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:500px){
+.event-grid{
+grid-template-columns:1fr;
+}
+}
+
+/* CARD */
+
+.event-card{
+background:#fff;
+border-radius:16px;
+overflow:hidden;
+border:1px solid #e8e2da;
+text-decoration:none;
+color:inherit;
+transition:0.3s;
+
+display:flex;
+flex-direction:column;
+}
+
+.event-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 40px rgba(0,0,0,0.12);
+}
+
+.event-img{
+height:180px;
+overflow:hidden;
+}
+
+.event-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.event-date{
+position:absolute;
+margin:12px;
+background:white;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:700;
+color:#8b6b4f;
+}
+
+.event-body{
+padding:18px;
+display:flex;
+flex-direction:column;
+flex:1;
+}
+
+.event-body h3{
+font-size:15px;
+margin-bottom:8px;
+}
+
+.event-body p{
+font-size:13px;
+color:#6d5b4c;
+margin-bottom:10px;
+}
+
+.event-foot{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+color:#8b6b4f;
+border-top:1px solid #f0ece6;
+padding-top:10px;
+margin-top:auto;
 }
 
 /* PRE FOOTER */
@@ -165,10 +226,6 @@ justify-content:space-between;
 max-width:1100px;
 margin:auto;
 gap:60px;
-}
-
-.pre-col{
-flex:1;
 }
 
 .pre-footer h4{
@@ -193,21 +250,85 @@ justify-content:center;
 color:white;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#8b6b4f;
-color:white;
-font-size:13px;
+/* ===== PRE FOOTER ===== */
+
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
 }
 
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
+}
+
+.pre-col {
+  flex:1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+}
+
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#8b6b4f;
+  color:#ffffff;
+  font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
+}
+  
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
+
 <nav>
+
 <div class="logo-area">
 <img src="logo.PNG" class="logo-img">
 <strong>Nazwa’s Library Corner</strong>
@@ -221,92 +342,177 @@ font-size:13px;
 <a href="contact.html">Contact Us</a>
 <a href="login.html" id="authBtn">Login</a>
 </div>
+
 </nav>
 
-<!-- CONTACT -->
-<section class="contact-section">
-<div class="contact-container">
 
-<h2>Contact Us</h2>
+<!-- HERO -->
 
-<p>
-Punya pertanyaan, kritik, atau saran untuk Nazwa’s Library Corner? 
-Silahkan kirimkan pesanmu melalui formulir di bawah ini.
-</p>
+<section class="event-hero">
 
-<form id="contactForm">
-<div class="input-group">
-<label>Nama</label>
-<input type="text" id="nama" required>
+<h1>Kegiatan Perpustakaan</h1>
+<p>Berbagai kegiatan literasi dan pengembangan perpustakaan</p>
+
+</section>
+
+
+<!-- FILTER -->
+
+<div class="filter-bar">
+
+<button class="filter-btn active" data-filter="all">Semua</button>
+<button class="filter-btn" data-filter="workshop">Workshop</button>
+<button class="filter-btn" data-filter="sosialisasi">Sosialisasi</button>
+<button class="filter-btn" data-filter="observasi">Observasi</button>
+
 </div>
 
-<div class="input-group">
-<label>Email</label>
-<input type="email" id="email" required>
+
+<section class="event-container">
+
+<div class="event-grid">
+
+
+<!-- EVENT 1 -->
+
+<div class="event-card" data-category="workshop">
+
+<div class="event-img">
+<img src="workshop.jpeg">
 </div>
 
-<div class="input-group">
-<label>Pesan</label>
-<textarea id="pesan" required></textarea>
+<div class="event-body">
+
+<h3>Workshop Penanggulangan Arsip Bencana</h3>
+
+<p>Pelatihan pengelolaan arsip untuk menghadapi bencana banjir di SD Angkasa Medan.</p>
+
+<div class="event-foot">
+<span>SD Angkasa Medan</span>
+<span>2025</span>
 </div>
 
-<button type="submit">Kirim Pesan</button>
-</form>
+</div>
 
-<p style="font-size:12px; margin-top:15px;">
-Semua pesan yang masuk akan dibaca dan dihargai 🤎
-</p>
+</div>
 
-<div class="success-message" id="successMsg"></div>
+
+<!-- EVENT 2 -->
+
+<div class="event-card" data-category="sosialisasi">
+
+<div class="event-img">
+<img src="sosialisasi.jpeg">
+</div>
+
+<div class="event-body">
+
+<h3>Sosialisasi Digitalisasi Layanan Perpustakaan</h3>
+
+<p>Instalisasi SLiMS di SMA Harapan 1 Medan.</p>
+
+<div class="event-foot">
+<span>SMA Harapan 1 Medan</span>
+<span>2025</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- EVENT 3 -->
+
+<div class="event-card" data-category="observasi">
+
+<div class="event-img">
+<img src="observasi.jpeg">
+</div>
+
+<div class="event-body">
+
+<h3>Observasi Sistem Informasi Perpustakaan</h3>
+
+<p>Analisis kelayakan sistem informasi di Perpustakaan Universitas Medan Area.</p>
+
+<div class="event-foot">
+<span>Universitas Medan Area</span>
+<span>2025</span>
+</div>
+
+</div>
+
+</div>
+
 
 </div>
 </section>
 
-<!-- PRE FOOTER -->
+
 <section class="pre-footer">
-<div class="pre-footer-container">
+  <div class="pre-footer-container">
+    
+    <div class="pre-col">
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat: 08.00 - 16.00</p>
+      <p>Sabtu: 09.00 - 14.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
 
-<div class="pre-col">
-<h4>Jam Operasional</h4>
-<p>Senin - Jumat: 08.00 - 16.00</p>
-<p>Sabtu: 09.00 - 14.00</p>
-<p>Minggu & Libur Nasional: Tutup</p>
-</div>
+    <div class="pre-col">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
+      <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
+    </div>
 
-<div class="pre-col">
-<h4>Kontak</h4>
-<p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
-<p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
-<p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
-</div>
+    <div class="pre-col">
+      <h4>Sosial Media</h4>
+      <p>
+        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
+      </p>
 
-<div class="pre-col">
-<h4>Sosial Media</h4>
-<p>Ikuti Nazwa’s Library Corner untuk update literasi.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
 
-<div class="social-icons">
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-
-</div>
+  </div>
 </section>
 
 <footer>
 © 2026 Nazwa’s Library Corner
-</footer>
+</footer>  
+
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-e.preventDefault();
 
-document.getElementById("successMsg").innerText = 
-"Terima kasih atas feedback Anda ❤️";
+/* FILTER EVENT */
 
-this.reset();
-});
+const filterBtns=document.querySelectorAll(".filter-btn")
+const cards=document.querySelectorAll(".event-card")
+
+filterBtns.forEach(btn=>{
+btn.addEventListener("click",()=>{
+
+filterBtns.forEach(b=>b.classList.remove("active"))
+btn.classList.add("active")
+
+const filter=btn.dataset.filter
+
+cards.forEach(card=>{
+if(filter==="all" || card.dataset.category===filter){
+card.style.display="block"
+}else{
+card.style.display="none"
+}
+})
+
+})
+})
+
 </script>
 
 </body>
