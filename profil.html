@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil - Nazwa’s Library Corner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+color:#4b3621;
+background:#f6f1ea;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#ffffff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 50px;
+height:70px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.logo-img{
+height:80px;
+}
+
+nav strong{
+font-size:18px;
+}
+
+nav a{
+text-decoration:none;
+color:#4b3621;
+margin-left:30px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#8b6b4f;
+}
+
+#authBtn{
+background:#8b6b4f;
+color:white;
+padding:8px 22px;
+border-radius:30px;
+}
+
+/* HERO */
+
+.profile-hero{
+padding-top:140px;
+padding-bottom:60px;
+text-align:center;
+background:linear-gradient(rgba(75,54,33,0.85),rgba(75,54,33,0.85)),
+url('foto bground.jpg');
+background-size:cover;
+color:white;
+}
+
+.hero-subtitle{
+font-size:14px;
+letter-spacing:2px;
+margin-bottom:10px;
+opacity:0.8;
+}
+
+.profile-hero h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-desc{
+max-width:600px;
+margin:auto;
+font-size:14px;
+line-height:1.7;
+opacity:0.9;
+}
+
+/* CONTENT */
+
+.profile-wrapper{
+max-width:1100px;
+margin:auto;
+display:flex;
+gap:40px;
+padding:80px 20px;
+}
+
+/* KIRI */
+
+.profile-info{
+flex:1;
+background:#8b6b4f;
+color:white;
+padding:30px;
+border-radius:16px;
+}
+
+.profile-info h3{
+margin-bottom:20px;
+}
+
+.profile-info p{
+font-size:14px;
+line-height:1.7;
+}
+
+/* KANAN */
+
+.profile-content{
+flex:2;
+background:white;
+padding:30px;
+border-radius:16px;
+border:1px solid #e8e2da;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.profile-content h3{
+margin-bottom:10px;
+}
+
+.profile-content p{
+font-size:14px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* VISI MISI */
+
+.visi-misi{
+margin-top:20px;
+}
+
+.visi-misi h4{
+margin-bottom:10px;
+color:#8b6b4f;
+}
+
+.visi-misi ul{
+padding-left:18px;
+}
+
+.visi-misi li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+.profile-wrapper{
+flex-direction:column;
+}
+}
+
+/* PRE FOOTER */
+
+.pre-footer {
+background: #8b6b4f;
+color: #ffffff;
+padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+display: flex;
+justify-content: space-between;
+max-width: 1100px;
+margin: auto;
+gap: 60px;
+}
+
+.pre-col {
+flex:1;
+}
+
+.pre-footer h4 {
+margin-bottom: 20px;
+color: #f4d03f;
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.social-icons a{
+width:42px;
+height:42px;
+border:1px solid rgba(255,255,255,0.6);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#ffffff;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#8b6b4f;
+color:#ffffff;
+font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo-area">
+<img src="logo.PNG" class="logo-img">
+<strong>Nazwa’s Library Corner</strong>
+</div>
+
+<div>
+<a href="index.html#beranda">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="koleksi.html">Koleksi</a>
+<a href="event.html">Events</a>
+<a href="contact.html">Contact Us</a>
+<a href="login.html" id="authBtn">Login</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="profile-hero">
+<p class="hero-subtitle">✦ Tentang Kami ✦</p>
+<h1>Profil Nazwa’s Library Corner</h1>
+<p class="hero-desc">
+Nazwa’s Library Corner hadir sebagai ruang literasi digital yang 
+memberikan akses informasi serta mendukung pengembangan pengetahuan bagi masyarakat.
+</p>
+</section>
+
+<!-- CONTENT -->
+<section class="profile-wrapper">
+
+<div class="profile-info">
+<h3>Tentang Perpustakaan</h3>
+<p>
+Nazwa’s Library Corner merupakan perpustakaan digital yang dirancang untuk 
+memberikan akses informasi secara mudah, cepat, dan efisien. 
+Perpustakaan ini berfokus pada penyediaan sumber informasi yang relevan 
+serta mendukung kebutuhan literasi pengguna.
+</p>
+</div>
+
+<div class="profile-content">
+
+<h3>Deskripsi</h3>
+<p>
+Perpustakaan ini dikembangkan sebagai sarana untuk meningkatkan akses informasi 
+dan mendukung kegiatan pembelajaran. Dengan memanfaatkan teknologi digital, 
+Nazwa’s Library Corner menyediakan berbagai layanan yang memudahkan pengguna 
+dalam menemukan, mengelola, dan memanfaatkan informasi.
+</p>
+
+<div class="visi-misi">
+<h4>Visi</h4>
+<p>
+Menjadi ruang literasi yang inspiratif dan inklusif dalam mendukung pembelajaran, penelitian, dan pengembangan pengetahuan masyarakat.
+</p>
+
+<h4>Misi</h4>
+<ul>
+<li>Menyediakan akses informasi yang mudah dan berkualitas.</li>
+<li>Meningkatkan minat baca dan literasi masyarakat.</li>
+<li>Mengembangkan layanan perpustakaan berbasis teknologi.</li>
+<li>Mendukung kegiatan pendidikan dan penelitian.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRE FOOTER -->
+<section class="pre-footer">
+<div class="pre-footer-container">
+
+<div class="pre-col">
+<h4>Jam Operasional</h4>
+<p>Senin - Jumat: 08.00 - 16.00</p>
+<p>Sabtu: 09.00 - 14.00</p>
+<p>Minggu & Libur Nasional: Tutup</p>
+</div>
+
+<div class="pre-col">
+<h4>Kontak</h4>
+<p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
+<p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
+<p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
+</div>
+
+<div class="pre-col">
+<h4>Sosial Media</h4>
+<p>Ikuti Nazwa’s Library Corner untuk update literasi.</p>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Nazwa’s Library Corner
+</footer>
+
+</body>
+</html>
