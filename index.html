@@ -1417,32 +1417,5 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 </script>
-<script>
-
-const toggleBtn = document.getElementById("profileToggle");
-const visiBox = document.getElementById("visiMisiBox");
-const founder = document.getElementById("founderRow");
-
-toggleBtn.addEventListener("click", function(){
-
-if(visiBox.style.display === "none" || visiBox.style.display === ""){
-
-visiBox.style.display = "flex";
-
-/* pindahkan founder ke bawah box */
-visiBox.after(founder);
-
-}else{
-
-visiBox.style.display = "none";
-
-/* kembalikan founder ke bawah tombol */
-toggleBtn.parentElement.after(founder);
-
-}
-
-});
-
-</script>
 </body>
 </html>
