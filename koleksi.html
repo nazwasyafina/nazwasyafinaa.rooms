@@ -101,37 +101,62 @@ outline:none;
 background:#f2e5dc;
 }
   
-/* STATS BAR (NEW STYLE) */
-.stats-bar{
+/* STATS PREMIUM GRID (UPGRADE) */
+.stats-row{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-margin-top:40px;
-border-top:1px solid #e0d8cf;
-border-bottom:1px solid #e0d8cf;
-}
-.stat-item{
-padding:25px 10px;
-text-align:center;
-position:relative;
-}
-.stat-item:not(:last-child)::after{
-content:"";
-position:absolute;
-right:0;top:25%;height:50%;width:1px;
-background:#e0d8cf;
-}
-  .stat-number{
-font-family:'Playfair Display',serif;
-font-size:26px;
-font-weight:900;
-color:#8b6b4f;
-}
-.stat-label{
-font-size:12px;
-color:#7a7570;
-margin-top:4px;
+gap:25px;
+margin-top:50px;
+padding:30px;
+background:#efe7dd; /* beda dari bawah */
+border-radius:20px;
+border:1px solid #e0d6c9;
 }
 
+.stat-card{
+background:#ffffff;
+border-radius:18px;
+padding:35px 20px;
+border:1px solid #e6d8c9;
+text-align:center;
+transition:0.3s;
+position:relative;
+}
+
+/* efek hover biar hidup */
+.stat-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(139,107,79,0.18);
+}
+
+/* garis atas sebagai pembeda */
+.stat-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+border-radius:18px 18px 0 0;
+background:linear-gradient(90deg,#8b6b4f,#b08968);
+}
+
+/* angka lebih gede */
+.stat-number{
+font-family:'Playfair Display',serif;
+font-size:36px;
+font-weight:900;
+color:#4b3621;
+margin-top:10px;
+}
+
+/* label lebih clean */
+.stat-label{
+font-size:13px;
+color:#7a7570;
+margin-top:8px;
+letter-spacing:0.5px;
+}
 /* GRID */
 .koleksi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:50px;}
 
