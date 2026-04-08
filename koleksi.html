@@ -5,343 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Koleksi - Nazwa’s Library Corner</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-  color:#4b3621;
-  padding-top:80px;
-  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 40%),
-              radial-gradient(circle at 80% 70%, rgba(139,107,79,0.25) 0%, transparent 45%),
-              linear-gradient(135deg,#f3e9e1,#d7c2b0,#c2a891);
-  background-attachment: fixed;
-}
+body{background:#f7f4ef;color:#4b3621;}
 
-/* ===== NAVBAR (SAMA PERSIS) ===== */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#ffffff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 50px;
-  height:70px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  z-index:1000;
-}
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:#fff;padding:15px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);z-index:1000;}
+nav a{margin-left:25px;text-decoration:none;color:#4b3621;font-weight:500;}
 
-nav strong{ 
-  color:#4b3621; 
-  font-size:18px;
-}
-
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  height:70px;
-}
-
-.logo-img{
-  height:80px;
-  width:auto;
-  object-fit:contain;
-}
-
-nav a{
-  text-decoration:none;
-  color:#4b3621;
-  margin-left:30px;
-  font-weight:500;
-  transition:0.3s;
-}
-
-nav a:hover{ color:#8b6b4f; }
-
-#authBtn{
-  background:#8b6b4f;
-  color:#ffffff !important;
-  padding:8px 22px;
-  border-radius:30px;
-  margin-left:30px;
-  transition:0.3s;
-}
-
-#authBtn:hover{
-  background:#b08968;
-}
-
-/* ===== KOLEKSI SECTION ===== */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 40px;
-}
-
+/* HERO */
 .hero{
-  text-align:center;
-  margin-bottom:60px;
+height:60vh;
+background:linear-gradient(rgba(59,37,22,0.75),rgba(90,58,39,0.75)),url('foto bground.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding-top:80px;
+}
+.hero h1{font-size:42px;margin-bottom:10px;}
+.hero p{opacity:0.9;}
+
+/* CONTAINER */
+.container{max-width:1100px;margin:auto;padding:80px 30px;}
+
+/* STATS */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
+.stat-card { background: #F7F4EF; border: 1px solid #E4DED5; border-top: 3px solid #B8954A; border-radius: 12px; padding: 26px 20px; text-align: center; transition: all 0.25s ease; }
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(184,149,74,0.13); }
+.stat-number { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: #9A7A38; margin-bottom: 7px; }
+.stat-label { font-size: 0.80rem; color: #7A7570; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* KOLEKSI GRID */
+.koleksi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:50px;}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:16px;
+border:1px solid #e6d8c9;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.1);}
+
+.icon{font-size:28px;color:#8b6b4f;margin-bottom:15px;}
+.title{font-weight:700;margin-bottom:8px;}
+.desc{font-size:14px;color:#6d5b4c;margin-bottom:12px;}
+.count{font-weight:600;color:#b08968;font-size:14px;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.koleksi-grid{grid-template-columns:1fr 1fr;}
+.stats-row{grid-template-columns:1fr 1fr;}
 }
 
-.hero h1{
-  font-size:38px;
-  color:#5c4033;
-  margin-bottom:15px;
+@media(max-width:500px){
+.koleksi-grid{grid-template-columns:1fr;}
+.stats-row{grid-template-columns:1fr;}
 }
 
-.hero p{
-  font-size:14px;
-  color:#7a6a5f;
-  max-width:600px;
-  margin:auto;
-}
-
-/* GRID */
-.collection-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
-}
-
-/* GLASS CARD */
-.collection-card{
-  backdrop-filter:blur(12px);
-  background:rgba(255,255,255,0.65);
-  border-radius:25px;
-  padding:35px;
-  border:1px solid rgba(255,255,255,0.4);
-  transition:0.3s;
-  box-shadow:0 8px 25px rgba(0,0,0,0.05);
-}
-
-.collection-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 35px rgba(0,0,0,0.08);
-}
-
-/* ICON */
-.icon-circle{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#8b6b4f,#c7b198);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:25px;
-}
-
-.icon-circle i{
-  color:white;
-  font-size:24px;
-}
-
-.collection-card h3{
-  margin-bottom:12px;
-  color:#4a3428;
-}
-
-.collection-card p{
-  font-size:13px;
-  color:#6d5c50;
-  line-height:1.6;
-  margin-bottom:20px;
-}
-
-.collection-card a{
-  display:inline-block;
-  padding:9px 20px;
-  border-radius:30px;
-  font-size:13px;
-  text-decoration:none;
-  font-weight:500;
-  transition:0.3s;
-}
-
-.btn-main{
-  background:#8b6b4f;
-  color:white;
-}
-
-.btn-main:hover{
-  background:#6f523c;
-}
-
-.btn-alt{
-  background:#c7b198;
-  color:#4a3428;
-}
-
-.btn-alt:hover{
-  background:#b59e86;
-}
-
-/* ===== PRE FOOTER ===== */
-
-.pre-footer {
-  background: #8b6b4f;
-  color: #ffffff;
-  padding: 70px 80px 50px;
-}
-
-.pre-footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1100px;
-  margin: auto;
-  gap: 60px;
-}
-
-.pre-col {
-  flex:1;
-}
-
-.pre-footer h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #f4d03f;
-  
-}
-.pre-footer p {
-  font-size: 15px;
-  margin-bottom: 12px;
-  line-height: 1.8;
-}
-/* SOCIAL ICONS SEJAJAR */
-.social-icons{
-  display:flex;
-  gap:15px;
-  margin-top:15px;
-}
-
-.social-icons a{
-  width:42px;
-  height:42px;
-  border:1px solid rgba(255,255,255,0.6);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#ffffff;
-  font-size:18px;
-  transition:0.3s;
-}
-
-.social-icons a:hover{
-  background:#f4d03f;
-  color:#8b6b4f;
-}
-  /* FOOTER */
-
-footer{
-  text-align:center;
-  padding:20px;
-  background:#8b6b4f;
-  color:#ffffff;
-  font-size:13px;
-  border-top:1px solid rgba(255,255,255,0.3);
-}
 </style>
 </head>
 
 <body>
 
 <nav>
- <div class="logo-area">
-  <img src="logo.PNG" alt="Logo" class="logo-img">
-  <strong>Nazwa’s Library Corner</strong>
+<strong>Nazwa’s Library Corner</strong>
+<div>
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="koleksi.html">Koleksi</a>
+<a href="event.html">Events</a>
+<a href="contact.html">Contact</a>
 </div>
-  <div>
-    <a href="index.html#beranda">Beranda</a>
-  </div>
 </nav>
+
+<div class="hero">
+<div>
+<h1>Koleksi Perpustakaan</h1>
+<p>Eksplorasi berbagai sumber informasi yang tersedia</p>
+</div>
+</div>
 
 <div class="container">
 
-  <div class="hero">
-    <h1>Koleksi Perpustakaan</h1>
-    <p>
-      Akses berbagai sumber pengetahuan dalam format fisik, digital,
-      hingga multimedia untuk mendukung literasi dan pembelajaran.
-    </p>
-  </div>
+<h2>Total Koleksi</h2>
 
-  <div class="collection-grid">
-
-    <div class="collection-card">
-      <div class="icon-circle">
-        <i class="fa-solid fa-book-open"></i>
-      </div>
-      <h3>Buku Fisik</h3>
-      <p>Koleksi cetak mencakup literatur akademik, referensi ilmiah, serta bacaan umum untuk memperkaya wawasan dan literasi.</p>
-      <a href="#" class="btn-main">Telusuri Buku</a>
-    </div>
-
-    <div class="collection-card">
-      <div class="icon-circle">
-        <i class="fa-solid fa-laptop"></i>
-      </div>
-      <h3>Sumber Digital</h3>
-      <p>Akses e-book, e-journal, dan database ilmiah yang mendukung pembelajaran, penelitian, dan pengembangan akademik.</p>
-      <a href="#" class="btn-main">Akses Digital</a>
-    </div>
-
-    <div class="collection-card">
-      <div class="icon-circle">
-        <i class="fa-solid fa-circle-play"></i>
-      </div>
-      <h3>Koleksi Multimedia</h3>
-      <p>Video edukatif, dokumentasi literasi, dan podcast inspiratif yang dapat diputar langsung.</p>
-      <a href="multimedia.html" target="_blank" class="btn-alt">Buka Multimedia</a>
-    </div>
-
-  </div>
+<div class="stats-row">
+<div class="stat-card"><div class="stat-number">150</div><div class="stat-label">Buku Umum</div></div>
+<div class="stat-card"><div class="stat-number">90</div><div class="stat-label">Buku Anak</div></div>
+<div class="stat-card"><div class="stat-number">80</div><div class="stat-label">Referensi</div></div>
+<div class="stat-card"><div class="stat-number">180+</div><div class="stat-label">Digital & Terbitan</div></div>
 </div>
 
-<section class="pre-footer">
-  <div class="pre-footer-container">
+<div class="koleksi-grid">
 
-    <div class="pre-col">
-      <h4>Jam Operasional</h4>
-      <p>Senin - Jumat: 08.00 - 16.00</p>
-      <p>Sabtu: 09.00 - 14.00</p>
-      <p>Minggu & Libur Nasional: Tutup</p>
-    </div>
+<div class="card">
+<div class="icon"><i class="fas fa-book-open"></i></div>
+<div class="title">Buku Umum</div>
+<div class="desc">Berbagai buku dari banyak bidang ilmu untuk semua kalangan.</div>
+<div class="count">150 Koleksi</div>
+</div>
 
-    <div class="pre-col">
-      <h4>Kontak</h4>
-      <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
-      <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
-      <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
-    </div>
+<div class="card">
+<div class="icon"><i class="fas fa-child"></i></div>
+<div class="title">Buku Anak</div>
+<div class="desc">Cerita dan edukasi untuk anak-anak.</div>
+<div class="count">90 Koleksi</div>
+</div>
 
-    <div class="pre-col">
-      <h4>Sosial Media</h4>
-      <p>
-        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
-      </p>
+<div class="card">
+<div class="icon"><i class="fas fa-book"></i></div>
+<div class="title">Referensi</div>
+<div class="desc">Ensiklopedia dan kamus sebagai sumber rujukan.</div>
+<div class="count">80 Koleksi</div>
+</div>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
+<div class="card">
+<div class="icon"><i class="fas fa-newspaper"></i></div>
+<div class="title">Majalah & Surat Kabar</div>
+<div class="desc">Informasi terkini dari berbagai media.</div>
+<div class="count">60 Koleksi</div>
+</div>
 
-  </div>
-</section>
-<footer>
-  © 2026 Nazwa’s Library Corner
-</footer>
+<div class="card">
+<div class="icon"><i class="fas fa-laptop"></i></div>
+<div class="title">Koleksi Digital</div>
+<div class="desc">E-book dan sumber digital yang bisa diakses online.</div>
+<div class="count">120+ Koleksi</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
