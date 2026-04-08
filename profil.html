@@ -103,41 +103,45 @@ line-height:1.7;
 opacity:0.9;
 }
 
-/* CONTENT */
-
 .profile-content{
 max-width:900px;
 margin:auto;
 padding:80px 20px;
+display:flex;
+flex-direction:column;
+gap:30px;
 }
 
-.profile-content h2{
+.content-box{
+background:white;
+padding:30px;
+border-radius:16px;
+border:1px solid #e8e2da;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.content-box h2{
 margin-bottom:15px;
 }
 
-.profile-content p{
+.content-box h3{
+color:#8b6b4f;
+margin-top:15px;
+margin-bottom:8px;
+}
+
+.content-box p{
 font-size:15px;
 line-height:1.8;
-margin-bottom:25px;
+margin-bottom:15px;
 color:#5a4633;
 }
 
-/* VISI MISI */
-
-.visi-misi{
-margin-top:30px;
-}
-
-.visi-misi h3{
-color:#8b6b4f;
-margin-bottom:10px;
-}
-
-.visi-misi ul{
+.content-box ul{
 padding-left:20px;
 }
 
-.visi-misi li{
+.content-box li{
 margin-bottom:10px;
 line-height:1.7;
 }
@@ -233,30 +237,40 @@ gap:30px;
 <!-- CONTENT -->
 <section class="profile-content">
 
-<h2>✦ Tentang Kami ✦</h2>
-<p>
-        <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
-      </p>
-      
-      <p>
-       Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
-      </p>
-<div class="visi-misi">
+  <!-- BOX 1 -->
+  <div class="content-box">
+    <h2>Tentang Kami</h2>
+    <p>
+      Nazwa’s Library Corner merupakan perpustakaan digital yang dirancang 
+      untuk memberikan kemudahan akses informasi bagi pengguna. 
+      Dengan memanfaatkan teknologi, perpustakaan ini menghadirkan layanan 
+      yang efektif, efisien, serta relevan dengan kebutuhan literasi masa kini.
+    </p>
 
-<h3>Visi</h3>
-<p>
-Menjadi pusat literasi digital yang inovatif dan mudah diakses oleh semua kalangan.
-</p>
+    <p>
+      Kehadiran platform ini diharapkan dapat mendukung kegiatan pembelajaran, 
+      penelitian, serta meningkatkan minat baca masyarakat melalui akses 
+      informasi yang lebih luas dan terintegrasi.
+    </p>
+  </div>
 
-<h3>Misi</h3>
-<ul>
-<li>Menyediakan akses informasi yang cepat dan terpercaya.</li>
-<li>Meningkatkan minat baca dan literasi masyarakat.</li>
-<li>Mengembangkan layanan perpustakaan berbasis teknologi.</li>
-<li>Mendukung kegiatan pendidikan dan penelitian.</li>
-</ul>
+  <!-- BOX 2 -->
+  <div class="content-box">
+    <h2>Visi & Misi</h2>
 
-</div>
+    <h3>Visi</h3>
+    <p>
+      Menjadi pusat literasi digital yang inovatif dan mudah diakses oleh semua kalangan.
+    </p>
+
+    <h3>Misi</h3>
+    <ul>
+      <li>Menyediakan akses informasi yang cepat dan terpercaya.</li>
+      <li>Meningkatkan minat baca dan literasi masyarakat.</li>
+      <li>Mengembangkan layanan perpustakaan berbasis teknologi.</li>
+      <li>Mendukung kegiatan pendidikan dan penelitian.</li>
+    </ul>
+  </div>
 
 </section>
 
