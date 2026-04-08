@@ -101,61 +101,64 @@ outline:none;
 background:#f2e5dc;
 }
   
-/* STATS PREMIUM GRID (UPGRADE) */
+/* STATS CUSTOM LIBRARY STYLE */
 .stats-row{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
+gap:22px;
 margin-top:50px;
-padding:30px;
-background:#efe7dd; /* beda dari bawah */
-border-radius:20px;
-border:1px solid #e0d6c9;
 }
 
+/* CARD */
 .stat-card{
-background:#ffffff;
-border-radius:18px;
-padding:35px 20px;
-border:1px solid #e6d8c9;
+background:linear-gradient(145deg,#fffdf9,#f3ebe3);
+border-radius:20px;
+padding:30px 20px;
 text-align:center;
-transition:0.3s;
 position:relative;
+transition:0.3s;
+border:1px solid #eadfce;
 }
 
-/* efek hover biar hidup */
-.stat-card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(139,107,79,0.18);
-}
-
-/* garis atas sebagai pembeda */
-.stat-card::before{
+/* efek “layer” biar beda dari grid bawah */
+.stat-card::after{
 content:"";
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:6px;
-border-radius:18px 18px 0 0;
-background:linear-gradient(90deg,#8b6b4f,#b08968);
+inset:0;
+border-radius:20px;
+box-shadow:inset 0 0 0 1px rgba(139,107,79,0.08);
+pointer-events:none;
 }
 
-/* angka lebih gede */
+/* hover lembut */
+.stat-card:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 15px 35px rgba(139,107,79,0.15);
+}
+
+/* ANGKA */
 .stat-number{
 font-family:'Playfair Display',serif;
-font-size:36px;
+font-size:34px;
 font-weight:900;
-color:#4b3621;
-margin-top:10px;
+color:#8b6b4f;
+margin-bottom:6px;
 }
 
-/* label lebih clean */
+/* LABEL */
 .stat-label{
 font-size:13px;
-color:#7a7570;
-margin-top:8px;
+color:#6d5b4c;
 letter-spacing:0.5px;
+}
+
+/* AKSEN ICON KECIL (opsional aesthetic) */
+.stat-card i{
+display:block;
+font-size:18px;
+color:#b08968;
+margin-bottom:8px;
+opacity:0.8;
 }
 /* GRID */
 .koleksi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:50px;}
