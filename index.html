@@ -6,8 +6,7 @@
 <title>Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
 <style>
 *{
   margin:0;
@@ -22,55 +21,62 @@ body{
 }
 
 /* ===== NAVBAR ===== */
-.navbar{
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
   background:#ffffff;
-  padding:10px 50px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* Logo */
-.navbar-brand{
   display:flex;
+  justify-content:space-between;
   align-items:center;
-  gap:8px;
+  padding:0 50px;
+  height:70px; /* tinggi tetap */
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
 }
 
-.navbar-brand strong{
-  color:#4b3621;
+nav strong{ 
+  color:#4b3621; 
   font-size:18px;
 }
 
-/* Logo image */
+/* Logo Area */
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:70px;
+}
+
 .logo-img{
-  height:50px;
+  height:80px;
+  width:auto;
   object-fit:contain;
 }
 
-/* Menu */
-.navbar-nav .nav-link{
+nav a{
+  text-decoration:none;
   color:#4b3621;
-  margin-left:25px;
+  margin-left:30px;
   font-weight:500;
   transition:0.3s;
 }
 
-.navbar-nav .nav-link:hover{
-  color:#8b6b4f;
-}
-
-/* Button login */
-#authBtn{
+nav a:hover{ color:#8b6b4f; }
+  #authBtn{
   background:#8b6b4f;
   color:#ffffff !important;
-  padding:8px 20px;
+  padding:8px 22px;
   border-radius:30px;
-  margin-left:25px;
+  margin-left:30px;
   transition:0.3s;
 }
 
 #authBtn:hover{
   background:#b08968;
+  color:#ffffff;
 }
+
 /* ===== SECTION UMUM ===== */
 .section{
   padding:100px 60px;
@@ -520,6 +526,12 @@ gap:40px;
 align-items:start;
 }
 
+@media (max-width:900px){
+.koleksi-layout{
+grid-template-columns:1fr;
+}
+}
+
 /* ═════════ INTRO KOLEKSI (STYLE BARU) ═════════ */
 
 .koleksi-intro{
@@ -597,6 +609,20 @@ background:linear-gradient(135deg,#6f523d,#8b6b4f);
 transform:translateY(-2px);
 }
 
+/* ═════════ BENTO GRID ═════════ */
+
+.koleksi-bento{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+grid-auto-rows:minmax(140px,auto);
+gap:14px;
+}
+
+@media (max-width:580px){
+.koleksi-bento{
+grid-template-columns:1fr 1fr;
+}
+}
 
 /* CARD */
 
@@ -692,6 +718,25 @@ background:#f2e5dc;
 color:#8b6b4f;
 padding:3px 8px;
 border-radius:8px;
+}
+
+/* ═════════ CUSTOM BENTO LAYOUT (UNIQUE) ═════════ */
+.kb-card.featured{
+grid-column:1 / 2;
+grid-row:1 / 3;
+}
+.koleksi-bento .kb-card:nth-child(2){
+grid-column:2 / 4;
+}
+.koleksi-bento .kb-card:nth-child(3){
+grid-column:2 / 3;
+}
+.koleksi-bento .kb-card:nth-child(4){
+grid-column:3 / 4;
+grid-row:2 / 4;
+}
+.koleksi-bento .kb-card:nth-child(5){
+grid-column:1 / 3;
 }
 
 /* ════════ EVENT / KEGIATAN PERPUSTAKAAN ═════════════ */
@@ -1085,57 +1130,30 @@ footer{
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-  <div class="container">
-
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="logo.PNG" height="40">
-      <strong>Nazwa’s Library Corner</strong>
-    </a>
-
-    <!-- Hamburger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Menu -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="koleksi.html">Koleksi</a></li>
-        <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="looping.php">Looping</a></li>
-
-        <li class="nav-item ms-lg-3">
-          <a href="login.html" id="authBtn" class="btn btn-sm text-white" style="background:#8b6b4f;">
-            Login
-          </a>
-        </li>
-      </ul>
-    </div>
-
+<nav>
+ <div class="logo-area">
+  <img src="logo.PNG" alt="Logo" class="logo-img">
+  <strong>Nazwa’s Library Corner</strong>
+</div>
+  <div>
+    <a href="index.html#beranda">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="koleksi.html">Koleksi</a>
+    <a href="event.html">Events</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="looping.php">Looping</a>
+    <a href="login.html" id="authBtn">Login</a>
   </div>
 </nav>
 
-<section id="beranda" class="d-flex align-items-center text-center text-white">
-  <div class="container">
-    <h1 class="fw-bold">Welcome to Nazwa’s Library Corner</h1>
-    <p class="mb-4">A public library space where knowledge and ideas grow together</p>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="input-group">
-          <input type="text" class="form-control rounded-start-pill" placeholder="Search...">
-          <button class="btn text-white rounded-end-pill" style="background:#b08968;">
-            Search
-          </button>
-        </div>
-      </div>
+<section class="section" id="beranda">
+  <div class="intro-wrapper">
+    <h1>Welcome to Nazwa’s Library Corner</h1>
+    <p>A public library space where knowledge and ideas grow together</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search books, articles, ideas...">
+      <button>Search</button>
     </div>
-
   </div>
 </section>
 
@@ -1253,19 +1271,18 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
   </div>
 
   <!-- BENTO GRID -->
+  <div class="koleksi-bento">
 
-   <div class="row g-3">
-  <div class="col-12 col-md-6 col-lg-4">
     <div class="kb-card featured">
       <i class="fas fa-book-open kb-icon"></i>
       <div class="kb-name">Buku Umum</div>
       <div class="kb-desc">
         Koleksi buku pengetahuan umum dari berbagai bidang
         yang dapat dibaca oleh seluruh lapisan masyarakat.
-   </div>
-  </div>
+      </div>
+      <span class="kb-badge">Koleksi Utama</span>
+    </div>
 
-     <div class="col-6 col-md-6 col-lg-4">
     <div class="kb-card">
       <i class="fas fa-child kb-icon"></i>
       <div class="kb-name">Buku Anak</div>
@@ -1275,7 +1292,6 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
       </div>
     </div>
 
-    <div class="col-6 col-md-6 col-lg-4">
     <div class="kb-card">
       <i class="fas fa-book kb-icon"></i>
       <div class="kb-name">Referensi</div>
@@ -1285,7 +1301,6 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
       </div>
     </div>
 
-  <div class="col-6 col-md-6 col-lg-4">
     <div class="kb-card">
       <i class="fas fa-newspaper kb-icon"></i>
       <div class="kb-name">Majalah & Surat Kabar</div>
@@ -1293,9 +1308,9 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
         Koleksi majalah dan surat kabar yang
         menyediakan informasi dan berita terkini.
       </div>
+      <span class="kb-tag">Terbitan</span>
     </div>
 
-  <div class="col-6 col-md-6 col-lg-4">
     <div class="kb-card">
       <i class="fas fa-laptop kb-icon"></i>
       <div class="kb-name">Koleksi Digital</div>
@@ -1311,6 +1326,7 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
 </section>
   
 <section id="event">
+
 <div class="event-container">
 
 <div class="event-head">
@@ -1459,6 +1475,5 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
