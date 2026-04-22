@@ -128,11 +128,6 @@ body {
 </div>
 
 </div>
-    <div class="checkbox-group">
-      <input type="checkbox" id="remember">
-      <label for="remember">Remember Me</label>
-    </div>
-
 
     <div class="register-link">
       Belum punya akun? <a href="register.php">Daftar</a>
