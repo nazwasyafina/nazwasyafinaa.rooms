@@ -1134,19 +1134,28 @@ footer{
   }
 
   /* ===== KOLEKSI (INI PALING PENTING) ===== */
-  .koleksi-layout{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
+  /* ===== KOLEKSI MOBILE FIX TOTAL ===== */
+.koleksi-layout{
+  grid-template-columns:1fr;
+  gap:25px;
+}
 
-  .koleksi-bento{
-    grid-template-columns:1fr;
-  }
+.koleksi-bento{
+  grid-template-columns:1fr 1fr; /* 2 kolom biar ga terlalu panjang */
+  gap:12px;
+}
 
-  .kb-card.featured{
-    grid-column:auto;
-    grid-row:auto;
-  }
+/* reset semua bento positioning biar ga aneh */
+.kb-card,
+.kb-card.featured{
+  grid-column:auto !important;
+  grid-row:auto !important;
+}
+
+/* featured jadi full width biar tetap standout */
+.kb-card.featured{
+  grid-column:1 / -1;
+}
 
   /* ===== EVENT ===== */
   .event-grid{
