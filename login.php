@@ -129,10 +129,6 @@ body {
 
 </div>
 
-    <div class="register-link">
-      Belum punya akun? <a href="register.php">Daftar</a>
-    </div>
-
   </div>
 </div>
 
