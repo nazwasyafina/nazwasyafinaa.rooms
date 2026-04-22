@@ -107,53 +107,40 @@ body {
   </p>
 
   <div class="form-container">
+<div class="form-container">
 
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
+<form action="proses_login.php" method="POST">
 
+  <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+
+  <div class="checkbox-group">
+    <input type="checkbox">
+    <label>Remember Me</label>
+  </div>
+
+  <button type="submit">Masuk</button>
+
+</form>
+
+<div class="register-link">
+  Belum punya akun? <a href="register.html">Daftar</a>
+</div>
+
+</div>
     <div class="checkbox-group">
       <input type="checkbox" id="remember">
       <label for="remember">Remember Me</label>
     </div>
 
-    <button id="loginBtn">Masuk</button>
 
     <div class="register-link">
-      Belum punya akun? <a href="register.html">Daftar</a>
+      Belum punya akun? <a href="register.php">Daftar</a>
     </div>
 
   </div>
 </div>
 
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "API_KEY_KAMU",
-  authDomain: "PROJECT_ID.firebaseapp.com",
-  projectId: "PROJECT_ID",
-  storageBucket: "PROJECT_ID.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-document.getElementById("loginBtn").addEventListener("click", ()=>{
-  const email=document.getElementById("email").value;
-  const password=document.getElementById("password").value;
-
-  signInWithEmailAndPassword(auth,email,password)
-  .then(()=>{
-    alert("Login Berhasil");
-    window.location.href="index.html";
-  })
-  .catch(err=>alert(err.message));
-});
-</script>
 
 </body>
 </html>
