@@ -6,8 +6,7 @@
 <title>Nazwa’s Library Corner</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
 <style>
 *{
   margin:0;
@@ -969,66 +968,123 @@ footer{
   border-top:1px solid rgba(255,255,255,0.3);
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px){
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width:768px){
 
+  /* ===== NAVBAR ===== */
   nav{
-    padding:15px 20px;
+    padding:0 20px;
   }
 
-  nav a{
-    margin-left:15px;
+  nav strong{
     font-size:14px;
   }
 
-  .section{
-    padding:70px 20px;
+  .logo-img{
+    height:50px;
+  }
+
+  nav div:last-child{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  nav a{
+    margin-left:12px;
+    font-size:13px;
+  }
+
+  #authBtn{
+    padding:6px 14px;
+    font-size:13px;
+  }
+
+  /* ===== BERANDA ===== */
+  #beranda{
+    padding-top:120px;
+    background-attachment:scroll;
   }
 
   .intro-wrapper h1{
-    font-size:28px;
+    font-size:26px;
   }
 
   .intro-wrapper p{
-    font-size:15px;
+    font-size:14px;
   }
 
+  /* SEARCH */
   .search-box{
     flex-direction:column;
-    align-items:center;
   }
 
   .search-box input{
     width:100%;
     border-radius:30px;
     margin-bottom:10px;
+    font-size:14px;
   }
 
   .search-box button{
     width:100%;
     border-radius:30px;
+    padding:12px;
   }
 
-  .profile-content{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
+  /* ===== PROFIL ===== */
+  .profile-left p{
+    font-size:14px;
   }
 
   .profile-right{
-    text-align:left;
-  }
-}
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .pre-footer {
-    padding: 50px 20px 40px;
+    margin-top:20px;
   }
 
-  .pre-footer-container {
-    flex-direction: column;
-    gap: 40px;
+  .profile-title{
+    font-size:28px;
   }
+
+  /* ===== LAYANAN ===== */
+  .layanan-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  /* ===== KOLEKSI (INI PALING PENTING) ===== */
+  .koleksi-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .koleksi-bento{
+    grid-template-columns:1fr;
+  }
+
+  .kb-card.featured{
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  /* ===== EVENT ===== */
+  .event-grid{
+    grid-template-columns:1fr;
+  }
+
+  .event-img{
+    height:150px;
+  }
+
+  /* ===== PRE FOOTER ===== */
+  .pre-footer{
+    padding:50px 25px;
+  }
+
+  .pre-footer-container{
+    flex-direction:column;
+    gap:30px;
+  }
+
 }
   /* ===== PREMIUM EDITORIAL STYLE PROFIL ===== */
 #profil{
@@ -1074,35 +1130,20 @@ footer{
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top px-4">
-  <div class="container-fluid">
-
-    <a class="navbar-brand fw-bold" href="#">
-      Nazwa’s Library Corner
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="koleksi.html">Koleksi</a></li>
-        <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item">
-          <a class="btn btn-sm ms-3" id="authBtn" href="login.html" style="background:#8b6b4f;color:white;border-radius:20px;">
-            Login
-          </a>
-        </li>
-      </ul>
-    </div>
-
+<nav>
+ <div class="logo-area">
+  <img src="logo.PNG" alt="Logo" class="logo-img">
+  <strong>Nazwa’s Library Corner</strong>
+</div>
+  <div>
+    <a href="index.html#beranda">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="koleksi.html">Koleksi</a>
+    <a href="event.html">Events</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html" id="authBtn">Login</a>
   </div>
 </nav>
-  
 
 <section class="section" id="beranda">
   <div class="intro-wrapper">
@@ -1432,7 +1473,6 @@ onAuthStateChanged(auth, (user) => {
     };
   }
 });
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </script>
 </body>
 </html>
