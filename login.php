@@ -111,7 +111,7 @@ body {
 
 <form action="proses_login.php" method="POST">
 
-  <input type="text" name="username" placeholder="Username">
+  <input type="text" name="email" placeholder="Email">
   <input type="password" name="password" placeholder="Password">
 
   <div class="checkbox-group">
@@ -124,7 +124,7 @@ body {
 </form>
 
 <div class="register-link">
-  Belum punya akun? <a href="register.html">Daftar</a>
+  Belum punya akun? <a href="register.php">Daftar</a>
 </div>
 
 </div>
