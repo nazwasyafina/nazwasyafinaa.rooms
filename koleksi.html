@@ -311,6 +311,41 @@ margin-bottom:5px;
 font-size:13px;
 color:#7a6a5a;
 }
+
+.section-box{
+background:#fff;
+padding:40px;
+border-radius:18px;
+margin-top:40px;
+border:1px solid #e6d8c9;
+box-shadow:0 5px 20px rgba(0,0,0,0.04);
+}
+  .section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:70px;
+margin-bottom:10px;
+}
+
+.section-header h2{
+margin:0;
+}
+
+.btn-lihat{
+background:#8b6b4f;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-size:13px;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn-lihat:hover{
+background:#6f543d;
+}
 </style>
 </head>
 
@@ -340,6 +375,7 @@ color:#7a6a5a;
 <p>Eksplorasi berbagai sumber informasi yang tersedia</p>
 </div>
 </div>
+  
 <div class="container">
   <h2>Jelajahi Koleksi</h2>
 <p style="color:#6d5b4c;margin-top:5px;">
@@ -418,8 +454,11 @@ Temukan berbagai koleksi terbaik dari perpustakaan kami.
 </div>
 
 <!-- BUKU NYATA -->
-<h2 style="margin-top:70px;">Rekomendasi Buku</h2>
-
+<div class="section-header">
+  <h2>Daftar Pilihan Bacaan</h2>
+  <a href="#" class="btn-lihat">Lihat Semua</a>
+</div>
+  
 <div class="buku-grid">
 
 <div class="buku-card">
