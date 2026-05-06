@@ -1278,29 +1278,31 @@ nav{
   color:#8b6b4f !important;
   font-weight:600;
   transition:0.3s;
-}
 
-/* HOVER */
-.login-btn:hover{
-  background:#8b6b4f;
-  color:#fff !important;
 }
-  .btn-explore{
+.btn-explore{
   display:inline-block;
-  margin-top:20px;
-  padding:14px 28px;
+  margin-top:25px;
+  padding:14px 30px;
   border-radius:30px;
-  background:linear-gradient(135deg,#b08968,#8b6b4f);
+
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.4);
   color:white;
+
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
-  box-shadow:0 8px 25px rgba(0,0,0,0.2);
 }
 
+/* HOVER */
 .btn-explore:hover{
+  background:rgba(255,255,255,0.25);
   transform:translateY(-3px);
-  background:linear-gradient(135deg,#8b6b4f,#6f543d);
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
 }
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1342,7 +1344,7 @@ nav{
     <h1>Welcome to Nazwa’s Library Corner</h1>
     <p>A public library space where knowledge and ideas grow together</p>
    <a href="#koleksi" class="btn-explore">
-  Jelajahi Perpustakaan ↓
+  Jelajahi Perpustakaan 
 </a>
   </div>
 </section>
