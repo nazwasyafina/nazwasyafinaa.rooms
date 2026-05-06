@@ -1285,6 +1285,23 @@ nav{
   background:#8b6b4f;
   color:#fff !important;
 }
+  .btn-explore{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#b08968,#8b6b4f);
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn-explore:hover{
+  transform:translateY(-3px);
+  background:linear-gradient(135deg,#8b6b4f,#6f543d);
+}
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -1324,10 +1341,9 @@ nav{
   <div class="intro-wrapper">
     <h1>Welcome to Nazwa’s Library Corner</h1>
     <p>A public library space where knowledge and ideas grow together</p>
-    <div class="search-box">
-      <input type="text" placeholder="Search books, articles, ideas...">
-      <button>Search</button>
-    </div>
+   <a href="#koleksi" class="btn-explore">
+  Jelajahi Perpustakaan ↓
+</a>
   </div>
 </section>
 
@@ -1376,7 +1392,7 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
 
 <div class="layanan-grid">
 
-  <a href="sirkulasi.html" target="_blank" class="layanan-card">
+  <a href="register.html" target="_blank" class="layanan-card">
     <div class="lc-icon"><i class="fas fa-arrows-rotate"></i></div>
     <div class="lc-title">Layanan Sirkulasi</div>
     <div class="lc-desc">
@@ -1394,7 +1410,7 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
     </div>
   </a>
 
-  <a href="literasi.html" target="_blank" class="layanan-card">
+  <a href="register.html" target="_blank" class="layanan-card">
     <div class="lc-icon"><i class="fas fa-book-reader"></i></div>
     <div class="lc-title">Program Literasi</div>
     <div class="lc-desc">
@@ -1403,7 +1419,7 @@ Ingin mengenal lebih jauh sosok di balik berdirinya
     </div>
   </a>
 
-  <a href="edukasi.html" target="_blank" class="layanan-card">
+  <a href="register.html" target="_blank" class="layanan-card">
     <div class="lc-icon"><i class="fas fa-graduation-cap"></i></div>
     <div class="lc-title">Layanan Edukasi</div>
     <div class="lc-desc">
